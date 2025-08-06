@@ -1,0 +1,458 @@
+{
+  "active": true,
+  "connections": {
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Stackoverflow",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wikipedia1": {
+      "ai_tool": [
+        [
+          {
+            "node": "Stackoverflow",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "Stackoverflow",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings OpenAI2": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Supabase Vector Store1",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase Vector Store1": {
+      "ai_tool": [
+        [
+          {
+            "node": "Stackoverflow",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Postgres Chat Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "Stackoverflow",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Stackoverflow Forum": {
+      "ai_tool": [
+        [
+          {
+            "node": "Stackoverflow",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Web Search 1": {
+      "ai_tool": [
+        [
+          {
+            "node": "Stackoverflow",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Web Search 2": {
+      "ai_tool": [
+        [
+          {
+            "node": "Stackoverflow",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-05-03T12:39:57.663Z",
+  "id": "yT9ook167Eq04t3Q",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "SAP",
+  "nodes": [
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4o-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        480,
+        680
+      ],
+      "id": "0daa1a3c-6455-4d07-9c76-731a30e6b5f3",
+      "name": "OpenAI Chat Model1",
+      "credentials": {
+        "openAiApi": {
+          "id": "jpK6UkKnpLM9LJPk",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.toolWikipedia",
+      "typeVersion": 1,
+      "position": [
+        1520,
+        680
+      ],
+      "id": "66b2ec19-9e1d-4ee0-9b8e-69d9c845e166",
+      "name": "Wikipedia1",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "9a9a245e-f1a1-4282-bb02-a81ffe629f0f",
+              "name": "chatInput",
+              "value": "={{ $json?.chatInput || $json.body.chatInput }}",
+              "type": "string"
+            },
+            {
+              "id": "b80831d8-c653-4203-8706-adedfdb98f77",
+              "name": "sessionId",
+              "value": "={{ $json?.sessionId || $json.body.sessionId}}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "4a3a2ec7-17d6-4a57-8855-535b042e8cdc",
+      "name": "Edit Fields1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        260,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "public": true,
+        "initialMessages": "Have questions about SAP? Ask away—or if you’re feeling adventurous, let’s dive into something new!",
+        "options": {
+          "subtitle": "I am your SAP Advisor. How can I assist you today?",
+          "title": "Hi !"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        40,
+        460
+      ],
+      "id": "a98d9f6b-5e8a-4ab5-9e94-fd951ca1e40c",
+      "name": "When chat message received",
+      "webhookId": "1e4d631e-60bd-44d2-b7b4-ef202212e1e3"
+    },
+    {
+      "parameters": {
+        "mode": "retrieve-as-tool",
+        "toolName": "documents",
+        "toolDescription": "Use RAG to look up information in the knowledgebase.",
+        "tableName": {
+          "__rl": true,
+          "value": "n8n_test",
+          "mode": "list",
+          "cachedResultName": "n8n_test"
+        },
+        "topK": 20,
+        "options": {
+          "queryName": "match5_documents"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+      "typeVersion": 1,
+      "position": [
+        840,
+        682.5
+      ],
+      "id": "241c73d8-9b60-487d-82e8-91b1b0631e62",
+      "name": "Supabase Vector Store1",
+      "credentials": {
+        "supabaseApi": {
+          "id": "g2fuxg9JpTFapfzz",
+          "name": "Supabase Nostar"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        720,
+        740
+      ],
+      "id": "3bdde883-9518-48a6-acd2-bedb9600d5be",
+      "name": "Embeddings OpenAI2",
+      "credentials": {
+        "openAiApi": {
+          "id": "jpK6UkKnpLM9LJPk",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "tableName": "n8n_chat"
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryPostgresChat",
+      "typeVersion": 1.3,
+      "position": [
+        600,
+        680
+      ],
+      "id": "713a6d58-382f-430f-b057-1132ee544359",
+      "name": "Postgres Chat Memory",
+      "credentials": {
+        "postgres": {
+          "id": "aU6gEnNNOwoNT9SD",
+          "name": "Postgres Nostar"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.chatInput }}",
+        "options": {
+          "systemMessage": "=Important: Give answer only from the input data collected using tools. Do not answer anything from your own knowledge. If you are not able find answer from input state \"not able to answer\".\n\nAlways use suparbase store (n8n_test table) to get required data from Supabase tool, if required do this multiple times.\n\nSupabase has text in German , so use german while querry data from Supabase.\n\nThe answer must be in english.\n\nIf you found \"not able to answer\" from chat memory don't accept that memory and do the whole workflow.\n\n2. Structure your output using these headers when applicable:\n   • Step-by-Step Guide\n   • Things To Consider\n   • Further Understanding\n3. Under \"Further Understanding,\" ask for related questions to give better answer and list each of them in its own numbered line:\n   1. …\n   2. …\n   3. … \n\n\n!important: Do not reply like this \"please consult technical documentation or SAP integration experts.\" as you are the SAP expert. Instead ask for further questions which may help you to answer.\n\nDo only answer questions related to SAP and Process, not any other topics.",
+          "returnIntermediateSteps": false
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        840,
+        460
+      ],
+      "id": "4ec112a8-f6e6-40e5-b0ca-e6fdef40fb5c",
+      "name": "Stackoverflow"
+    },
+    {
+      "parameters": {
+        "toolDescription": "Always try to use this tool. This tool will fetch related Questions with all answers and comments from Stackoverflow Forum.",
+        "url": "https://api.stackexchange.com/2.3/search/advanced",
+        "sendQuery": true,
+        "parametersQuery": {
+          "values": [
+            {
+              "name": "page",
+              "valueProvider": "fieldValue",
+              "value": "1"
+            },
+            {
+              "name": "order",
+              "valueProvider": "fieldValue",
+              "value": "desc"
+            },
+            {
+              "name": "sort",
+              "valueProvider": "fieldValue",
+              "value": "relevance"
+            },
+            {
+              "name": "q"
+            },
+            {
+              "name": "body",
+              "valueProvider": "fieldValue",
+              "value": "SAP"
+            },
+            {
+              "name": "site",
+              "valueProvider": "fieldValue",
+              "value": "stackoverflow"
+            },
+            {
+              "name": "filter",
+              "valueProvider": "fieldValue",
+              "value": "!DF0KTmZ2zrQIYh-E0pJuISRQ20KVADKxrUXzr9WP9NTzfonVI4y"
+            }
+          ]
+        },
+        "placeholderDefinitions": {
+          "values": [
+            {
+              "name": "q",
+              "description": "Question Search String",
+              "type": "string"
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+      "typeVersion": 1.1,
+      "position": [
+        1136,
+        680
+      ],
+      "id": "972c252f-3437-4952-8ed6-e731f6bcfc2b",
+      "name": "Stackoverflow Forum",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "toolDescription": "Web Search tool excluding SAP websites",
+        "method": "POST",
+        "url": "https://api.tavily.com/search",
+        "sendHeaders": true,
+        "parametersHeaders": {
+          "values": [
+            {
+              "name": "Authorization",
+              "valueProvider": "fieldValue",
+              "value": "Bearer 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"
+            },
+            {
+              "name": "Content-Type",
+              "valueProvider": "fieldValue",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"query\": \"{query}\",\n  \"topic\": \"general\",\n  \"search_depth\": \"advanced\",\n  \"max_results\": 20,\n  \"include_answer\": true,\n  \"include_raw_content\": false,\n  \"include_images\": false,\n  \"include_image_descriptions\": false,\n  \"include_domains\": [],\n  \"exclude_domains\": [\"https://help.sap.com/docs/\",\"https://community.sap.com/\"]\n}",
+        "placeholderDefinitions": {
+          "values": [
+            {
+              "name": "query",
+              "description": "Search Querry",
+              "type": "string"
+            }
+          ]
+        },
+        "optimizeResponse": true
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+      "typeVersion": 1.1,
+      "position": [
+        1260,
+        680
+      ],
+      "id": "cda078fd-ffb6-43f6-becb-dd57a7ca63b5",
+      "name": "Web Search 1",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "toolDescription": "Web Search tool only SAP websites",
+        "method": "POST",
+        "url": "https://api.tavily.com/search",
+        "sendHeaders": true,
+        "parametersHeaders": {
+          "values": [
+            {
+              "name": "Authorization",
+              "valueProvider": "fieldValue",
+              "value": "Bearer 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"
+            },
+            {
+              "name": "Content-Type",
+              "valueProvider": "fieldValue",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"query\": \"{query}\",\n  \"topic\": \"general\",\n  \"search_depth\": \"advanced\",\n  \"max_results\": 20,\n  \"include_answer\": true,\n  \"include_raw_content\": false,\n  \"include_images\": false,\n  \"include_image_descriptions\": false,\n  \"include_domains\": [\"https://help.sap.com/docs/\",\"https://community.sap.com/\"],\n  \"exclude_domains\": []\n}",
+        "placeholderDefinitions": {
+          "values": [
+            {
+              "name": "query",
+              "description": "Search Querry",
+              "type": "string"
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+      "typeVersion": 1.1,
+      "position": [
+        1380,
+        680
+      ],
+      "id": "7a0ce077-db99-4807-a55c-a335bd869e0f",
+      "name": "Web Search 2",
+      "disabled": true
+    }
+  ],
+  "origin": "n8n",
+  "pinData": {},
+  "repo": {
+    "owner": "AnushaPriya2",
+    "name": "n8n-workflow-backups"
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2025-05-20T14:06:27.000Z",
+  "versionId": "ee886d4f-0682-422e-86d5-8ef2ef4906f5"
+}
