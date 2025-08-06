@@ -1,0 +1,2599 @@
+{
+  "active": true,
+  "connections": {
+    "Microsoft SharePoint HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Split Out1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out1": {
+      "main": [
+        [
+          {
+            "node": "Compare Datasets",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Loop Over Items2": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Set File ID1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft SharePoint HTTP Request1": {
+      "main": [
+        [
+          {
+            "node": "Code1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set File ID1": {
+      "main": [
+        [
+          {
+            "node": "Insert Document Metadata",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code1": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Supabase",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Microsoft SharePoint HTTP Request",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Supabase2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Microsoft SharePoint HTTP Request6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Compare Datasets": {
+      "main": [
+        [
+          {
+            "node": "Supabase1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [],
+        [],
+        [
+          {
+            "node": "Loop Over Items2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "Microsoft SharePoint HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields2": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Convert to File": {
+      "main": [
+        [
+          {
+            "node": "S3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Convert to File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields3": {
+      "main": [
+        [
+          {
+            "node": "Split Out",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If1": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Edit Fields3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Loop Over Items2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Default Data Loader": {
+      "ai_document": [
+        [
+          {
+            "node": "Insert into Supabase Vectorstore",
+            "type": "ai_document",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings OpenAI1": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Insert into Supabase Vectorstore",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Character Text Splitter": {
+      "ai_textSplitter": [
+        [
+          {
+            "node": "Default Data Loader",
+            "type": "ai_textSplitter",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "Insert into Supabase Vectorstore",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft SharePoint HTTP Request2": {
+      "main": [
+        [
+          {
+            "node": "Split Out3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "S31",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "S31": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        []
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "If1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Insert Document Metadata": {
+      "main": [
+        [
+          {
+            "node": "Microsoft SharePoint HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase1": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Insert into Supabase Vectorstore": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code2": {
+      "main": [
+        []
+      ]
+    },
+    "Code3": {
+      "main": [
+        []
+      ]
+    },
+    "Edit Fields4": {
+      "main": [
+        [
+          {
+            "node": "Compare Datasets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out2": {
+      "main": [
+        [
+          {
+            "node": "Compare Datasets1",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Set File ID",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft SharePoint HTTP Request5": {
+      "main": [
+        [
+          {
+            "node": "Code4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set File ID": {
+      "main": [
+        [
+          {
+            "node": "Insert Document Metadata1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code4": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Compare Datasets1": {
+      "main": [
+        [
+          {
+            "node": "Supabase3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [],
+        [],
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase2": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait1": {
+      "main": [
+        [
+          {
+            "node": "Microsoft SharePoint HTTP Request5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase3": {
+      "main": [
+        []
+      ]
+    },
+    "Edit Fields5": {
+      "main": [
+        [
+          {
+            "node": "Code5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields5",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Default Data Loader1": {
+      "ai_document": [
+        [
+          {
+            "node": "Insert into Supabase Vectorstore1",
+            "type": "ai_document",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings OpenAI": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Insert into Supabase Vectorstore1",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Character Text Splitter1": {
+      "ai_textSplitter": [
+        [
+          {
+            "node": "Default Data Loader1",
+            "type": "ai_textSplitter",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Insert into Supabase Vectorstore1": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code5": {
+      "main": [
+        [
+          {
+            "node": "Insert into Supabase Vectorstore1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request1": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Wait1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Insert Document Metadata1": {
+      "main": [
+        [
+          {
+            "node": "Microsoft SharePoint HTTP Request5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields9": {
+      "main": [
+        [
+          {
+            "node": "Compare Datasets1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft SharePoint HTTP Request6": {
+      "main": [
+        [
+          {
+            "node": "Split Out2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Test workflow’": {
+      "main": [
+        [
+          {
+            "node": "Microsoft SharePoint HTTP Request2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Microsoft SharePoint HTTP Request9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out3": {
+      "main": [
+        [
+          {
+            "node": "Microsoft SharePoint HTTP Request8",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Loop Over Items1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items1": {
+      "main": [
+        [
+          {
+            "node": "Split Out4",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Microsoft SharePoint HTTP Request3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft SharePoint HTTP Request3": {
+      "main": [
+        [
+          {
+            "node": "Microsoft SharePoint HTTP Request10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out4": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields6": {
+      "main": [
+        [
+          {
+            "node": "Sort",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft SharePoint HTTP Request9": {
+      "main": [
+        [
+          {
+            "node": "Sort",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft SharePoint HTTP Request10": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-07-25T09:19:11.142Z",
+  "id": "nYH86TmMOmP7K58Z",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "Nosta SD Agent-Data Load Test",
+  "nodes": [
+    {
+      "parameters": {
+        "curlImport": "",
+        "httpVariantWarning": "",
+        "method": "GET",
+        "url": "https://nosta.sharepoint.com/sites/OPEX/_api/web/GetFolderByServerRelativeUrl('/sites/OPEX/Freigegebene%20Dokumente/OPEX/03_Externer_Zugriff/SAP%20Docs')/Files",
+        "": "",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "microsoftSharePointOAuth2Api",
+        "provideSslCertificates": false,
+        "sendQuery": false,
+        "sendHeaders": false,
+        "sendBody": false,
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": false,
+              "neverError": false,
+              "responseFormat": "autodetect"
+            }
+          }
+        },
+        "infoMessage": ""
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        0,
+        200
+      ],
+      "id": "ffb7e510-2c24-4e33-a88d-8093933af226",
+      "name": "Microsoft SharePoint HTTP Request",
+      "extendsCredential": "microsoftSharePointOAuth2Api",
+      "credentials": {
+        "microsoftSharePointOAuth2Api": {
+          "id": "9BGGzF75Nq8GkPkx",
+          "name": "Microsoft SharePoint account 4"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "value",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        180,
+        200
+      ],
+      "id": "8b9b1aea-6d95-4f30-8c41-107724a1399a",
+      "name": "Split Out1"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        800,
+        120
+      ],
+      "id": "94f2a7ed-9903-4957-a661-8e0cd7291a44",
+      "name": "Loop Over Items2"
+    },
+    {
+      "parameters": {
+        "curlImport": "",
+        "httpVariantWarning": "",
+        "method": "GET",
+        "url": "=https://nosta.sharepoint.com/sites/OPEX/_api/web/GetFileByServerRelativeUrl('{{ $('Microsoft SharePoint HTTP Request').item.json.value[0].ServerRelativeUrl }}')/$value",
+        "": "",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "microsoftSharePointOAuth2Api",
+        "provideSslCertificates": false,
+        "sendQuery": false,
+        "sendHeaders": false,
+        "sendBody": false,
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": false,
+              "neverError": false,
+              "responseFormat": "file",
+              "outputPropertyName": "data"
+            }
+          }
+        },
+        "infoMessage": ""
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1380,
+        140
+      ],
+      "id": "95bab80b-f416-4860-9719-ff5c12f74316",
+      "name": "Microsoft SharePoint HTTP Request1",
+      "extendsCredential": "microsoftSharePointOAuth2Api",
+      "credentials": {
+        "microsoftSharePointOAuth2Api": {
+          "id": "9BGGzF75Nq8GkPkx",
+          "name": "Microsoft SharePoint account 4"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "10646eae-ae46-4327-a4dc-9987c2d76173",
+              "name": "file_id",
+              "value": "={{ $json.UniqueId }}",
+              "type": "string"
+            },
+            {
+              "id": "f4536df5-d0b1-4392-bf17-b8137fb31a44",
+              "name": "file_type",
+              "value": "={{ $json.Name.split('.').pop() }}",
+              "type": "string"
+            },
+            {
+              "id": "77d782de-169d-4a46-8a8e-a3831c04d90f",
+              "name": "file_title",
+              "value": "={{ $json.Name }}",
+              "type": "string"
+            },
+            {
+              "id": "9bde4d7f-e4f3-4ebd-9338-dce1350f9eab",
+              "name": "file_url",
+              "value": "={{ $json.LinkingUri }}",
+              "type": "string"
+            },
+            {
+              "id": "fae402c8-c486-4b57-8d28-bf669db6b442",
+              "name": "last_modified_date",
+              "value": "={{ $json.TimeLastModified }}",
+              "type": "string"
+            },
+            {
+              "id": "866ce582-16e2-4869-ac77-13f248c187eb",
+              "name": "sharepoint_file_id",
+              "value": "={{ $json.UniqueId }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a8335829-0d4a-4c63-98b1-f9316a88ad05",
+      "name": "Set File ID1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1000,
+        140
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "$input.item.binary.data.fileName = 'myNewFilename.docx'\n\nreturn $input.item;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1580,
+        140
+      ],
+      "id": "8e4ea7d1-7c6c-41ae-ac7c-e36bcd5f62f4",
+      "name": "Code1"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {}
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -680,
+        560
+      ],
+      "id": "84b33a6f-a6ee-48b7-901e-eea1ca1e9042",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "mergeByFields": {
+          "values": [
+            {
+              "field1": "sharepoint_file_id",
+              "field2": "UniqueId"
+            },
+            {
+              "field1": "Last_modified_date",
+              "field2": "TimeLastModified"
+            }
+          ]
+        },
+        "fuzzyCompare": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.compareDatasets",
+      "typeVersion": 2.3,
+      "position": [
+        520,
+        60
+      ],
+      "id": "1a6b5fe5-b691-4529-8f16-668908099adf",
+      "name": "Compare Datasets"
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "tableId": "n8n_metadata",
+        "returnAll": true
+      },
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        -20,
+        -140
+      ],
+      "id": "b5d20db3-f992-459a-9fa3-a4b21e8fae8b",
+      "name": "Supabase",
+      "credentials": {
+        "supabaseApi": {
+          "id": "IOh0LUl8h2DbmqBS",
+          "name": "Supabase Ayan"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        1960,
+        300
+      ],
+      "id": "c089c04b-9097-4a01-afa5-9b8755cca3f0",
+      "name": "Wait",
+      "webhookId": "29a6451b-8a53-4598-b4fe-e11241eb51ab"
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "tableId": "n8n_metadata",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "id",
+              "condition": "eq",
+              "keyValue": "={{ $json.id }}"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        760,
+        -180
+      ],
+      "id": "48595e47-e9a7-40d3-9f32-7c9e9816f4fb",
+      "name": "Supabase1",
+      "credentials": {
+        "supabaseApi": {
+          "id": "IOh0LUl8h2DbmqBS",
+          "name": "Supabase Ayan"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "5132d92c-41da-4a55-ad79-0c329ca7e626",
+              "name": "Document name",
+              "value": "={{ $('HTTP Request').item.json.data[0].parseJson().source }}",
+              "type": "string"
+            },
+            {
+              "id": "c8160701-2be7-43c6-bcfa-295fbebe0e23",
+              "name": "Document data",
+              "value": "={{ $('HTTP Request').item.json.data[0].parseJson().blocks }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        2360,
+        120
+      ],
+      "id": "c833bcda-fcde-4428-8b2a-ffd4a97231fc",
+      "name": "Edit Fields2"
+    },
+    {
+      "parameters": {
+        "operation": "toBinary",
+        "sourceProperty": "data",
+        "options": {
+          "fileName": "={{ $('Insert Document Metadata').item.json.id +\"_\"+ $json.fileName}}"
+        }
+      },
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        2740,
+        -160
+      ],
+      "id": "00094f1c-fb77-40ed-ad31-fdcacf21b17b",
+      "name": "Convert to File"
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "={\n    \"data\": \"{{ $json.data }}\", \n    \"fileName\": \"{{ $json.filename }}\", \n    \"mimeType\": \"image/png\"\n}\n\n\n\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        2540,
+        -160
+      ],
+      "id": "c96de00f-2f8f-4f59-9acf-0ee555f64da6",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "7e6dcc66-0501-4739-a738-909878c4b23d",
+              "name": "images",
+              "value": "={{ $('HTTP Request').item.json.data[0].parseJson().images }}",
+              "type": "array"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        2240,
+        -160
+      ],
+      "id": "e2ddc66a-51a8-498b-8457-2ee0c1b17f88",
+      "name": "Edit Fields3"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "images",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        2380,
+        -160
+      ],
+      "id": "42580c40-e440-423d-8b9b-b7d6da96133e",
+      "name": "Split Out"
+    },
+    {
+      "parameters": {
+        "operation": "upload",
+        "bucketName": "images",
+        "fileName": "=",
+        "additionalFields": {
+          "parentFolderKey": "extracted_images"
+        }
+      },
+      "type": "n8n-nodes-base.s3",
+      "typeVersion": 1,
+      "position": [
+        2940,
+        -160
+      ],
+      "id": "bc4b21d5-06e6-4a15-aba6-d800ccd03250",
+      "name": "S3",
+      "credentials": {
+        "s3": {
+          "id": "R5bk1tDKWKBON865",
+          "name": "S3 account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "d15e917b-43d2-40b8-8b49-af467ff63961",
+              "leftValue": "={{ $json.data[0].parseJson().skipped }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notExists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        2020,
+        140
+      ],
+      "id": "3027c3f7-445e-4bf3-abed-944e71a1c8b8",
+      "name": "If1"
+    },
+    {
+      "parameters": {
+        "jsonMode": "expressionData",
+        "jsonData": "={{ $json.content.parseJson().pageContent.toJsonString() }}",
+        "options": {
+          "metadata": {
+            "metadataValues": [
+              {
+                "name": "source",
+                "value": "={{ $json.content.parseJson().metadata.source }}"
+              },
+              {
+                "name": "blobType",
+                "value": "application/jsonb"
+              },
+              {
+                "name": "loc",
+                "value": "={{ $json.content.parseJson().metadata.loc }}"
+              },
+              {
+                "name": "source_metadata_id",
+                "value": "={{ $json.content.parseJson().metadata.source_metadata_id }}"
+              }
+            ]
+          }
+        }
+      },
+      "id": "80ed2857-5e8e-417f-bea5-17bef3efaa0e",
+      "name": "Default Data Loader",
+      "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+      "typeVersion": 1,
+      "position": [
+        2920,
+        340
+      ]
+    },
+    {
+      "parameters": {
+        "model": "text-embedding-3-small",
+        "options": {}
+      },
+      "id": "bd27f0c1-f8f8-4937-8d4a-be928f38ecfc",
+      "name": "Embeddings OpenAI1",
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1,
+      "position": [
+        2740,
+        340
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "jpK6UkKnpLM9LJPk",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chunkSize": 10000000
+      },
+      "id": "1b913bfa-c29d-431d-9c26-5f72a45d9eb0",
+      "name": "Character Text Splitter",
+      "type": "@n8n/n8n-nodes-langchain.textSplitterCharacterTextSplitter",
+      "typeVersion": 1,
+      "position": [
+        2980,
+        580
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "insert",
+        "tableName": {
+          "__rl": true,
+          "value": "n8n_test",
+          "mode": "list",
+          "cachedResultName": "n8n_test"
+        },
+        "options": {
+          "queryName": "match5_documents"
+        }
+      },
+      "id": "1bca3cf2-fdc0-40ab-bdfb-5a4927658b8d",
+      "name": "Insert into Supabase Vectorstore",
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+      "typeVersion": 1,
+      "position": [
+        2840,
+        120
+      ],
+      "credentials": {
+        "supabaseApi": {
+          "id": "IOh0LUl8h2DbmqBS",
+          "name": "Supabase Ayan"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// 0. Parse the incoming Document data if it's still a string\nlet raw = $input.first().json['Document data'];\nlet arr = typeof raw === 'string' ? JSON.parse(raw) : raw;\nlet source = $input.first().json['Document name'];\nlet source_id = $('Insert Document Metadata').first().json.id\n\n// Helper: return character length of an array object\nfunction getObjLength(obj) {\n  console.log(obj, typeof(obj));\n  return (obj.content || '').length;\n}\n\nfunction getObjLengthofTextOnly(obj) {\n  if (obj.type === 'image_ocr') {\n    return 0;\n  }\n  return (obj.content || '').length;\n}\n\n// Split any single item whose content is > chunkSize into multiple items\nfunction splitOversizedItems(arr, chunkSize) {\n  const result = [];\n  for (const item of arr) {\n    const content = item.content || '';\n    if (content.length <= chunkSize) {\n      result.push(item);\n    } else {\n      // slice into parts of size chunkSize\n      for (let start = 0; start < content.length; start += chunkSize) {\n        const part = content.slice(start, start + chunkSize);\n        // carry over other fields (type, filename, etc.)\n        result.push({ ...item, content: part });\n      }\n    }\n  }\n  return result;\n}\n\n// Chunking function\nfunction chunkByCharLength(arr, source, chunkSize = 1000) {\n  // first, split oversized items\n  const flat = splitOversizedItems(arr, chunkSize);\n\n  const response = [];\n  let idx = 0;\n  let charPos = 0;\n\n  while (idx < flat.length) {\n    const a = [];\n    let sum = 0;\n    const from = charPos;\n\n    // collect until we hit chunkSize\n    while (idx < flat.length && sum < chunkSize) {\n      const item = flat[idx];\n      const len = getObjLength(item);\n      const text_len = getObjLengthofTextOnly(item);\n      a.push(item);\n      sum += len;\n      charPos += text_len;\n      idx++;\n    }\n\n    const to = charPos;\n    const metadata = {\n      source: source,\n      source_metadata_id: source_id,\n      loc: { Characters: { from, to } }\n    };\n\n    response.push({\n      content: JSON.stringify({\n        pageContent: a,\n        metadata\n      })\n    });\n  }\n\n  return response;\n}\n\n// 1. Run chunking\nconst chunks = chunkByCharLength(arr, source, 1000);\n\n// 2. Return in n8n‑compatible format\nreturn chunks.map(c => ({ json: c }));\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2580,
+        120
+      ],
+      "id": "99b20715-217d-47db-b03d-686364df72b0",
+      "name": "Code"
+    },
+    {
+      "parameters": {
+        "curlImport": "",
+        "httpVariantWarning": "",
+        "method": "GET",
+        "url": "https://nosta.sharepoint.com/sites/OPEX/_api/web/lists",
+        "": "",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "microsoftSharePointOAuth2Api",
+        "provideSslCertificates": false,
+        "sendQuery": false,
+        "sendHeaders": false,
+        "sendBody": false,
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": false,
+              "neverError": false,
+              "responseFormat": "autodetect"
+            }
+          }
+        },
+        "infoMessage": ""
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1600,
+        -1220
+      ],
+      "id": "2f373631-bb60-4523-9ee8-0e6ae5bb651c",
+      "name": "Microsoft SharePoint HTTP Request2",
+      "extendsCredential": "microsoftSharePointOAuth2Api",
+      "credentials": {
+        "microsoftSharePointOAuth2Api": {
+          "id": "9BGGzF75Nq8GkPkx",
+          "name": "Microsoft SharePoint account 4"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "68193487-bacc-4522-afdf-180c97c243e7",
+              "name": "storage url",
+              "value": "https://nsebtjqnfydjgjtigsiq.supabase.co/storage/v1/object/public/images/extracted_images/",
+              "type": "string"
+            },
+            {
+              "id": "91abb037-6fbd-48bf-a2f7-e87d1d7ecb3f",
+              "name": "file id",
+              "value": "={{ $('Compare Datasets').item.json.id }}",
+              "type": "string"
+            },
+            {
+              "id": "c0ca2edb-e256-4fdf-9b30-78e32751032f",
+              "name": "number",
+              "value": "={{ 1 + $runIndex }}",
+              "type": "number"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1000,
+        -180
+      ],
+      "id": "f4b61bcd-0afb-4332-a47c-d63d8cf4e36a",
+      "name": "Edit Fields1"
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "bucketName": "images",
+        "fileKey": "=extracted_images/{{ $json['file id'] }}_image{{ $json.number }}.png",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.s3",
+      "typeVersion": 1,
+      "position": [
+        1260,
+        -180
+      ],
+      "id": "e924b581-605b-4b7c-ba62-ba0ea41fde6e",
+      "name": "S31",
+      "credentials": {
+        "s3": {
+          "id": "R5bk1tDKWKBON865",
+          "name": "S3 account"
+        }
+      },
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://universal-file-to-text-extractor.vercel.app/extract",
+        "sendBody": true,
+        "contentType": "multipart-form-data",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "mode",
+              "value": "single"
+            },
+            {
+              "name": "output_type",
+              "value": "jsonl"
+            },
+            {
+              "parameterType": "formBinaryData",
+              "name": "files",
+              "inputDataFieldName": "data"
+            },
+            {
+              "name": "include_images",
+              "value": "true"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1740,
+        140
+      ],
+      "id": "94506d5b-56d2-4d24-a024-45e4ebad4b68",
+      "name": "HTTP Request",
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "operation": "upsert",
+        "schema": {
+          "__rl": true,
+          "mode": "list",
+          "value": "public"
+        },
+        "table": {
+          "__rl": true,
+          "value": "=n8n_metadata",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "id": "={{ $('Set File ID1').item.json.file_id }}",
+            "title": "={{ $('Set File ID1').item.json.file_title.replaceSpecialChars() }}",
+            "url": "={{ $('Set File ID1').item.json.file_url }}",
+            "sharepoint_file_id": "={{ $json.sharepoint_file_id }}",
+            "Last_modified_date": "={{ $json.last_modified_date }}"
+          },
+          "matchingColumns": [
+            "id"
+          ],
+          "schema": [
+            {
+              "id": "id",
+              "displayName": "id",
+              "required": true,
+              "defaultMatch": true,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "title",
+              "displayName": "title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false
+            },
+            {
+              "id": "url",
+              "displayName": "url",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false,
+              "removed": false
+            },
+            {
+              "id": "created_at",
+              "displayName": "created_at",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "dateTime",
+              "canBeUsedToMatch": false
+            },
+            {
+              "id": "schema",
+              "displayName": "schema",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false,
+              "removed": true
+            },
+            {
+              "id": "Last_modified_date",
+              "displayName": "Last_modified_date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "dateTime",
+              "canBeUsedToMatch": false,
+              "removed": false
+            },
+            {
+              "id": "sharepoint_file_id",
+              "displayName": "sharepoint_file_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.5,
+      "position": [
+        1180,
+        140
+      ],
+      "id": "cfcd596e-e1a4-457e-9f0a-58ebc1676f68",
+      "name": "Insert Document Metadata",
+      "executeOnce": true,
+      "credentials": {
+        "postgres": {
+          "id": "Qer75M1RfykhlGmw",
+          "name": "Postgres Ayan"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map(item => {\n  const rawDate = item.json.Last_modified_date;\n\n  if (rawDate) {\n    const date = new Date(rawDate);\n    item.json.Last_modified_date = date.toISOString(); // convert to UTC format\n  }\n\n  return item;\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        380,
+        -1660
+      ],
+      "id": "bde60fa7-26a5-4ea9-926b-ff0c4287f686",
+      "name": "Code2"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map(item => {\n  const rawDate = item.json.TimeLastModified;\n\n  if (rawDate) {\n    const date = new Date(rawDate);\n    item.json.TimeLastModified = date.toISOString(); // Normalizes to '...000Z'\n  }\n\n  return item;\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        640,
+        -1640
+      ],
+      "id": "dc8fadfc-d28a-448a-8a85-6a49a37a29f4",
+      "name": "Code3"
+    },
+    {
+      "parameters": {
+        "curlImport": "",
+        "httpVariantWarning": "",
+        "method": "GET",
+        "url": "=https://nosta.sharepoint.com/sites/OPEX/_api/web/lists/GetByTitle('{{ $json.Title }}')/items",
+        "": "",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "microsoftSharePointOAuth2Api",
+        "provideSslCertificates": false,
+        "sendQuery": false,
+        "sendHeaders": false,
+        "sendBody": false,
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": false,
+              "neverError": false,
+              "responseFormat": "autodetect"
+            }
+          }
+        },
+        "infoMessage": ""
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2420,
+        -1280
+      ],
+      "id": "2455bf40-235b-4e7e-920e-ab9b3488aa70",
+      "name": "Microsoft SharePoint HTTP Request3",
+      "extendsCredential": "microsoftSharePointOAuth2Api",
+      "credentials": {
+        "microsoftSharePointOAuth2Api": {
+          "id": "9BGGzF75Nq8GkPkx",
+          "name": "Microsoft SharePoint account 4"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "4244c0ca-eef1-4674-ae75-8c7f9f06018b",
+              "name": "Last_modified_date",
+              "value": "={{ $json[\"Last_modified_date\"] + \"Z\" }}",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        180,
+        -140
+      ],
+      "id": "97c8c3a6-2970-4da4-8d6a-44368fbe8254",
+      "name": "Edit Fields4"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "value",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        180,
+        1200
+      ],
+      "id": "b640e631-ca91-4e96-9fcb-a079edb1fd21",
+      "name": "Split Out2"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        780,
+        1220
+      ],
+      "id": "d265037c-b049-4884-b565-99afb76eda79",
+      "name": "Loop Over Items"
+    },
+    {
+      "parameters": {
+        "curlImport": "",
+        "httpVariantWarning": "",
+        "method": "GET",
+        "url": "=https://nosta.sharepoint.com/sites/OPEX/_api/web/GetFileByServerRelativeUrl('{{ $('Microsoft SharePoint HTTP Request6').item.json.value[0].ServerRelativeUrl }}')/$value",
+        "": "",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "microsoftSharePointOAuth2Api",
+        "provideSslCertificates": false,
+        "sendQuery": false,
+        "sendHeaders": false,
+        "sendBody": false,
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": false,
+              "neverError": false,
+              "responseFormat": "file",
+              "outputPropertyName": "data"
+            }
+          }
+        },
+        "infoMessage": ""
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1360,
+        1240
+      ],
+      "id": "687956d1-c7a5-4b35-9bde-7d17cfddce8f",
+      "name": "Microsoft SharePoint HTTP Request5",
+      "extendsCredential": "microsoftSharePointOAuth2Api",
+      "credentials": {
+        "microsoftSharePointOAuth2Api": {
+          "id": "9BGGzF75Nq8GkPkx",
+          "name": "Microsoft SharePoint account 4"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "10646eae-ae46-4327-a4dc-9987c2d76173",
+              "name": "file_id",
+              "value": "={{ $json.UniqueId }}",
+              "type": "string"
+            },
+            {
+              "id": "f4536df5-d0b1-4392-bf17-b8137fb31a44",
+              "name": "file_type",
+              "value": "={{ $json.Name.split('.').pop() }}",
+              "type": "string"
+            },
+            {
+              "id": "77d782de-169d-4a46-8a8e-a3831c04d90f",
+              "name": "file_title",
+              "value": "={{ $json.Name }}",
+              "type": "string"
+            },
+            {
+              "id": "9bde4d7f-e4f3-4ebd-9338-dce1350f9eab",
+              "name": "file_url",
+              "value": "={{ $json.LinkingUri }}",
+              "type": "string"
+            },
+            {
+              "id": "fae402c8-c486-4b57-8d28-bf669db6b442",
+              "name": "last_modified_date",
+              "value": "={{ $json.TimeLastModified }}",
+              "type": "string"
+            },
+            {
+              "id": "866ce582-16e2-4869-ac77-13f248c187eb",
+              "name": "sharepoint_file_id",
+              "value": "={{ $json.UniqueId }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "7c1b5765-8c77-4f7d-89bc-397917697651",
+      "name": "Set File ID",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        980,
+        1240
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "$input.item.binary.data.fileName = 'myNewFilename.docx'\n\nreturn $input.item;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1560,
+        1240
+      ],
+      "id": "46855f69-92fb-42f9-9e6b-fbcd4453c073",
+      "name": "Code4"
+    },
+    {
+      "parameters": {
+        "mergeByFields": {
+          "values": [
+            {
+              "field1": "sharepoint_file_id",
+              "field2": "UniqueId"
+            },
+            {
+              "field1": "Last_modified_date",
+              "field2": "TimeLastModified"
+            }
+          ]
+        },
+        "fuzzyCompare": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.compareDatasets",
+      "typeVersion": 2.3,
+      "position": [
+        460,
+        1160
+      ],
+      "id": "5d55c54e-b976-4c6c-a16d-4b3daa54aed6",
+      "name": "Compare Datasets1"
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "tableId": "knowledge_metadata",
+        "returnAll": true
+      },
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        -160,
+        940
+      ],
+      "id": "74bdcde9-a23c-494c-815f-bf142cfdf6f9",
+      "name": "Supabase2",
+      "credentials": {
+        "supabaseApi": {
+          "id": "IOh0LUl8h2DbmqBS",
+          "name": "Supabase Ayan"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        1940,
+        1400
+      ],
+      "id": "83f50c5e-2bc1-4d4d-a2ca-a439e04741d3",
+      "name": "Wait1",
+      "webhookId": "29a6451b-8a53-4598-b4fe-e11241eb51ab"
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "tableId": "knowledge_metadata",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "id",
+              "condition": "eq",
+              "keyValue": "={{ $json.id }}"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        720,
+        920
+      ],
+      "id": "9e1c4a12-758f-48f6-bed4-19faad846dcd",
+      "name": "Supabase3",
+      "credentials": {
+        "supabaseApi": {
+          "id": "IOh0LUl8h2DbmqBS",
+          "name": "Supabase Ayan"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "5132d92c-41da-4a55-ad79-0c329ca7e626",
+              "name": "Document name",
+              "value": "={{ $('HTTP Request1').item.json.data[0].parseJson().source }}",
+              "type": "string"
+            },
+            {
+              "id": "c8160701-2be7-43c6-bcfa-295fbebe0e23",
+              "name": "Document data",
+              "value": "={{ $('HTTP Request1').item.json.data[0].parseJson().blocks }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        2220,
+        1220
+      ],
+      "id": "7e71d912-6110-4042-a0f5-62a4d1ce7502",
+      "name": "Edit Fields5"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "d15e917b-43d2-40b8-8b49-af467ff63961",
+              "leftValue": "={{ $json.data[0].parseJson().skipped }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notExists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        2000,
+        1240
+      ],
+      "id": "e958e6c8-b1a3-4dcb-8ab6-70ec41580bb1",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "jsonMode": "expressionData",
+        "jsonData": "={{ $json.content.parseJson().pageContent.toJsonString() }}",
+        "options": {
+          "metadata": {
+            "metadataValues": [
+              {
+                "name": "source",
+                "value": "={{ $json.content.parseJson().metadata.source }}"
+              },
+              {
+                "name": "blobType",
+                "value": "application/jsonb"
+              },
+              {
+                "name": "loc",
+                "value": "={{ $json.content.parseJson().metadata.loc }}"
+              },
+              {
+                "name": "source_metadata_id",
+                "value": "={{ $json.content.parseJson().metadata.source_metadata_id }}"
+              }
+            ]
+          }
+        }
+      },
+      "id": "bae2275f-47f1-41d6-8ec8-bbba76900830",
+      "name": "Default Data Loader1",
+      "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+      "typeVersion": 1,
+      "position": [
+        2900,
+        1440
+      ]
+    },
+    {
+      "parameters": {
+        "model": "text-embedding-3-small",
+        "options": {}
+      },
+      "id": "16b0a9b3-c750-4642-b884-beb88509c541",
+      "name": "Embeddings OpenAI",
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1,
+      "position": [
+        2720,
+        1440
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "jpK6UkKnpLM9LJPk",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chunkSize": 10000000
+      },
+      "id": "e453f8da-c898-42f1-8261-2ca365b8eb23",
+      "name": "Character Text Splitter1",
+      "type": "@n8n/n8n-nodes-langchain.textSplitterCharacterTextSplitter",
+      "typeVersion": 1,
+      "position": [
+        2960,
+        1680
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "insert",
+        "tableName": {
+          "__rl": true,
+          "value": "knowledge_test",
+          "mode": "list",
+          "cachedResultName": "knowledge_test"
+        },
+        "options": {
+          "queryName": "match7_documents"
+        }
+      },
+      "id": "da4d384e-8e30-471b-b4e4-f18f0861c26a",
+      "name": "Insert into Supabase Vectorstore1",
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+      "typeVersion": 1,
+      "position": [
+        2820,
+        1220
+      ],
+      "credentials": {
+        "supabaseApi": {
+          "id": "IOh0LUl8h2DbmqBS",
+          "name": "Supabase Ayan"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// 0. Parse the incoming Document data if it's still a string\nlet raw = $input.first().json['Document data'];\nlet arr = typeof raw === 'string' ? JSON.parse(raw) : raw;\nlet source = $input.first().json['Document name'];\nlet source_id = $('Insert Document Metadata1').first().json.id\n\n// Helper: return character length of an array object\nfunction getObjLength(obj) {\n  console.log(obj, typeof(obj));\n  return (obj.content || '').length;\n}\n\nfunction getObjLengthofTextOnly(obj) {\n  if (obj.type === 'image_ocr') {\n    return 0;\n  }\n  return (obj.content || '').length;\n}\n\n// Split any single item whose content is > chunkSize into multiple items\nfunction splitOversizedItems(arr, chunkSize) {\n  const result = [];\n  for (const item of arr) {\n    const content = item.content || '';\n    if (content.length <= chunkSize) {\n      result.push(item);\n    } else {\n      // slice into parts of size chunkSize\n      for (let start = 0; start < content.length; start += chunkSize) {\n        const part = content.slice(start, start + chunkSize);\n        // carry over other fields (type, filename, etc.)\n        result.push({ ...item, content: part });\n      }\n    }\n  }\n  return result;\n}\n\n// Chunking function\nfunction chunkByCharLength(arr, source, chunkSize = 1000) {\n  // first, split oversized items\n  const flat = splitOversizedItems(arr, chunkSize);\n\n  const response = [];\n  let idx = 0;\n  let charPos = 0;\n\n  while (idx < flat.length) {\n    const a = [];\n    let sum = 0;\n    const from = charPos;\n\n    // collect until we hit chunkSize\n    while (idx < flat.length && sum < chunkSize) {\n      const item = flat[idx];\n      const len = getObjLength(item);\n      const text_len = getObjLengthofTextOnly(item);\n      a.push(item);\n      sum += len;\n      charPos += text_len;\n      idx++;\n    }\n\n    const to = charPos;\n    const metadata = {\n      source: source,\n      source_metadata_id: source_id,\n      loc: { Characters: { from, to } }\n    };\n\n    response.push({\n      content: JSON.stringify({\n        pageContent: a,\n        metadata\n      })\n    });\n  }\n\n  return response;\n}\n\n// 1. Run chunking\nconst chunks = chunkByCharLength(arr, source, 1000);\n\n// 2. Return in n8n‑compatible format\nreturn chunks.map(c => ({ json: c }));\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2500,
+        1220
+      ],
+      "id": "49d537cd-2320-413b-89bb-315c44ada70a",
+      "name": "Code5"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://universal-file-to-text-extractor.vercel.app/extract",
+        "sendBody": true,
+        "contentType": "multipart-form-data",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "mode",
+              "value": "single"
+            },
+            {
+              "name": "output_type",
+              "value": "jsonl"
+            },
+            {
+              "parameterType": "formBinaryData",
+              "name": "files",
+              "inputDataFieldName": "data"
+            },
+            {
+              "name": "include_images",
+              "value": "true"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1720,
+        1240
+      ],
+      "id": "b20f45f3-a4de-4234-835a-6bb78f0e4fe3",
+      "name": "HTTP Request1",
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "operation": "upsert",
+        "schema": {
+          "__rl": true,
+          "mode": "list",
+          "value": "public"
+        },
+        "table": {
+          "__rl": true,
+          "value": "=knowledge_metadata",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "id": "={{ $('Set File ID').item.json.file_id }}",
+            "title": "={{ $('Set File ID').item.json.file_title.replaceSpecialChars() }}",
+            "url": "={{ $('Set File ID').item.json.file_url }}",
+            "sharepoint_file_id": "={{ $json.sharepoint_file_id }}",
+            "Last_modified_date": "={{ $json.last_modified_date }}"
+          },
+          "matchingColumns": [
+            "id"
+          ],
+          "schema": [
+            {
+              "id": "id",
+              "displayName": "id",
+              "required": true,
+              "defaultMatch": true,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "title",
+              "displayName": "title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false
+            },
+            {
+              "id": "url",
+              "displayName": "url",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false,
+              "removed": false
+            },
+            {
+              "id": "created_at",
+              "displayName": "created_at",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "dateTime",
+              "canBeUsedToMatch": false
+            },
+            {
+              "id": "schema",
+              "displayName": "schema",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false,
+              "removed": true
+            },
+            {
+              "id": "Last_modified_date",
+              "displayName": "Last_modified_date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "dateTime",
+              "canBeUsedToMatch": false,
+              "removed": false
+            },
+            {
+              "id": "sharepoint_file_id",
+              "displayName": "sharepoint_file_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.5,
+      "position": [
+        1160,
+        1240
+      ],
+      "id": "5b224539-2353-4c5c-b67a-4a6084fb3794",
+      "name": "Insert Document Metadata1",
+      "executeOnce": true,
+      "credentials": {
+        "postgres": {
+          "id": "Qer75M1RfykhlGmw",
+          "name": "Postgres Ayan"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "4244c0ca-eef1-4674-ae75-8c7f9f06018b",
+              "name": "Last_modified_date",
+              "value": "={{ $json[\"Last_modified_date\"] + \"Z\" }}",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        120,
+        940
+      ],
+      "id": "5188e6e9-265f-453d-b39b-6828c2c8ab3a",
+      "name": "Edit Fields9"
+    },
+    {
+      "parameters": {
+        "curlImport": "",
+        "httpVariantWarning": "",
+        "method": "GET",
+        "url": "https://nosta.sharepoint.com/sites/OPEX/_api/web/GetFolderByServerRelativeUrl('/sites/OPEX/Freigegebene%20Dokumente/OPEX/03_Externer_Zugriff/Knowledge%20OPEX')/Files",
+        "": "",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "microsoftSharePointOAuth2Api",
+        "provideSslCertificates": false,
+        "sendQuery": false,
+        "sendHeaders": false,
+        "sendBody": false,
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": false,
+              "neverError": false,
+              "responseFormat": "autodetect"
+            }
+          }
+        },
+        "infoMessage": ""
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -140,
+        1200
+      ],
+      "id": "6740bdad-a0fb-47cc-9217-8f07d3c90a7c",
+      "name": "Microsoft SharePoint HTTP Request6",
+      "extendsCredential": "microsoftSharePointOAuth2Api",
+      "credentials": {
+        "microsoftSharePointOAuth2Api": {
+          "id": "9BGGzF75Nq8GkPkx",
+          "name": "Microsoft SharePoint account 4"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "-- Create a table to store your documents\ncreate table knowledge_test (\n  id bigserial primary key,\n  content text, -- corresponds to Document.pageContent\n  metadata jsonb, -- corresponds to Document.metadata\n  embedding vector(1536) -- 1536 works for OpenAI embeddings, change if needed\n);\n\n-- Create a function to search for documents\ncreate function match7_documents (\n  query_embedding vector(1536),\n  match_count int default null,\n  filter jsonb DEFAULT '{}'\n) returns table (\n  id bigint,\n  content text,\n  metadata jsonb,\n  similarity float\n)\nlanguage plpgsql\nas $$\n#variable_conflict use_column\nbegin\n  return query\n  select\n    id,\n    content,\n    metadata,\n    1 - (knowledge_test.embedding <=> query_embedding) as similarity\n  from knowledge_test\n  where metadata @> filter\n  order by knowledge_test.embedding <=> query_embedding\n  limit match_count;\nend;\n$$;",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.5,
+      "position": [
+        1560,
+        -1700
+      ],
+      "id": "f995cf44-4ff3-4ede-95c2-8c5fc73f11d2",
+      "name": "Create Documents Table and Match Function",
+      "credentials": {
+        "postgres": {
+          "id": "Qer75M1RfykhlGmw",
+          "name": "Postgres Ayan"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "curlImport": "",
+        "httpVariantWarning": "",
+        "method": "GET",
+        "url": "https://nosta.sharepoint.com/_api/v2.1/sites?$select=displayName,webUrl,id",
+        "": "",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "microsoftSharePointOAuth2Api",
+        "provideSslCertificates": false,
+        "sendQuery": false,
+        "sendHeaders": false,
+        "sendBody": false,
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": false,
+              "neverError": false,
+              "responseFormat": "autodetect"
+            }
+          }
+        },
+        "infoMessage": ""
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1000,
+        -1420
+      ],
+      "id": "be980bb2-fcb7-4904-8e70-415f2a87c8e1",
+      "name": "Microsoft SharePoint HTTP Request4",
+      "extendsCredential": "microsoftSharePointOAuth2Api",
+      "credentials": {
+        "microsoftSharePointOAuth2Api": {
+          "id": "9BGGzF75Nq8GkPkx",
+          "name": "Microsoft SharePoint account 4"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "curlImport": "",
+        "httpVariantWarning": "",
+        "method": "GET",
+        "url": "https://nosta.sharepoint.com/sites/OPEX/_api/web/lists(guid'd1d8beb8-9b53-4c8f-9361-8651be56b326')/items?$select=ID,FileLeafRef,File/ServerRelativeUrl&$expand=File       ",
+        "": "",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "microsoftSharePointOAuth2Api",
+        "provideSslCertificates": false,
+        "sendQuery": false,
+        "sendHeaders": false,
+        "sendBody": false,
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": false,
+              "neverError": false,
+              "responseFormat": "autodetect"
+            }
+          }
+        },
+        "infoMessage": ""
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1280,
+        -1420
+      ],
+      "id": "a51432d4-ae25-4037-b454-5efcbbeeba02",
+      "name": "Microsoft SharePoint HTTP Request7",
+      "extendsCredential": "microsoftSharePointOAuth2Api",
+      "credentials": {
+        "microsoftSharePointOAuth2Api": {
+          "id": "9BGGzF75Nq8GkPkx",
+          "name": "Microsoft SharePoint account 4"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "value",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        1840,
+        -1220
+      ],
+      "id": "b3296173-9f05-47d5-a2d1-ad3bdd1f7361",
+      "name": "Split Out3"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        1240,
+        -1200
+      ],
+      "id": "13113b27-bf9e-46b7-a854-00d642e1365b",
+      "name": "When clicking ‘Test workflow’"
+    },
+    {
+      "parameters": {
+        "curlImport": "",
+        "httpVariantWarning": "",
+        "method": "GET",
+        "url": "=https://nosta.sharepoint.com/sites/OPEX/_api/web/lists/GetByTitle('{{ $json.Title }}')/getitems",
+        "": "",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "microsoftSharePointOAuth2Api",
+        "provideSslCertificates": false,
+        "sendQuery": false,
+        "sendHeaders": false,
+        "sendBody": false,
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": false,
+              "neverError": false,
+              "responseFormat": "autodetect"
+            }
+          }
+        },
+        "infoMessage": ""
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2360,
+        -1060
+      ],
+      "id": "ac383ac8-d960-4ac5-8b27-45b944b57e12",
+      "name": "Microsoft SharePoint HTTP Request8",
+      "extendsCredential": "microsoftSharePointOAuth2Api",
+      "credentials": {
+        "microsoftSharePointOAuth2Api": {
+          "id": "9BGGzF75Nq8GkPkx",
+          "name": "Microsoft SharePoint account 4"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        2180,
+        -1340
+      ],
+      "id": "b20bf34f-7b4d-4eac-b1c6-8e84342e6746",
+      "name": "Loop Over Items1"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "63857546-133e-4a3c-bfa8-05654e7ce35f",
+              "name": "title",
+              "value": "={{ $json.Title }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        2640,
+        -1440
+      ],
+      "id": "237af5b1-98d3-41ee-a463-8a01b407c38b",
+      "name": "Edit Fields6"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "value",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        2400,
+        -1440
+      ],
+      "id": "3995c324-c2ab-4a16-972f-b44b22580e58",
+      "name": "Split Out4"
+    },
+    {
+      "parameters": {
+        "sortFieldsUi": {
+          "sortField": [
+            {
+              "fieldName": "title"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.sort",
+      "typeVersion": 1,
+      "position": [
+        2900,
+        -880
+      ],
+      "id": "bec9fe79-54f0-4136-a1aa-17b573b5d8fc",
+      "name": "Sort"
+    },
+    {
+      "parameters": {
+        "curlImport": "",
+        "httpVariantWarning": "",
+        "method": "GET",
+        "url": "https://nosta.sharepoint.com/sites/OPEX/_api/web",
+        "": "",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "microsoftSharePointOAuth2Api",
+        "provideSslCertificates": false,
+        "sendQuery": false,
+        "sendHeaders": false,
+        "sendBody": false,
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": false,
+              "neverError": false,
+              "responseFormat": "autodetect"
+            }
+          }
+        },
+        "infoMessage": ""
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1640,
+        -1000
+      ],
+      "id": "e03d4ec0-3563-4c5d-81cf-03ce9e9148b0",
+      "name": "Microsoft SharePoint HTTP Request9",
+      "extendsCredential": "microsoftSharePointOAuth2Api",
+      "credentials": {
+        "microsoftSharePointOAuth2Api": {
+          "id": "9BGGzF75Nq8GkPkx",
+          "name": "Microsoft SharePoint account 4"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "curlImport": "",
+        "httpVariantWarning": "",
+        "method": "GET",
+        "url": "=https://nosta.sharepoint.com/sites/OPEX/_api/web/lists('{{ $('Loop Over Items1').item.json.Id }}')",
+        "": "",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "microsoftSharePointOAuth2Api",
+        "provideSslCertificates": false,
+        "sendQuery": false,
+        "sendHeaders": false,
+        "sendBody": false,
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": false,
+              "neverError": false,
+              "responseFormat": "autodetect"
+            }
+          }
+        },
+        "infoMessage": ""
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2600,
+        -1260
+      ],
+      "id": "849697cf-6c6c-4a5e-9fef-d1e55e6ef7ff",
+      "name": "Microsoft SharePoint HTTP Request10",
+      "extendsCredential": "microsoftSharePointOAuth2Api",
+      "credentials": {
+        "microsoftSharePointOAuth2Api": {
+          "id": "9BGGzF75Nq8GkPkx",
+          "name": "Microsoft SharePoint account 4"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "curlImport": "",
+        "httpVariantWarning": "",
+        "method": "GET",
+        "url": "https://nosta.sharepoint.com/sites/OPEX/_api/web/lists?$select=Title,Id,RootFolder",
+        "": "",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "microsoftSharePointOAuth2Api",
+        "provideSslCertificates": false,
+        "sendQuery": false,
+        "sendHeaders": false,
+        "sendBody": false,
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": false,
+              "neverError": false,
+              "responseFormat": "autodetect"
+            }
+          }
+        },
+        "infoMessage": ""
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -20,
+        -1280
+      ],
+      "id": "a351b2a2-4105-43b6-8694-a3ceca1459bf",
+      "name": "Microsoft SharePoint HTTP Request11",
+      "extendsCredential": "microsoftSharePointOAuth2Api",
+      "credentials": {
+        "microsoftSharePointOAuth2Api": {
+          "id": "9BGGzF75Nq8GkPkx",
+          "name": "Microsoft SharePoint account 4"
+        }
+      }
+    }
+  ],
+  "origin": "n8n",
+  "pinData": {},
+  "repo": {
+    "owner": "AnushaPriya2",
+    "name": "n8n-workflow-backups"
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": {
+    "node:Schedule Trigger": {
+      "recurrenceRules": []
+    }
+  },
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2025-08-03T19:59:20.000Z",
+  "versionId": "ca1c68c1-e327-4824-a6f1-815200eec9ea"
+}
