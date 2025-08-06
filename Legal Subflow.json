@@ -1,0 +1,235 @@
+{
+  "active": false,
+  "connections": {
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase Get": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase Delete": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When Executed by Another Workflow": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-07-11T07:54:50.608Z",
+  "id": "7r4wLfjPALE8M9vJ",
+  "meta": null,
+  "name": "Legal Subflow",
+  "nodes": [
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.query }}",
+        "options": {
+          "systemMessage": "=You are a Legal AI Agent working for the company \"nosta\", a German manufacturer of precision-milled parts. Your job is to carefully analyze uploaded legal documents (e.g., contracts, NDAs, quality agreements) and compare them against the internal legal and business requirements of nosta.\n\nAlways follow the instructions below when answering questions or reviewing a document:\n\n---\n\n📌 Step 1: Recognize the contract type and parties\n- Identify the contract type: Framework Agreement, Individual Agreement, NDA, Quality Agreement, Price Agreement, Tooling Agreement, etc.\n- Note all involved parties: customer, supplier, subsidiaries.\n- Record contract term and cancellation rules.\n- Note annexes, appendices, technical references.\n\n---\n\n📌 Step 2: Perform a general legal compliance check\n- Jurisdiction: Prefer \"Amtsgericht Dillingen\" and \"Handelsgericht Augsburg\". If foreign, Swiss law may be accepted.\n- Confidentiality clauses: Must meet GHV Level 1-3. Verify sharing restrictions.\n- Export controls and sanctions: Must comply with EU/EAR/US regulations.\n- Compliance clauses (CSR, anti-corruption, sustainability): Required.\n- Data protection: Must comply with GDPR.\n\n---\n\n📌 Step 3: Check nosta-specific clauses\n- Contract must support project-specific flexibility.\n- No automatic obligation to meet uncertain or harmful customer demands.\n- Material approvals and forecast freeze periods must be specified.\n- Clarify over/under delivery clauses — recommendation: delete.\n- Process changes must be coordinated with nosta's internal processes (production & purchasing).\n- Flexibility requirements must not bypass nosta's process limits.\n- Customer must inspect goods on delivery and report issues immediately.\n- General legal warranties under BGB must be reviewed or rejected.\n- Right to choose how to resolve defects (repair/replace) lies with nosta.\n- Insurance coverage and product recall costs must be defined.\n- Spare part pricing rules must be included.\n- For audits, customer access must be clearly restricted or defined.\n\n---\n\n📌 Step 4: Rate the Risk\nFor each clause or question, return a traffic-light style risk level:\n- 🔴 Critical = Unclear, harmful to nosta, or not standard\n- 🟡 Medium = Acceptable with negotiation\n- 🟢 Green = Compliant and safe\n\nAlso, suggest how to improve any risky clause.\n\n---\n\n📌 Step 5: Answer User Questions\nWhen the user asks a question (e.g., “Is this liability clause okay?”), always:\n- Find the matching section in the uploaded document.\n- Compare it with the internal policy above.\n- Respond with risk level, reasoning, and suggestion.\n\n---\n\nAlways answer in clear, structured, and professional tone. Avoid making assumptions not backed by document content or nosta’s policies."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.9,
+      "position": [
+        -40,
+        -20
+      ],
+      "id": "cd7a8405-2938-4854-860a-02dda2ca20e4",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4o-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        -80,
+        200
+      ],
+      "id": "bc9d5910-45f5-48d0-961b-306892628b21",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "jpK6UkKnpLM9LJPk",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "tableId": "temp_table",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "session_id",
+              "condition": "eq",
+              "keyValue": "={{ $json.sessionId }}"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.supabaseTool",
+      "typeVersion": 1,
+      "position": [
+        240,
+        200
+      ],
+      "id": "0d2ba2e2-49fa-4e02-b952-83b8adb2d89c",
+      "name": "Supabase Get",
+      "credentials": {
+        "supabaseApi": {
+          "id": "IOh0LUl8h2DbmqBS",
+          "name": "Supabase Ayan"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "tableId": "temp_table",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "session_id",
+              "condition": "eq",
+              "keyValue": "={{ $json.sessionId }}"
+            },
+            {
+              "keyName": "file_name",
+              "condition": "eq",
+              "keyValue": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('conditions1_Field_Value', `Provide the file name to delete`, 'string') }}"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.supabaseTool",
+      "typeVersion": 1,
+      "position": [
+        400,
+        200
+      ],
+      "id": "7ea57e41-56aa-4920-a285-d31069c69cc0",
+      "name": "Supabase Delete",
+      "credentials": {
+        "supabaseApi": {
+          "id": "IOh0LUl8h2DbmqBS",
+          "name": "Supabase Ayan"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "workflowInputs": {
+          "values": [
+            {
+              "name": "query"
+            },
+            {
+              "name": "sessionId"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -360,
+        -20
+      ],
+      "id": "73d46814-ba06-4361-a4cb-d1d02a5012a8",
+      "name": "When Executed by Another Workflow"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "b80831d8-c653-4203-8706-adedfdb98f77",
+              "name": "query",
+              "value": "={{ $json.query }}",
+              "type": "string"
+            },
+            {
+              "id": "4b291433-cedb-4631-9128-621c6744e51d",
+              "name": "sessionId",
+              "value": "={{ $json.sessionId }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "4bc1b60c-04dd-4b56-9468-0b363fa01388",
+      "name": "Edit Fields1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -200,
+        -20
+      ]
+    }
+  ],
+  "origin": "n8n",
+  "pinData": {},
+  "repo": {
+    "owner": "AnushaPriya2",
+    "name": "n8n-workflow-backups"
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-08-05T12:31:53.000Z",
+  "versionId": "20af9e25-747d-4561-b821-7b7064d0b282"
+}
