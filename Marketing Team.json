@@ -1,0 +1,4092 @@
+{
+  "active": false,
+  "connections": {
+    "GPT 4.1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Marketing Team Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create Image": {
+      "ai_tool": [
+        [
+          {
+            "node": "Marketing Team Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "Marketing Team Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Image": {
+      "ai_tool": [
+        [
+          {
+            "node": "Marketing Team Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Search Images": {
+      "ai_tool": [
+        [
+          {
+            "node": "Marketing Team Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Blog Post": {
+      "ai_tool": [
+        [
+          {
+            "node": "Marketing Team Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "LinkedIn Post": {
+      "ai_tool": [
+        [
+          {
+            "node": "Marketing Team Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Download Voice File": {
+      "main": [
+        [
+          {
+            "node": "Transcribe Audio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "Download Voice File",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Set 'Text'",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Transcribe Audio": {
+      "main": [
+        [
+          {
+            "node": "Marketing Team Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set 'Text'": {
+      "main": [
+        [
+          {
+            "node": "Marketing Team Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Video": {
+      "ai_tool": [
+        [
+          {
+            "node": "Marketing Team Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Marketing Team Agent": {
+      "main": [
+        [
+          {
+            "node": "Telegram",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Think": {
+      "ai_tool": [
+        [
+          {
+            "node": "Marketing Team Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tavily": {
+      "ai_tool": [
+        [
+          {
+            "node": "Blog Post Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "GPT_4.1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Blog Post Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "Image Prompt Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Image Prompt Agent": {
+      "main": [
+        [
+          {
+            "node": "Generate Image",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate Image": {
+      "main": [
+        [
+          {
+            "node": "Convert to Binary",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When Executed by Another Workflow": {
+      "main": [
+        [
+          {
+            "node": "Blog Post Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Blog Post Agent": {
+      "main": [
+        [
+          {
+            "node": "Image Prompt Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Convert to Binary": {
+      "main": [
+        [
+          {
+            "node": "Send Photo",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Upload",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Image & Title": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Image Prompt Agent",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Photo": {
+      "main": [
+        [
+          {
+            "node": "Send Blog",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Upload": {
+      "main": [
+        [
+          {
+            "node": "Image Log",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Image Prompt": {
+      "main": [
+        [
+          {
+            "node": "Generate Image1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Convert to File": {
+      "main": [
+        [
+          {
+            "node": "Google Drive",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Send Photo1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Drive": {
+      "main": [
+        [
+          {
+            "node": "Image Log1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate Image1": {
+      "main": [
+        [
+          {
+            "node": "Convert to File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "GPT 4.": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Image Prompt",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Upload Image": {
+      "main": [
+        [
+          {
+            "node": "Image Log2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Download": {
+      "main": [
+        [
+          {
+            "node": "Edit Image1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Image1": {
+      "main": [
+        [
+          {
+            "node": "Convert to File1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Convert to File1": {
+      "main": [
+        [
+          {
+            "node": "Send Photo2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Upload Image",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Images": {
+      "main": [
+        [
+          {
+            "node": "Generate Videos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sound Agent": {
+      "main": [
+        [
+          {
+            "node": "Generate Audio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate Audio": {
+      "main": [
+        [
+          {
+            "node": "Upload to Drive",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Upload to Drive": {
+      "main": [
+        [
+          {
+            "node": "Share File",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Split Out Parts",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Render Video": {
+      "main": [
+        [
+          {
+            "node": "25 Seconds",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "25 Seconds": {
+      "main": [
+        [
+          {
+            "node": "Download Video",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Download Video": {
+      "main": [
+        [
+          {
+            "node": "Send Video",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Videos": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Sound Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate Videos": {
+      "main": [
+        [
+          {
+            "node": "90_Seconds",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out Parts": {
+      "main": [
+        [
+          {
+            "node": "Render Video",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Share File": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "GPT 4.1 mini": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Image Prompt Agent1",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "4 Parts": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Image Prompt Agent1",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out": {
+      "main": [
+        [
+          {
+            "node": "Generate Image2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "GPT-4.1 mini": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Sound Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Video": {
+      "main": [
+        [
+          {
+            "node": "Title",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Title": {
+      "main": [
+        [
+          {
+            "node": "Log Video",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "90 Seconds": {
+      "main": [
+        [
+          {
+            "node": "Get Images",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "90_Seconds": {
+      "main": [
+        [
+          {
+            "node": "Get Videos",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate Image2": {
+      "main": [
+        [
+          {
+            "node": "90 Seconds",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Image Prompt Agent1": {
+      "main": [
+        [
+          {
+            "node": "Split Out",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tavily1": {
+      "ai_tool": [
+        [
+          {
+            "node": "Blog Post Agent1",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "GPT_4.": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Blog Post Agent1",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "Image Prompt Agent2",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Image Prompt Agent2": {
+      "main": [
+        [
+          {
+            "node": "Generate Image3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Generate Image3": {
+      "main": [
+        [
+          {
+            "node": "Convert to Binary1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Convert to Binary1": {
+      "main": [
+        [
+          {
+            "node": "Send Photo3",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Upload1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Blog Post Agent1": {
+      "main": [
+        [
+          {
+            "node": "Image Prompt Agent2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Image & Title1": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Image Prompt Agent2",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send Photo3": {
+      "main": [
+        [
+          {
+            "node": "Send Blog1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Upload1": {
+      "main": [
+        [
+          {
+            "node": "Image Log3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Image Database": {
+      "ai_tool": [
+        [
+          {
+            "node": "Image Search Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Image Search Agent": {
+      "main": [
+        [
+          {
+            "node": "Not Found?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Not Found?": {
+      "main": [
+        [
+          {
+            "node": "Not Found",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Get?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get?": {
+      "main": [
+        [
+          {
+            "node": "Download File",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Edit",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Download File": {
+      "main": [
+        [
+          {
+            "node": "Send Photo4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Name, ID, & Link": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Image Search Agent",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "GPT 4.1 mini1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Image Search Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-06-18T13:11:23.955Z",
+  "id": "Qolfoa0KpqZVjpUr",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "Marketing Team",
+  "nodes": [
+    {
+      "parameters": {
+        "model": "openai/gpt-4.1",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1,
+      "position": [
+        -940,
+        120
+      ],
+      "id": "c9abf411-3dde-4405-853c-35655f3b3356",
+      "name": "GPT 4.1"
+    },
+    {
+      "parameters": {
+        "name": "createImage",
+        "description": "Call this tool to create an image. ",
+        "workflowId": {
+          "__rl": true,
+          "value": "lsZTPeThp35cB3Hs",
+          "mode": "list",
+          "cachedResultName": "Create Image"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "chatID": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
+            "imagePrompt": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('imagePrompt', `The image requested by the user`, 'string') }}",
+            "imageTitle": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('imageTitle', `The title of the image. Should be no more than 4 words.`, 'string') }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "imageTitle",
+              "displayName": "imageTitle",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "imagePrompt",
+              "displayName": "imagePrompt",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "chatID",
+              "displayName": "chatID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 2.1,
+      "position": [
+        20,
+        120
+      ],
+      "id": "90085661-729f-42f2-a303-1cda8ea6fca7",
+      "name": "Create Image"
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
+        "text": "={{ $json.output }}",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        400,
+        -220
+      ],
+      "id": "349b2c9d-ac8e-44df-9371-8a944dc1e594",
+      "name": "Telegram",
+      "webhookId": "fbdb3bd7-490b-4d3e-961e-e2d398294649"
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $('Telegram Trigger').item.json.message.chat.id }}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        -660,
+        120
+      ],
+      "id": "c1c0ea7e-b81b-4582-935c-ba8d083f7846",
+      "name": "Simple Memory"
+    },
+    {
+      "parameters": {
+        "name": "editImage",
+        "description": "Call this tool to edit an image.",
+        "workflowId": {
+          "__rl": true,
+          "value": "nMBpMe21l4gDEjOI",
+          "mode": "list",
+          "cachedResultName": "Edit Image"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "image": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('image', `The title of the image the user wants to edit`, 'string') }}",
+            "chatID": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
+            "request": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('request', `The edit the user wants to make to the image`, 'string') }}",
+            "pictureID": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('pictureID', `The ID of the image to edit`, 'string') }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "image",
+              "displayName": "image",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "request",
+              "displayName": "request",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "chatID",
+              "displayName": "chatID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "pictureID",
+              "displayName": "pictureID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 2.1,
+      "position": [
+        180,
+        120
+      ],
+      "id": "5b63b3ba-b6e0-418e-bb83-e7060607720a",
+      "name": "Edit Image"
+    },
+    {
+      "parameters": {
+        "name": "searchImages",
+        "description": "Call this tool to search the image database.",
+        "workflowId": {
+          "__rl": true,
+          "value": "zDYAKGCIEChJa1JH",
+          "mode": "list",
+          "cachedResultName": "Search Images"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "intent": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('intent', `The intent of the user. This can either be \"Get\" or \"Edit\"`, 'string') }}",
+            "image": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('image', `The image title`, 'string') }}",
+            "chatID": "={{ $('Telegram Trigger').item.json.message.chat.id }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "intent",
+              "displayName": "intent",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "image",
+              "displayName": "image",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            },
+            {
+              "id": "chatID",
+              "displayName": "chatID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string",
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 2.1,
+      "position": [
+        420,
+        120
+      ],
+      "id": "9073faec-ca2d-4d4d-b3b3-6745d691a3ad",
+      "name": "Search Images"
+    },
+    {
+      "parameters": {
+        "name": "blogPost",
+        "description": "Call this tool to create a blog post using a topic and a target audience.",
+        "workflowId": {
+          "__rl": true,
+          "value": "sS2JMp5z7YiqtJpa",
+          "mode": "list",
+          "cachedResultName": "Blog Post"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "blogTopic": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('blogTopic', `The topic of the blog.`, 'string') }}",
+            "targetAudience": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('targetAudience', `The target audience for the blog.`, 'string') }}",
+            "chatID": "={{ $('Telegram Trigger').item.json.message.chat.id }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "blogTopic",
+              "displayName": "blogTopic",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "targetAudience",
+              "displayName": "targetAudience",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "chatID",
+              "displayName": "chatID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 2.1,
+      "position": [
+        -160,
+        120
+      ],
+      "id": "e422be93-1a5a-4297-8878-a1fcb5f1c6ae",
+      "name": "Blog Post"
+    },
+    {
+      "parameters": {
+        "content": "# Marketing Team",
+        "height": 400,
+        "width": 460
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -160,
+        -380
+      ],
+      "id": "eebdd000-8fd6-430c-a11c-61fe80c18f30",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "name": "linkedinPost",
+        "description": "Call this tool to create a LinkedIn post using a topic and a target audience.",
+        "workflowId": {
+          "__rl": true,
+          "value": "RgUBWsswXoQsX2tI",
+          "mode": "list",
+          "cachedResultName": "LinkedIn Post"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "postTopic": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('postTopic', `The topic of the LinkedIn post`, 'string') }}",
+            "targetAudience": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('targetAudience', `The target audience of the LinkedIn post`, 'string') }}",
+            "chatID": "={{ $('Telegram Trigger').item.json.message.chat.id }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "postTopic",
+              "displayName": "postTopic",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "targetAudience",
+              "displayName": "targetAudience",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "chatID",
+              "displayName": "chatID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 2.1,
+      "position": [
+        -320,
+        120
+      ],
+      "id": "f162466d-1176-4dac-bbdc-c058f8660743",
+      "name": "LinkedIn Post"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "fe7ecc99-e1e8-4a5e-bdd6-6fce9757b234",
+              "name": "text",
+              "value": "={{ $json.message.text }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "f1973321-9191-40f7-a825-b631ccaf8523",
+      "name": "Set 'Text'",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -440,
+        -140
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "file",
+        "fileId": "={{ $json.message.voice.file_id }}"
+      },
+      "id": "93bb50e1-e29d-44d5-9ec4-1253f13dc759",
+      "name": "Download Voice File",
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        -520,
+        -300
+      ],
+      "webhookId": "c0b376b1-7b63-41b6-8063-0b3096b8333d"
+    },
+    {
+      "parameters": {
+        "resource": "audio",
+        "operation": "transcribe",
+        "options": {}
+      },
+      "id": "1bda755e-1811-46f7-a194-a3e695775db0",
+      "name": "Transcribe Audio",
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.6,
+      "position": [
+        -360,
+        -300
+      ]
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.message.voice.file_id }}",
+                    "rightValue": "",
+                    "operator": {
+                      "type": "string",
+                      "operation": "exists",
+                      "singleValue": true
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Voice"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "8c844924-b2ed-48b0-935c-c66a8fd0c778",
+                    "leftValue": "={{ $json.message.text }}",
+                    "rightValue": "",
+                    "operator": {
+                      "type": "string",
+                      "operation": "exists",
+                      "singleValue": true
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "Text"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "6e1c67da-dd09-4f65-a9f9-5323b40e755c",
+      "name": "Switch",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        -780,
+        -220
+      ]
+    },
+    {
+      "parameters": {
+        "updates": [
+          "message"
+        ],
+        "additionalFields": {}
+      },
+      "id": "639ada97-7648-48e7-ad2d-4ba567076f7c",
+      "name": "Telegram Trigger",
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -920,
+        -220
+      ],
+      "webhookId": "99eab1a0-569d-4f0f-a49e-578a02abfe63"
+    },
+    {
+      "parameters": {
+        "content": "# Trigger\n",
+        "height": 400,
+        "width": 360,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -980,
+        -380
+      ],
+      "id": "600c6546-adb4-46e7-8786-4f22caa1e300",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "content": "# Content Creation",
+        "height": 220,
+        "width": 480,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -520,
+        40
+      ],
+      "id": "b4750741-3714-4aaa-b278-c9a79eb5087e",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "content": "# Image Creation",
+        "height": 220,
+        "width": 320,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -20,
+        40
+      ],
+      "id": "ba2a037d-f499-40fd-9879-1d5e0aa8c87a",
+      "name": "Sticky Note3"
+    },
+    {
+      "parameters": {
+        "content": "# Image Database",
+        "height": 220,
+        "width": 300,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        320,
+        40
+      ],
+      "id": "827c1aca-e682-45f8-a172-1c008edae19f",
+      "name": "Sticky Note4"
+    },
+    {
+      "parameters": {
+        "content": "# Response\n\n",
+        "height": 400,
+        "width": 300,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        320,
+        -380
+      ],
+      "id": "5ec2b496-2068-4459-880a-b669ac3154da",
+      "name": "Sticky Note5"
+    },
+    {
+      "parameters": {
+        "content": "# Brain\n\n",
+        "height": 220,
+        "width": 440,
+        "color": 2
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -980,
+        40
+      ],
+      "id": "0a4cb935-90ff-4775-adbf-e407549b1561",
+      "name": "Sticky Note6"
+    },
+    {
+      "parameters": {
+        "content": "# Voice or Text",
+        "height": 400,
+        "width": 420,
+        "color": 7
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -600,
+        -380
+      ],
+      "id": "546fdc16-671b-45eb-ac1f-10ec8e4f0bea",
+      "name": "Sticky Note7"
+    },
+    {
+      "parameters": {
+        "name": "video",
+        "description": "Call this tool to create a video.",
+        "workflowId": {
+          "__rl": true,
+          "value": "7HwL0nnjhjdXJ3FY",
+          "mode": "list",
+          "cachedResultName": "Faceless Video"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "videoTopic": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('videoTopic', `The topic of the video`, 'string') }}",
+            "chatID": "={{ $('Telegram Trigger').item.json.message.chat.id }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "videoTopic",
+              "displayName": "videoTopic",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            },
+            {
+              "id": "chatID",
+              "displayName": "chatID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "canBeUsedToMatch": true,
+              "type": "string"
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolWorkflow",
+      "typeVersion": 2.1,
+      "position": [
+        -480,
+        120
+      ],
+      "id": "aefeb5e6-3a2b-4d2d-9621-5e54c0635319",
+      "name": "Video"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.text }}",
+        "options": {
+          "systemMessage": "=# Overview\nYou are a marketing team AI agent. Your job is to help the user create and edit images based on the request, or create content.\n\n## Tools\ncreateImage - Use this to create an image. Send the requested image prompt to this tool.\neditImage - Use this to edit an image. The user might also say \"make\" rather than \"edit\".\nImage Database - Use this to search the image database. \nblogPost - Use this to create a blog post.\nlinkedinPost - Use this to create a LinkedIn post.\nvideo - Use this tool to create a video.\nThink - Use this if you need help making a decision.\n\n## Instructions\n- If the user asks to 'edit that image' or 'make that...', this indicates they want to edit the last image in the database, the most recent one.\n- If the user requests a blog post or LinkedIn post, use the \"blogPost\" or \"linkedinPost\" tool and output: \"Here's that post you requested. Hope you enjoy it.\"\n\n## Output\n- Make sure to return the image link as a clickable link\n\n"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.9,
+      "position": [
+        -60,
+        -220
+      ],
+      "id": "2c63305d-2ac3-4c40-a136-075fdce90cea",
+      "name": "Marketing Team Agent"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.toolThink",
+      "typeVersion": 1,
+      "position": [
+        -800,
+        120
+      ],
+      "id": "48803490-48ae-4bbd-9717-46346c2cabb5",
+      "name": "Think"
+    },
+    {
+      "parameters": {
+        "toolDescription": "Use this tool to search the web. ",
+        "method": "POST",
+        "url": "https://api.tavily.com/search",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"query\": \"{searchTerm}\",\n  \"topic\": \"general\",\n  \"search_depth\": \"advanced\",\n  \"chunks_per_source\": 3,\n  \"max_results\": 1,\n  \"time_range\": null,\n  \"days\": 7,\n  \"include_answer\": true,\n  \"include_raw_content\": false,\n  \"include_images\": false,\n  \"include_image_descriptions\": false,\n  \"include_domains\": [],\n  \"exclude_domains\": []\n}",
+        "placeholderDefinitions": {
+          "values": [
+            {
+              "name": "searchTerm",
+              "description": "What the user is searching for. "
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+      "typeVersion": 1.1,
+      "position": [
+        1160,
+        0
+      ],
+      "id": "faf24849-2ac5-4690-8e07-ac3dd0ccefd0",
+      "name": "Tavily"
+    },
+    {
+      "parameters": {
+        "model": "openai/gpt-4.1",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1,
+      "position": [
+        1300,
+        0
+      ],
+      "id": "59212e01-3d19-4db6-a21a-97a4864f16db",
+      "name": "GPT_4.1"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Blog Post: \n{{ $json.output }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=# Overview\nYou are an AI agent that transforms blog posts into visual prompt descriptions for generating graphic marketing materials. These visuals are designed to be paired with the post, helping communicate the message in a visually engaging, brand-aligned way.\n\n## Objective:\n- Read and analyze the given blog post.\n- Identify the main message, insight, or takeaway from the post.\n- Create a clear and compelling graphic prompt that can be used with a text-to-image generator.\n- The result should be a marketing-style graphic — not a literal scene or hyperrealistic photo — that:\n1) Visually supports or illustrates the key idea of the post\n2) Looks appropriate for use in a professional LinkedIn feed\n3) Feels polished, modern, and engaging\n\n## Output Instructions:\n- Output two fields: \n1) title (2-4 words) \n2) prompt\n- Output only the final image prompt. Do not output quotation marks.\n- Do not repeat or rephrase the blog post.\n- Do not add any explanations or extra content — just the image prompt.\n- Never leave things blank like \"Header area reserved for customizable callout text\"\n- Output numeric stats when available in the original post\n\n## Style Guidelines:\n- Think like a brand designer or marketing creative.\n- Visuals may include: text, charts, icons, abstract shapes, overlays, modern illustrations, motion-like effects, bold typography elements (described, not rendered), or metaphorical concepts.\n- You can mention layout suggestions (e.g., \"split screen design,\" \"header with bold title and subtle background illustration\").\n- Assume the output will be generated using AI image tools — your prompt should guide those tools effectively.\n\n## Example Prompt Format:\nA modern flat-style graphic showing a human brain connected to mechanical gears, representing the fusion of AI and automation. Minimalist background, soft gradients, clean sans-serif text placement space at the top.\n\n"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.9,
+      "position": [
+        1580,
+        -280
+      ],
+      "id": "c6325111-6ea6-4297-94b8-59400d37e77e",
+      "name": "Image Prompt Agent"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.openai.com/v1/images/generations",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "model",
+              "value": "gpt-image-1"
+            },
+            {
+              "name": "prompt",
+              "value": "={{ $json.output.prompt.replace(/\"/g, '') }}"
+            },
+            {
+              "name": "size",
+              "value": "1024x1024"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2020,
+        -280
+      ],
+      "id": "0c29f22e-b43d-4836-8612-755de3649b3d",
+      "name": "Generate Image"
+    },
+    {
+      "parameters": {
+        "operation": "toBinary",
+        "sourceProperty": "data[0].b64_json",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        2220,
+        -280
+      ],
+      "id": "a2b00291-f481-4b81-a7db-c8334bb68276",
+      "name": "Convert to Binary"
+    },
+    {
+      "parameters": {
+        "workflowInputs": {
+          "values": [
+            {
+              "name": "blogTopic"
+            },
+            {
+              "name": "targetAudience"
+            },
+            {
+              "name": "chatID"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        880,
+        -280
+      ],
+      "id": "9693c86b-dd79-40bb-bc5d-a8f69f2a7996",
+      "name": "When Executed by Another Workflow"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Topic of Blog: {{ $json.blogTopic }}\n\nTarget Audience: {{ $json.targetAudience }}",
+        "options": {
+          "systemMessage": "=# Overview\nYou are an AI agent specialized in creating professional, educational, and engaging blog articles based on any topic provided by the user.\n\n## Objectives:\nAlways begin by conducting a real-time search using the Tavily tool to gather the most accurate, up-to-date information on the topic. The blog article should be written to appeal to the provided target audience.\n\nBased on your research, generate a well-structured blog post that:\n- Starts with an engaging and informative introduction that sets up the importance of the topic\n- Maintains a professional, clear, and easy-to-read tone\n- Is educational, insightful, and provides depth\n- Uses headers, subheaders, and paragraphs to create good readability\n- Incorporates real data, examples, or case studies, properly attributing sources (e.g., “according to [source]”)\n- Light on emojis (use only if highly relevant and minimal)\n- Includes a natural conclusion that summarizes key takeaways\n- (Optional but encouraged) Suggests next steps for the reader, such as related articles, resources, or actionable advice\n\n## Output Instructions:\n- Your ONLY output should be the final blog article text.\n- Do not include explanations, notes, or anything beyond the blog content itself.\n\n## Example Workflow:\n1) Receive a topic (e.g., “The ROI of warehouse automation”)\n2) Use Tavily to search and gather recent information, studies, or examples\n3) Draft a blog post using that research\n4) Format it with an engaging intro, structured sections, source citations, and a natural conclusion"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.9,
+      "position": [
+        1140,
+        -280
+      ],
+      "id": "e947a509-1b93-4a36-9fd0-ec7b4e5e7d8e",
+      "name": "Blog Post Agent"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1JqOTd49heNBdmrf5hSwxI66X724tspAmSjzWoA6-EU0",
+          "mode": "list",
+          "cachedResultName": "Marketing Team Log",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JqOTd49heNBdmrf5hSwxI66X724tspAmSjzWoA6-EU0/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JqOTd49heNBdmrf5hSwxI66X724tspAmSjzWoA6-EU0/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Request": "={{ $('When Executed by Another Workflow').item.json.blogTopic }} for {{ $('When Executed by Another Workflow').item.json.targetAudience }}",
+            "ID": "={{ $json.id }}",
+            "Link": "={{ $json.webViewLink }}",
+            "Post": "={{ $('Blog Post Agent').item.json.output }}",
+            "Title": "={{ $('Image Prompt Agent').item.json.output.title }}",
+            "Type": "Post"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Title",
+              "displayName": "Title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Type",
+              "displayName": "Type",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Request",
+              "displayName": "Request",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ID",
+              "displayName": "ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Link",
+              "displayName": "Link",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Post",
+              "displayName": "Post",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        2880,
+        -80
+      ],
+      "id": "e0a3fae2-3b0c-43d3-83a4-29daa8868f95",
+      "name": "Image Log"
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n  \"title\": \"<2-4 word creative title for the image>\",\n  \"prompt\": \"<full detailed image generation prompt>\"\n}\n"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        1680,
+        0
+      ],
+      "id": "5f7bf035-c07e-4382-9ef7-936aca04c297",
+      "name": "Image & Title"
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('When Executed by Another Workflow').item.json.chatID }}",
+        "text": "={{ $('Blog Post Agent').item.json.output }}",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        2880,
+        -380
+      ],
+      "id": "06628f20-d0e8-4f18-aa3f-f0c1b8cb5d91",
+      "name": "Send Blog",
+      "webhookId": "94fa70af-f2fc-4c05-8fa1-d9f55637485f"
+    },
+    {
+      "parameters": {
+        "operation": "sendPhoto",
+        "chatId": "={{ $('When Executed by Another Workflow').item.json.chatID }}",
+        "binaryData": true,
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        2660,
+        -380
+      ],
+      "id": "b6d434cf-a73e-4d4b-8191-2bccc8b57aab",
+      "name": "Send Photo",
+      "webhookId": "8fcbda9c-8396-41f7-8f2d-39e4ae4337c7"
+    },
+    {
+      "parameters": {
+        "name": "={{ $('Image Prompt Agent').item.json.output.title }}.png",
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "1TgQu-5hlOzO1X28TMMzLxfhunhPSUIqy",
+          "mode": "list",
+          "cachedResultName": "AI Image Generation",
+          "cachedResultUrl": "https://drive.google.com/drive/folders/1TgQu-5hlOzO1X28TMMzLxfhunhPSUIqy"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        2660,
+        -80
+      ],
+      "id": "42cbe050-4483-46f1-8dfb-9aa610ffab44",
+      "name": "Upload"
+    },
+    {
+      "parameters": {
+        "content": "# Content Generation",
+        "height": 260,
+        "width": 380
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1120,
+        -380
+      ],
+      "id": "4ff3783e-2bde-464f-8f01-bb2cdb9a544c",
+      "name": "Sticky Note8"
+    },
+    {
+      "parameters": {
+        "content": "# Generate Image\n",
+        "height": 260,
+        "width": 460,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1980,
+        -340
+      ],
+      "id": "5a738ac8-31a4-427c-9d5d-b28e8be57c4a",
+      "name": "Sticky Note9"
+    },
+    {
+      "parameters": {
+        "content": "# Image Prompt\n",
+        "height": 260,
+        "width": 440,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1520,
+        -320
+      ],
+      "id": "790f4414-6294-436b-8a39-1d58b45b2bd0",
+      "name": "Sticky Note10"
+    },
+    {
+      "parameters": {
+        "content": "## Tool & Model",
+        "height": 240,
+        "width": 380,
+        "color": 7
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1100,
+        -60
+      ],
+      "id": "1d49d9de-a356-412c-a56c-966cf44b08d4",
+      "name": "Sticky Note11"
+    },
+    {
+      "parameters": {
+        "content": "## Structured Output",
+        "height": 240,
+        "width": 320,
+        "color": 7
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1580,
+        -20
+      ],
+      "id": "54efa437-51c4-4c46-acee-07eb8bbb46f9",
+      "name": "Sticky Note12"
+    },
+    {
+      "parameters": {
+        "content": "# Trigger\n",
+        "height": 260,
+        "width": 260,
+        "color": 7
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        820,
+        -360
+      ],
+      "id": "04f41eb3-927f-4ae9-804e-b6e4c0599d4c",
+      "name": "Sticky Note13",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "content": "# Write to Drive & Sheets",
+        "height": 240,
+        "width": 540,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        2540,
+        -160
+      ],
+      "id": "3e959ef9-fa11-4f2e-9ee6-bb05f7a3aff0",
+      "name": "Sticky Note14"
+    },
+    {
+      "parameters": {
+        "content": "# Send Content",
+        "height": 300,
+        "width": 540,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        2540,
+        -500
+      ],
+      "id": "f27c30c0-c998-4492-9b93-2e808c973d64",
+      "name": "Sticky Note15"
+    },
+    {
+      "parameters": {
+        "operation": "toBinary",
+        "sourceProperty": "data[0].b64_json",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        2040,
+        480
+      ],
+      "id": "f413aa06-17cb-4f05-8c27-fe438b194031",
+      "name": "Convert to File"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.imagePrompt }}",
+        "options": {
+          "systemMessage": "=# Overview\nYou are an expert image prompt engineer. Your role is to take a simple image topic or concept and expand it into a fully detailed image prompt that can be fed into a text-to-image generation model.\n\n## Prompt Instructions\nYour detailed prompt must clearly describe the following:\n1) Main Subject: What is the primary focus of the image?\n2) Background/Setting: What is happening in the background or environment?\n3) Style: Specify the visual style (e.g., hyper-realistic, digital painting, watercolor, anime, 3D render, etc.).\n4) Mood/Lighting: Describe the emotional tone and lighting (e.g., soft warm sunset, moody storm clouds, futuristic neon lights).\n5) Additional Details: Mention any specific objects, clothing, colors, textures, or notable features that should appear.\n\n## Output Format\n- Begin with a clean, natural-sounding descriptive prompt that integrates all of the above elements seamlessly.\n- The description should sound like it’s written specifically for an AI to generate a professional, high-quality image.\n- Avoid repeating the original topic verbatim — instead, reframe it into a vivid scene or visual concept.\n- Use rich, vivid language and imagery.\n\n## Example\n- Input: \"A futuristic city\"\n- Output: \"A sprawling futuristic city at night, glowing with neon lights in shades of blue and purple. Towering skyscrapers with sleek, glass facades line the horizon. Flying cars zoom between the buildings under a cloudy, electric sky. The streets below are bustling with holographic advertisements and people wearing high-tech fashion. Digital painting style, highly detailed, cinematic perspective, moody atmosphere with soft neon reflections on wet pavement.\""
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.9,
+      "position": [
+        1340,
+        460
+      ],
+      "id": "fa99dbae-ec36-4100-a4b7-7ceddfb55c39",
+      "name": "Image Prompt"
+    },
+    {
+      "parameters": {
+        "name": "={{ $('When Executed by Another Workflow').item.json.imageTitle }}.png",
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "1TgQu-5hlOzO1X28TMMzLxfhunhPSUIqy",
+          "mode": "list",
+          "cachedResultName": "AI Image Generation",
+          "cachedResultUrl": "https://drive.google.com/drive/folders/1TgQu-5hlOzO1X28TMMzLxfhunhPSUIqy"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        2660,
+        700
+      ],
+      "id": "a602c0c7-e172-4b0c-ae90-ec539b1a26c1",
+      "name": "Google Drive"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.openai.com/v1/images/generations",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "model",
+              "value": "gpt-image-1"
+            },
+            {
+              "name": "prompt",
+              "value": "={{ $json.output.replace(/\"/g, '') }}"
+            },
+            {
+              "name": "size",
+              "value": "1024x1024"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1800,
+        480
+      ],
+      "id": "a97970ea-05c5-4937-acc2-77329a088edc",
+      "name": "Generate Image1"
+    },
+    {
+      "parameters": {
+        "model": "openai/gpt-4.1",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1,
+      "position": [
+        1320,
+        760
+      ],
+      "id": "ecc072c3-a43b-46d8-9af8-eaf7d7e552cc",
+      "name": "GPT 4."
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1JqOTd49heNBdmrf5hSwxI66X724tspAmSjzWoA6-EU0",
+          "mode": "list",
+          "cachedResultName": "Marketing Team Log",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JqOTd49heNBdmrf5hSwxI66X724tspAmSjzWoA6-EU0/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JqOTd49heNBdmrf5hSwxI66X724tspAmSjzWoA6-EU0/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Request": "={{ $('When Executed by Another Workflow').item.json.imagePrompt }}",
+            "ID": "={{ $json.id }}",
+            "Link": "={{ $json.webViewLink }}",
+            "Title": "={{ $('When Executed by Another Workflow').item.json.imageTitle }}",
+            "Type": "Image"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Title",
+              "displayName": "Title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Type",
+              "displayName": "Type",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Request",
+              "displayName": "Request",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ID",
+              "displayName": "ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Link",
+              "displayName": "Link",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Post",
+              "displayName": "Post",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        2880,
+        700
+      ],
+      "id": "6b35fab6-2ae4-422c-ae96-c27d0dfecdec",
+      "name": "Image Log1"
+    },
+    {
+      "parameters": {
+        "content": "# Image Prompt\n",
+        "height": 260,
+        "width": 360,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1280,
+        380
+      ],
+      "id": "9d31344a-954e-4f9f-ac68-ffdb6e7c289d",
+      "name": "Sticky Note16"
+    },
+    {
+      "parameters": {
+        "content": "## Model",
+        "height": 180,
+        "color": 7
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1220,
+        680
+      ],
+      "id": "7943e91a-33c3-4f58-889a-29b036a9b8ab",
+      "name": "Sticky Note17"
+    },
+    {
+      "parameters": {
+        "content": "# Trigger\n",
+        "height": 240,
+        "width": 260,
+        "color": 7
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        880,
+        420
+      ],
+      "id": "7396ea6d-a20f-4e85-a950-3c35523edb73",
+      "name": "Sticky Note18",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "content": "# Generate Image\n",
+        "height": 240,
+        "width": 400,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1780,
+        380
+      ],
+      "id": "68cffbde-e41a-4317-b2bd-493286a78a54",
+      "name": "Sticky Note19"
+    },
+    {
+      "parameters": {
+        "content": "# Send Content",
+        "height": 240,
+        "width": 300,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        2560,
+        340
+      ],
+      "id": "dc11bde0-a07d-4d94-b6ba-7a8155c26e63",
+      "name": "Sticky Note20"
+    },
+    {
+      "parameters": {
+        "content": "# Write to Drive & Sheets",
+        "height": 240,
+        "width": 540,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        2560,
+        640
+      ],
+      "id": "121f51b6-f7b1-4203-aabb-6d441daf0b98",
+      "name": "Sticky Note21"
+    },
+    {
+      "parameters": {
+        "operation": "sendPhoto",
+        "chatId": "={{ $('When Executed by Another Workflow').item.json.chatID }}",
+        "binaryData": true,
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        2660,
+        420
+      ],
+      "id": "34fe3386-9ac4-4d21-bb65-e1c636c7837d",
+      "name": "Send Photo1",
+      "webhookId": "8fcbda9c-8396-41f7-8f2d-39e4ae4337c7"
+    },
+    {
+      "parameters": {
+        "name": "={{ $('When Executed by Another Workflow').item.json.image }} (Edited).png",
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "1TgQu-5hlOzO1X28TMMzLxfhunhPSUIqy",
+          "mode": "list",
+          "cachedResultName": "AI Image Generation",
+          "cachedResultUrl": "https://drive.google.com/drive/folders/1TgQu-5hlOzO1X28TMMzLxfhunhPSUIqy"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        4420,
+        -120
+      ],
+      "id": "d665e60b-9dfc-42b0-b0f7-cb38ff8b1dc6",
+      "name": "Upload Image"
+    },
+    {
+      "parameters": {
+        "operation": "download",
+        "fileId": {
+          "__rl": true,
+          "value": "={{ $json.pictureID }}",
+          "mode": "id"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        3640,
+        -260
+      ],
+      "id": "ee435f8b-632f-498f-910a-88530119ed48",
+      "name": "Download"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.openai.com/v1/images/edits",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "contentType": "multipart-form-data",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "parameterType": "formBinaryData",
+              "name": "image",
+              "inputDataFieldName": "data"
+            },
+            {
+              "name": "prompt",
+              "value": "={{ $('When Executed by Another Workflow').item.json.request.replace(/\"/g, '') }}"
+            },
+            {
+              "name": "model",
+              "value": "gpt-image-1"
+            },
+            {
+              "name": "size",
+              "value": "1024x1024"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        3900,
+        -260
+      ],
+      "id": "2a30f256-c572-40e8-b3c3-d8a8720fe2f8",
+      "name": "Edit Image1"
+    },
+    {
+      "parameters": {
+        "operation": "toBinary",
+        "sourceProperty": "data[0].b64_json",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        4120,
+        -260
+      ],
+      "id": "745e5314-f9a0-4d37-b308-8f8c0b782409",
+      "name": "Convert to File1"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1JqOTd49heNBdmrf5hSwxI66X724tspAmSjzWoA6-EU0",
+          "mode": "list",
+          "cachedResultName": "Marketing Team Log",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JqOTd49heNBdmrf5hSwxI66X724tspAmSjzWoA6-EU0/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JqOTd49heNBdmrf5hSwxI66X724tspAmSjzWoA6-EU0/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Request": "={{ $('When Executed by Another Workflow').item.json.request }}",
+            "ID": "={{ $json.id }}",
+            "Link": "={{ $json.webViewLink }}",
+            "Title": "={{ $('When Executed by Another Workflow').item.json.image }}",
+            "Type": "Edit"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Title",
+              "displayName": "Title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Type",
+              "displayName": "Type",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Request",
+              "displayName": "Request",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ID",
+              "displayName": "ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Link",
+              "displayName": "Link",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Post",
+              "displayName": "Post",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        4660,
+        -120
+      ],
+      "id": "6e40ef2f-eb03-4db5-9f1c-93e6ac4a1fac",
+      "name": "Image Log2"
+    },
+    {
+      "parameters": {
+        "content": "# Edit Image\n",
+        "height": 260,
+        "width": 460,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        3820,
+        -340
+      ],
+      "id": "6153363f-eaae-46de-b3cc-865a80a873ed",
+      "name": "Sticky Note22"
+    },
+    {
+      "parameters": {
+        "content": "# Send Content",
+        "height": 240,
+        "width": 300,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        4320,
+        -460
+      ],
+      "id": "5f39b528-4357-4ad6-8d50-a7dc83706d9c",
+      "name": "Sticky Note23"
+    },
+    {
+      "parameters": {
+        "content": "# Write to Drive & Sheets",
+        "height": 240,
+        "width": 540,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        4320,
+        -200
+      ],
+      "id": "4a30db42-d3f5-4d4b-8007-c0d45f846c07",
+      "name": "Sticky Note24"
+    },
+    {
+      "parameters": {
+        "content": "# Trigger\n",
+        "height": 260,
+        "width": 260,
+        "color": 7
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        3300,
+        -340
+      ],
+      "id": "5b7ad42c-2b84-40a8-83f6-9f74ecd2d7ed",
+      "name": "Sticky Note25",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "content": "# Download\n",
+        "height": 260,
+        "width": 220,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        3580,
+        -340
+      ],
+      "id": "3efef4fb-b14e-41ab-94ce-981f812c0602",
+      "name": "Sticky Note26"
+    },
+    {
+      "parameters": {
+        "operation": "sendPhoto",
+        "chatId": "={{ $('When Executed by Another Workflow').item.json.chatID }}",
+        "binaryData": true,
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        4420,
+        -380
+      ],
+      "id": "991265fc-e080-4ee5-82b1-6e85b4a8b9ae",
+      "name": "Send Photo2",
+      "webhookId": "85dc0064-e5c5-45a9-91a5-60e5b2bc4f1e"
+    },
+    {
+      "parameters": {
+        "url": "=https://api.piapi.ai/api/v1/task/{{ $json.data.task_id }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        4560,
+        260
+      ],
+      "id": "c6e3293f-45c3-4965-9ef6-5ab0232e24f1",
+      "name": "Get Images"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Scene: {{ $('Get Images').item.json.data.input.prompt }}",
+        "options": {
+          "systemMessage": "=# Overview\nYou are a Master Sound Prompt Generator.\nYour task is to create vivid, immersive sound prompts based on a given scene. These prompts will be used to generate background audio that matches the mood and environment of the scene.\n\n## Instructions\n- Generate a one- to two-sentence prompt that captures the ambiance, tone, and key sound elements.\n- Use rich, evocative language to describe the background atmosphere, highlighting specific sounds (e.g., footsteps on cobblestone, distant chatter, wind rustling leaves, faint music, industrial hum).\n- Focus on the background audio — not dialogue, narration, or foreground sound effects.\n- Match the emotion and setting of the scene, whether it's calm, chaotic, eerie, festive, or serene.\n- Avoid vague descriptions; be specific and sensory-driven to maximize immersion.\n- Never include quotation marks (\"\") or newlines (\\n) in the output.\n\n## Output\nReturn only the crafted sound prompt text, ready to be used for an audio generation model.\n"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        4820,
+        260
+      ],
+      "id": "8ac07399-4748-4419-8053-5b3a1cd9880c",
+      "name": "Sound Agent"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.elevenlabs.io/v1/sound-generation",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "text",
+              "value": "={{ $json.output.replace(/\"/g, '') }}"
+            },
+            {
+              "name": "duration_seconds",
+              "value": "5"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        5180,
+        260
+      ],
+      "id": "c5c36b6c-f02f-4637-b65b-7d1f21ccfd62",
+      "name": "Generate Audio"
+    },
+    {
+      "parameters": {
+        "name": "={{ $('Get Videos').item.json.id }}.mp3",
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "1hhZhHBv0zm3adye9LE_sxwme7z7yUXw5",
+          "mode": "list",
+          "cachedResultName": "Audio Files",
+          "cachedResultUrl": "https://drive.google.com/drive/folders/1hhZhHBv0zm3adye9LE_sxwme7z7yUXw5"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        5360,
+        260
+      ],
+      "id": "7da36b06-c53a-447b-9539-e5fb5a850407",
+      "name": "Upload to Drive"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combineBy": "combineByPosition",
+        "numberInputs": 3,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [
+        4840,
+        600
+      ],
+      "id": "270c2b7d-d340-4dd4-8fee-fb4f4340dabb",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.creatomate.com/v1/renders",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer "
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"template_id\": \"e19f26a1-dfb6-4a0d-a3ba-d394e398b3c9\",\n  \"modifications\": {\n    \"Video-1.source\": \"{{ $json.urls[0].url }}\",\n    \"Video-2.source\": \"{{ $json.urls[1].url }}\",\n    \"Video-3.source\": \"{{ $json.urls[2].url }}\",\n    \"Video-4.source\": \"{{ $json.urls[3].url }}\",\n    \"Audio-1.source\": \"{{ $json.urls[0].webContentLink }}\",\n    \"Audio-2.source\": \"{{ $json.urls[1].webContentLink }}\",\n    \"Audio-3.source\": \"{{ $json.urls[2].webContentLink }}\",\n    \"Audio-4.source\": \"{{ $json.urls[3].webContentLink }}\"\n  }\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        5240,
+        600
+      ],
+      "id": "14d637da-e9ea-4598-9685-dba008315ca4",
+      "name": "Render Video"
+    },
+    {
+      "parameters": {
+        "amount": 25
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        5440,
+        600
+      ],
+      "id": "cfd99314-d32d-46b9-9a84-bcd601e682cc",
+      "name": "25 Seconds",
+      "webhookId": "d5cd29e8-d3f7-491c-a6b6-2d705aa47931"
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.url }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        4840,
+        820
+      ],
+      "id": "6b3e2603-ee8e-48ef-9054-0aef41deafc2",
+      "name": "Download Video"
+    },
+    {
+      "parameters": {
+        "url": "=https://api.dev.runwayml.com/v1/tasks/{{ $json.id }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-Runway-Version",
+              "value": "2024-11-06"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        4560,
+        540
+      ],
+      "id": "64c0981e-681e-4f8d-b0fd-792fad38454d",
+      "name": "Get Videos"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.dev.runwayml.com/v1/image_to_video",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-Runway-Version",
+              "value": "2024-11-06"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "promptImage",
+              "value": "={{ $json.data.output.image_url }}"
+            },
+            {
+              "name": "model",
+              "value": "gen3a_turbo"
+            },
+            {
+              "name": "ratio",
+              "value": "768:1280"
+            },
+            {
+              "name": "duration",
+              "value": "5"
+            },
+            {
+              "name": "promptText",
+              "value": "={{ $json.data.input.prompt.replace(/\"/g, '') }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        4220,
+        540
+      ],
+      "id": "69b109d3-a4c4-4bcf-bdfd-6e212aacb2a5",
+      "name": "Generate Videos"
+    },
+    {
+      "parameters": {
+        "jsCode": "// N8n Code Node to extract URLs from output arrays and combine them into a single array\n// This code assumes your input JSON is in items[0].json or is multiple items\n// Determine data source format\nlet inputArray;\nif (items.length === 1 && Array.isArray(items[0].json)) {\n  // If we have a single item containing our array\n  inputArray = items[0].json;\n} else if (items.length > 1) {\n  // If we already have multiple items, each containing part of our data\n  inputArray = items.map(item => item.json || item);\n} else {\n  throw new Error('Input structure not recognized. Please check your data format.');\n}\n// Create a single array to hold all URLs\nconst urlArray = [];\n// Process each item in the input array\nfor (const item of inputArray) {\n  // Get the data object\n  const data = item;\n  \n  // Check if the item has an output array\n  if (data.output && Array.isArray(data.output)) {\n    // For each URL in the output array, add to our URL array\n    for (const url of data.output) {\n      // Add URL along with metadata including the web content link\n      urlArray.push({\n        url: url,\n        sourceId: data.id,\n        createdAt: data.createdAt,\n        webContentLink: data.webContentLink || null // Add the web content link\n      });\n    }\n  }\n}\n// Return a single item containing the array of all URLs\nreturn [{\n  json: {\n    urls: urlArray\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        5040,
+        600
+      ],
+      "id": "01bceb58-afa7-42dd-9c0a-2a325590a19d",
+      "name": "Split Out Parts"
+    },
+    {
+      "parameters": {
+        "operation": "share",
+        "fileId": {
+          "__rl": true,
+          "value": "={{ $json.id }}",
+          "mode": "id"
+        },
+        "permissionsUi": {
+          "permissionsValues": {
+            "role": "reader",
+            "type": "anyone",
+            "allowFileDiscovery": true
+          }
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        5560,
+        260
+      ],
+      "id": "057dc3ad-45a0-43a5-b1e4-296e0b02ffeb",
+      "name": "Share File"
+    },
+    {
+      "parameters": {
+        "model": "openai/gpt-4.1-mini",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1,
+      "position": [
+        3620,
+        500
+      ],
+      "id": "439bc122-57e6-44d7-b3ef-0dbbcdac1404",
+      "name": "GPT 4.1 mini"
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n  \"Part 1\": \"Prompt for part 1\",\n  \"Part 2\": \"Prompt for part 2\",\n  \"Part 3\": \"Prompt for part 3\",\n  \"Part 4\": \"Prompt for part 4\"\n}\n"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        3820,
+        500
+      ],
+      "id": "b9e4e18e-250d-423e-8b48-7c9292fef12f",
+      "name": "4 Parts"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "output",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        3940,
+        320
+      ],
+      "id": "946209eb-6dad-41d4-bfe2-77b4a553ac14",
+      "name": "Split Out"
+    },
+    {
+      "parameters": {
+        "model": "openai/gpt-4.1-mini",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1,
+      "position": [
+        5060,
+        360
+      ],
+      "id": "a6cf7825-b33a-445c-8786-bff02a85f83f",
+      "name": "GPT-4.1 mini"
+    },
+    {
+      "parameters": {
+        "operation": "sendVideo",
+        "chatId": "={{ $('When Executed by Another Workflow').first().json.chatID }}",
+        "binaryData": true,
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        5020,
+        820
+      ],
+      "id": "251c3641-b1cd-4104-bed9-a47d62dc067b",
+      "name": "Send Video",
+      "webhookId": "cdeb2987-d275-480b-8532-f69bbed64999"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4.1-mini",
+          "mode": "list",
+          "cachedResultName": "GPT-4.1-MINI"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "=Video: {{ $('When Executed by Another Workflow').first().json.videoTopic }}"
+            },
+            {
+              "content": "Create a 3-4 word title for the given video",
+              "role": "system"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        5220,
+        820
+      ],
+      "id": "5de461b4-5aa9-4764-9cc6-baf709e83ac7",
+      "name": "Title"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1JqOTd49heNBdmrf5hSwxI66X724tspAmSjzWoA6-EU0",
+          "mode": "list",
+          "cachedResultName": "Marketing Team Log",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JqOTd49heNBdmrf5hSwxI66X724tspAmSjzWoA6-EU0/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JqOTd49heNBdmrf5hSwxI66X724tspAmSjzWoA6-EU0/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Title": "={{ $json.message.content }}",
+            "Request": "={{ $('When Executed by Another Workflow').first().json.videoTopic }}",
+            "Link": "={{ $('Download Video').item.json.url }}",
+            "Type": "Video"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Title",
+              "displayName": "Title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Type",
+              "displayName": "Type",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Request",
+              "displayName": "Request",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ID",
+              "displayName": "ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Link",
+              "displayName": "Link",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Post",
+              "displayName": "Post",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        5580,
+        820
+      ],
+      "id": "e72bc00e-a713-4beb-8665-1ef238f578f2",
+      "name": "Log Video"
+    },
+    {
+      "parameters": {
+        "amount": 90
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        4380,
+        260
+      ],
+      "id": "e28b1405-4d34-4ab3-b364-aec77205d24b",
+      "name": "90 Seconds",
+      "webhookId": "ffdc5132-c0fe-44f6-af2b-4b3bb8894153"
+    },
+    {
+      "parameters": {
+        "amount": 90
+      },
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        4380,
+        540
+      ],
+      "id": "60495443-05fa-4ea6-8ca4-d558f1957317",
+      "name": "90_Seconds",
+      "webhookId": "3ce99001-8f5a-4c0a-9b25-e3e261fcc778"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.piapi.ai/api/v1/task",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n    \"model\": \"Qubico/flux1-dev\",\n    \"task_type\": \"txt2img\",\n    \"input\": {\n        \"prompt\": \"{{ $json.output.replace(/\"/g, '') }}\",\n        \"width\": 540, \n        \"height\": 960\n    } \n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        4200,
+        260
+      ],
+      "id": "9ba6b90c-4710-4185-8c9f-88a782b0f128",
+      "name": "Generate Image2"
+    },
+    {
+      "parameters": {
+        "content": "# Generate Image Prompts",
+        "height": 540,
+        "width": 740,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        3380,
+        160
+      ],
+      "typeVersion": 1,
+      "id": "e311eb2a-64ea-41d3-a25b-d5f6275d9d17",
+      "name": "Sticky Note27",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "content": "# Generate Images\n",
+        "height": 260,
+        "width": 600,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        4140,
+        160
+      ],
+      "typeVersion": 1,
+      "id": "e2cd1549-8aae-4bfb-8208-4ea8086fc1a3",
+      "name": "Sticky Note28"
+    },
+    {
+      "parameters": {
+        "content": "# Generate Audio\n\n",
+        "height": 320,
+        "width": 980,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        4760,
+        160
+      ],
+      "typeVersion": 1,
+      "id": "56373cb1-e822-4f4b-b98b-9822a30899a6",
+      "name": "Sticky Note29"
+    },
+    {
+      "parameters": {
+        "content": "# Render & Log\n",
+        "height": 500,
+        "width": 1040
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        4760,
+        500
+      ],
+      "typeVersion": 1,
+      "id": "c30362a8-a3bb-4c61-935d-5c8c5f9f802b",
+      "name": "Sticky Note30"
+    },
+    {
+      "parameters": {
+        "content": "# Generate Videos\n",
+        "height": 260,
+        "width": 600,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        4140,
+        440
+      ],
+      "typeVersion": 1,
+      "id": "a397f20d-5d5a-4ea0-a5dc-12d80b0e9587",
+      "name": "Sticky Note31"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Video Topic: {{ $json.videoTopic }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=# Overview\nYou are a Master Visual Story Structuring Agent.\nYour task is to take a given short video topic and split it into four parts that together form a cohesive, vivid story, optimized for text-to-image generation.\n\n## Instructions:\n- You must create exactly four parts: Part 1, Part 2, Part 3, and Part 4.\n- Describe the subject of the story in the EXACT same way in all four parts. Each part should be consistent.\n- Each part should build upon the previous, creating a complete visual story by the end.\n- Every part must be written as a high-quality, richly detailed image prompt, following professional standards for models like Flux or similar.\n- Describe characters, settings, outfits, actions, and background elements vividly and precisely.\n- Use rich, imaginative language to maximize visual fidelity.\n- Avoid generic terms — always opt for specific and colorful descriptions.\n- No quotation marks (\"\") or newlines (\\n) should be included in the output.\n- Keep the description natural and seamless so it can be fed directly into a text-to-image model.\n\n## Key Elements to Include in Each Part:\n- Clear description of main subjects (appearance, outfits, facial expressions, poses)\n- Accessories or objects that add to the scene\n- A vivid background that matches the theme and enhances the overall story\n- Consistency and natural progression from part to part\n\n## Output Format:\nReturn your response structured into four fields:\n- Part 1: [Vivid image prompt for Part 1]\n- Part 2: [Vivid image prompt for Part 2]\n- Part 3: [Vivid image prompt for Part 3]\n- Part 4: [Vivid image prompt for Part 4]\n\nOnly output the fields listed above.\nMake sure the story across all four parts feels cohesive, visually rich, and cinematic."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.9,
+      "position": [
+        3620,
+        320
+      ],
+      "id": "13ca83c3-3520-44d8-bfee-c94936a4112a",
+      "name": "Image Prompt Agent1"
+    },
+    {
+      "parameters": {
+        "toolDescription": "Use this tool to search the web. ",
+        "method": "POST",
+        "url": "https://api.tavily.com/search",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"query\": \"{searchTerm}\",\n  \"topic\": \"general\",\n  \"search_depth\": \"advanced\",\n  \"chunks_per_source\": 3,\n  \"max_results\": 1,\n  \"time_range\": null,\n  \"days\": 7,\n  \"include_answer\": true,\n  \"include_raw_content\": false,\n  \"include_images\": false,\n  \"include_image_descriptions\": false,\n  \"include_domains\": [],\n  \"exclude_domains\": []\n}",
+        "placeholderDefinitions": {
+          "values": [
+            {
+              "name": "searchTerm",
+              "description": "What the user is searching for. "
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+      "typeVersion": 1.1,
+      "position": [
+        1180,
+        1540
+      ],
+      "id": "c5556667-8da8-4347-aed8-d5b4eaadec29",
+      "name": "Tavily1"
+    },
+    {
+      "parameters": {
+        "model": "openai/gpt-4.1",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1,
+      "position": [
+        1320,
+        1540
+      ],
+      "id": "19d67882-a3f8-466a-8b43-efc9f4287501",
+      "name": "GPT_4."
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Blog Post: \n{{ $json.output }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=# Overview\nYou are an AI agent that transforms LinkedIn posts into visual prompt descriptions for generating graphic marketing materials. These visuals are designed to be paired with the post on LinkedIn, helping communicate the message in a visually engaging, brand-aligned way.\n\n## Objective:\n- Read and analyze the given LinkedIn post.\n- Identify the main message, insight, or takeaway from the post.\n- Create a clear and compelling graphic prompt that can be used with a text-to-image generator.\n- The result should be a marketing-style graphic — not a literal scene or hyperrealistic photo — that:\n1) Visually supports or illustrates the key idea of the post\n2) Looks appropriate for use in a professional LinkedIn feed\n3) Feels polished, modern, and engaging\n\n## Output Instructions:\n- Output only the final image prompt. Do not output quotation marks.\n- Do not repeat or rephrase the LinkedIn post.\n- Do not add any explanations or extra content — just the image prompt.\n- Never leave things blank like \"Header area reserved for customizable callout text\"\n- Output numeric stats when available in the original post\n\n## Style Guidelines:\n- Think like a brand designer or marketing creative.\n- Visuals may include: text, charts, icons, abstract shapes, overlays, modern illustrations, motion-like effects, bold typography elements (described, not rendered), or metaphorical concepts.\n- You can mention layout suggestions (e.g., \"split screen design,\" \"header with bold title and subtle background illustration\").\n- Assume the output will be generated using AI image tools — your prompt should guide those tools effectively.\n\n## Example Prompt Format:\nA modern flat-style graphic showing a human brain connected to mechanical gears, representing the fusion of AI and automation. Minimalist background, soft gradients, clean sans-serif text placement space at the top."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.9,
+      "position": [
+        1600,
+        1260
+      ],
+      "id": "1f95fb37-bc58-45bb-9fdc-8979d2f35adf",
+      "name": "Image Prompt Agent2"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.openai.com/v1/images/generations",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "model",
+              "value": "gpt-image-1"
+            },
+            {
+              "name": "prompt",
+              "value": "={{ $json.output.prompt.replace(/\"/g, '') }}"
+            },
+            {
+              "name": "size",
+              "value": "1024x1024"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2040,
+        1260
+      ],
+      "id": "2cdd6474-6781-4ce3-9560-a8e322143169",
+      "name": "Generate Image3"
+    },
+    {
+      "parameters": {
+        "operation": "toBinary",
+        "sourceProperty": "data[0].b64_json",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        2240,
+        1260
+      ],
+      "id": "1d7f90c0-9e3c-4f64-bf43-9a5112f1aa3c",
+      "name": "Convert to Binary1"
+    },
+    {
+      "parameters": {
+        "content": "# Content Generation",
+        "height": 260,
+        "width": 380
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1100,
+        1160
+      ],
+      "id": "f7559ed7-1f4f-48ec-9097-63eed7ebf638",
+      "name": "Sticky Note32"
+    },
+    {
+      "parameters": {
+        "content": "# Generate Image\n",
+        "height": 260,
+        "width": 460,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1960,
+        1160
+      ],
+      "id": "11a6f761-76bf-4ef4-a540-33c6c9c44c5b",
+      "name": "Sticky Note33"
+    },
+    {
+      "parameters": {
+        "content": "# Image Prompt\n",
+        "height": 260,
+        "width": 440,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1500,
+        1160
+      ],
+      "id": "e238414e-a7a3-44fc-afda-9287580bf0ef",
+      "name": "Sticky Note34"
+    },
+    {
+      "parameters": {
+        "content": "## Tool & Model",
+        "height": 240,
+        "width": 380,
+        "color": 7
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1100,
+        1440
+      ],
+      "id": "800a589c-f44e-42b1-abfc-9c1869056f0f",
+      "name": "Sticky Note35"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Topic of Post: {{ $json.blogTopic }}\n\nTarget Audience: {{ $json.targetAudience }}",
+        "options": {
+          "systemMessage": "=# Overview\nYou are an AI agent specialized in creating professional, educational, and engaging LinkedIn posts based on any topic provided by the user.\n\n## Objectives:\nAlways begin by conducting a real-time search using the Tavily tool to gather the most accurate, up-to-date information on the topic. The post should be written to appeal to the provided target audience.\n\nBased on your research, generate a well-structured LinkedIn post that:\n- Starts with an engaging hook\n- Professional in tone\n- Clear and easy to read\n- Educational and insightful\n- Light on emojis (use only when highly relevant and minimal)\n- Includes proper source attribution (e.g., “according to [source]”)\n- Contains relevant hashtags to improve visibility\n- Ends with a clear call to action (e.g., asking for thoughts, feedback, or shares)\n\n## Output Instructions:\n- Your ONLY output should be the final LinkedIn post text.\n- Do not include explanations, notes, or anything beyond the post itself.\n\n## Example Workflow:\n1) Receive a topic (e.g., “The ROI of warehouse automation”)\n2) Use Tavily to search and gather recent information or case studies\n3) Draft a LinkedIn post using that research\n4) Format it with source citations, clean structure, optional hashtags, and a call to action"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.9,
+      "position": [
+        1160,
+        1260
+      ],
+      "id": "b58c9040-dcc1-431d-8d8d-23ff6027c244",
+      "name": "Blog Post Agent1"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1JqOTd49heNBdmrf5hSwxI66X724tspAmSjzWoA6-EU0",
+          "mode": "list",
+          "cachedResultName": "Marketing Team Log",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JqOTd49heNBdmrf5hSwxI66X724tspAmSjzWoA6-EU0/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JqOTd49heNBdmrf5hSwxI66X724tspAmSjzWoA6-EU0/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Request": "={{ $('When Executed by Another Workflow').item.json.postTopic }} for {{ $('When Executed by Another Workflow').item.json.targetAudience }}",
+            "ID": "={{ $json.id }}",
+            "Link": "={{ $json.webViewLink }}",
+            "Post": "={{ $('Blog Post Agent1').item.json.output }}",
+            "Title": "={{ $('When Executed by Another Workflow').item.json.postTopic }}",
+            "Type": "Post"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Title",
+              "displayName": "Title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Type",
+              "displayName": "Type",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Request",
+              "displayName": "Request",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ID",
+              "displayName": "ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Link",
+              "displayName": "Link",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Post",
+              "displayName": "Post",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        2820,
+        1320
+      ],
+      "id": "91e125c6-3809-4268-8978-75348ece3d5b",
+      "name": "Image Log3"
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n  \"title\": \"<2-4 word creative title for the image>\",\n  \"prompt\": \"<full detailed image generation prompt>\"\n}\n"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        1700,
+        1540
+      ],
+      "id": "43f6eee4-1688-4297-8638-4d8547fae1fb",
+      "name": "Image & Title1"
+    },
+    {
+      "parameters": {
+        "content": "## Structured Output",
+        "height": 240,
+        "width": 320,
+        "color": 7
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1580,
+        1440
+      ],
+      "id": "3c01e617-9b3e-4a0a-933e-bdd0010dcc41",
+      "name": "Sticky Note36"
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('When Executed by Another Workflow').item.json.chatID }}",
+        "text": "={{ $('Blog Post Agent1').item.json.output }}",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        2800,
+        1060
+      ],
+      "id": "f0224c49-0f76-4371-aeac-e4a813862cc3",
+      "name": "Send Blog1",
+      "webhookId": "94fa70af-f2fc-4c05-8fa1-d9f55637485f"
+    },
+    {
+      "parameters": {
+        "operation": "sendPhoto",
+        "chatId": "={{ $('When Executed by Another Workflow').item.json.chatID }}",
+        "binaryData": true,
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        2560,
+        1060
+      ],
+      "id": "d593f7c7-dfd9-4572-acaf-ace625be7bb5",
+      "name": "Send Photo3",
+      "webhookId": "8fcbda9c-8396-41f7-8f2d-39e4ae4337c7"
+    },
+    {
+      "parameters": {
+        "content": "# Trigger\n",
+        "height": 260,
+        "width": 260,
+        "color": 7
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        820,
+        1160
+      ],
+      "id": "eab1fe9e-889e-42b7-9350-92c431a72274",
+      "name": "Sticky Note37",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "content": "# Write to Drive & Sheets",
+        "height": 240,
+        "width": 540,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        2500,
+        1200
+      ],
+      "id": "834b830b-3c40-46c0-a012-d59596804232",
+      "name": "Sticky Note38"
+    },
+    {
+      "parameters": {
+        "content": "# Send Content",
+        "height": 240,
+        "width": 540,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        2460,
+        960
+      ],
+      "id": "ffb2f68c-eead-4954-997b-49e4b15e165a",
+      "name": "Sticky Note39"
+    },
+    {
+      "parameters": {
+        "name": "={{ $('Image Prompt Agent2').item.json.output.title }}.png",
+        "driveId": {
+          "__rl": true,
+          "mode": "list",
+          "value": "My Drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "1TgQu-5hlOzO1X28TMMzLxfhunhPSUIqy",
+          "mode": "list",
+          "cachedResultName": "AI Image Generation",
+          "cachedResultUrl": "https://drive.google.com/drive/folders/1TgQu-5hlOzO1X28TMMzLxfhunhPSUIqy"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        2580,
+        1320
+      ],
+      "id": "78a3c09f-218a-49d9-8d36-276e702e5c48",
+      "name": "Upload1"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1JqOTd49heNBdmrf5hSwxI66X724tspAmSjzWoA6-EU0",
+          "mode": "list",
+          "cachedResultName": "AI Images Log",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JqOTd49heNBdmrf5hSwxI66X724tspAmSjzWoA6-EU0/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1JqOTd49heNBdmrf5hSwxI66X724tspAmSjzWoA6-EU0/edit#gid=0"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheetsTool",
+      "typeVersion": 4.5,
+      "position": [
+        4020,
+        1600
+      ],
+      "id": "7d3c099c-8f7c-416f-92f1-806eee255cc1",
+      "name": "Image Database"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Image: {{ $json.image }}",
+        "hasOutputParser": true,
+        "options": {
+          "systemMessage": "=# Overview\nYou are an Image Retrieval Agent. When the user provides a query, your task is to search the \"Image Database\" using the keywords from the query. Locate the most relevant matching image.\n\n## Output\n- Return the name, ID, and the Link of the image\n- If no image is found, output \"Not Found\"\n"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.9,
+      "position": [
+        4020,
+        1340
+      ],
+      "id": "4fd813a9-012d-4d20-806e-d47c640ee2f9",
+      "name": "Image Search Agent"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "44c36e1d-19e8-4411-bd3d-86c5144ecb14",
+              "name": "response",
+              "value": "Image wasn't found in the database",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        4620,
+        1060
+      ],
+      "id": "66e7a8b5-eb49-4a4b-8dd0-8a7909599aaa",
+      "name": "Not Found"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "a5a9fd85-2403-423e-92a2-d3ba20db83d9",
+              "leftValue": "={{ $('When Executed by Another Workflow').first().json.intent }}",
+              "rightValue": "Get",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        4680,
+        1340
+      ],
+      "id": "7efc776a-6985-47e1-a39c-bce2ad7408b2",
+      "name": "Get?"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "85e307aa-0bb8-40f1-b62e-5b36c231b0af",
+              "leftValue": "={{ $json.output.status }}",
+              "rightValue": "Not Found",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        4420,
+        1340
+      ],
+      "id": "1c84f3a9-2588-4e40-a981-7ea7aab0f701",
+      "name": "Not Found?"
+    },
+    {
+      "parameters": {
+        "operation": "download",
+        "fileId": {
+          "__rl": true,
+          "value": "={{ $json.output.image_id }}",
+          "mode": "id"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        4940,
+        1340
+      ],
+      "id": "0ec978fe-a284-4120-92e5-f049fed41a91",
+      "name": "Download File"
+    },
+    {
+      "parameters": {
+        "jsonSchemaExample": "{\n  \"image_name\":\"string | null\",\n  \"image_id\": \"string | null\",\n  \"image_link\": \"string | null\",\n  \"status\": \"found | not_found\"\n}\n"
+      },
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "typeVersion": 1.2,
+      "position": [
+        4240,
+        1600
+      ],
+      "id": "c440e62a-cd1e-4ff7-8843-55c1f93f0f23",
+      "name": "Name, ID, & Link"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "be32fa20-d1e6-4831-a266-5991e5c4eb1e",
+              "name": "imageName",
+              "value": "={{ $json.output.image_name }}",
+              "type": "string"
+            },
+            {
+              "id": "10b5ddb9-a482-46a7-962f-8e18533d90d5",
+              "name": "imageID",
+              "value": "={{ $json.output.image_id }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        4960,
+        1640
+      ],
+      "id": "42e0916d-1404-495f-b08b-aec1eb03ded7",
+      "name": "Edit"
+    },
+    {
+      "parameters": {
+        "model": "openai/gpt-4.1-mini",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1,
+      "position": [
+        3900,
+        1600
+      ],
+      "id": "aeb9bf37-e8f4-40aa-8fab-30776cd24811",
+      "name": "GPT 4.1 mini1"
+    },
+    {
+      "parameters": {
+        "content": "# Trigger\n",
+        "height": 260,
+        "width": 260,
+        "color": 7
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        3600,
+        1240
+      ],
+      "id": "cf015a75-0b33-439c-b5cb-23afb3f69f54",
+      "name": "Sticky Note40",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "content": "## Tool & Model",
+        "height": 200,
+        "width": 280,
+        "color": 7
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        3860,
+        1540
+      ],
+      "id": "67b82379-473d-4e9e-abeb-b5cb8681d4b3",
+      "name": "Sticky Note41"
+    },
+    {
+      "parameters": {
+        "content": "# Image Search\n",
+        "height": 260,
+        "width": 580,
+        "color": 3
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        3880,
+        1240
+      ],
+      "id": "86c71bc0-6dda-4aa9-b1ac-1ae5a787aa95",
+      "name": "Sticky Note42"
+    },
+    {
+      "parameters": {
+        "content": "## Structured Output",
+        "height": 200,
+        "color": 7
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        4160,
+        1540
+      ],
+      "id": "12f00ec4-0db9-469d-a9f7-f64ecb78fc04",
+      "name": "Sticky Note43"
+    },
+    {
+      "parameters": {
+        "content": "# Not Found?",
+        "height": 260,
+        "width": 260,
+        "color": 2
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        4280,
+        1240
+      ],
+      "id": "bfe2b8b9-59cf-4e03-988a-a654374cd444",
+      "name": "Sticky Note44"
+    },
+    {
+      "parameters": {
+        "content": "",
+        "height": 200,
+        "width": 180,
+        "color": 7
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        3560,
+        1420
+      ],
+      "id": "1fe6929a-5805-45ee-ac26-ca13bb89c11e",
+      "name": "Sticky Note45"
+    },
+    {
+      "parameters": {
+        "content": "# Get?",
+        "height": 260,
+        "color": 2
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        4560,
+        1240
+      ],
+      "id": "c5ca8e22-f02c-400d-b4e0-d6fb67005baa",
+      "name": "Sticky Note46"
+    },
+    {
+      "parameters": {
+        "content": "",
+        "height": 200,
+        "width": 180,
+        "color": 7
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        4940,
+        1640
+      ],
+      "id": "dde0aff2-4fea-414a-9215-c097f59ef6f3",
+      "name": "Sticky Note47"
+    },
+    {
+      "parameters": {
+        "content": "# Send Content",
+        "height": 260,
+        "width": 280,
+        "color": 6
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        5060,
+        1240
+      ],
+      "id": "f46706db-6bce-4532-9df1-a653ba8a1d47",
+      "name": "Sticky Note48"
+    },
+    {
+      "parameters": {
+        "content": "# Download\n",
+        "height": 260,
+        "width": 220,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        4820,
+        1240
+      ],
+      "id": "80766c32-5d76-48dc-86cd-fe98fd396c13",
+      "name": "Sticky Note49"
+    },
+    {
+      "parameters": {
+        "operation": "sendPhoto",
+        "chatId": "={{ $('When Executed by Another Workflow').item.json.chatID }}",
+        "binaryData": true,
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        5200,
+        1340
+      ],
+      "id": "8f1ad8a6-496a-4f28-aee1-50e389c2f9de",
+      "name": "Send Photo4",
+      "webhookId": "85dc0064-e5c5-45a9-91a5-60e5b2bc4f1e"
+    }
+  ],
+  "origin": "n8n",
+  "pinData": {},
+  "repo": {
+    "owner": "AnushaPriya2",
+    "name": "n8n-workflow-backups"
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-06-21T17:13:26.000Z",
+  "versionId": "f25d2db9-b6c4-4e06-a5dc-703b4e82b564"
+}
