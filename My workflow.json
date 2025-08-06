@@ -1,0 +1,501 @@
+{
+  "active": false,
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Postgres Chat Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "SD agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase Vector Store": {
+      "ai_tool": [
+        [
+          {
+            "node": "SD agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Web Search 2": {
+      "ai_tool": [
+        [
+          {
+            "node": "SD agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Web Search 1": {
+      "ai_tool": [
+        [
+          {
+            "node": "SD agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings OpenAI": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Supabase Vector Store",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "SD agent",
+            "type": "ai_languageModel",
+            "index": 0
+          },
+          {
+            "node": "Basic LLM Chain",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        []
+      ]
+    },
+    "SD agent": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Basic LLM Chain": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Basic LLM Chain",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "SD agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-05-23T13:35:30.330Z",
+  "id": "p6fxKCNATJ6yxTdI",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "public": true,
+        "initialMessages": "Kann ich dir bei einem aktuellen SAP SD Thema helfen? Sag mir gerne, was du gerade machst oder frage mich ganz einfach :-)",
+        "options": {
+          "responseMode": "responseNode",
+          "subtitle": "Ich bin dein SAP SD Helfer & habe alle Informationen aus unseren Schulungsunterlagen für dich als Wissen gespeichert!",
+          "title": "Hi !"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        60,
+        760
+      ],
+      "id": "f10a619e-2a62-4f13-815c-45400c4e2a80",
+      "name": "When chat message received",
+      "webhookId": "1e4d631e-60bd-44d2-b7b4-ef202212e1e3"
+    },
+    {
+      "parameters": {
+        "tableName": "n8n_chat"
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryPostgresChat",
+      "typeVersion": 1.3,
+      "position": [
+        720,
+        980
+      ],
+      "id": "57977d1f-ef78-4ec0-99a4-280b2bcb643d",
+      "name": "Postgres Chat Memory",
+      "credentials": {
+        "postgres": {
+          "id": "aU6gEnNNOwoNT9SD",
+          "name": "Postgres Nostar"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.chatInput }}",
+        "options": {
+          "systemMessage": "=You are a helpful, intelligent AI support SD agent and are a proactive chat agent. Lead the conversation by asking open-ended questions and offering suggestions. Don’t wait for the user to guide the chat — keep it moving with helpful, friendly prompts. Anticipate needs, follow up thoughtfully, and make the user feel supported throughout.\n\n*Knowledge Access Instructions*\n   1.  First, for every user question, always use the Supabase store (n8n_test table) as the primary source for all questions. \n\n   2. Begin each query by searching only in Supabase (n8n_test). This content is primarily in German, so make sure all queries sent to Supabase are in German.\n\n   3. If relevant information is found in Supabase, respond in English and cite the internal document:\nExample:\n\"This guidance is based on the internal documentation related to offer creation in SAP systems (Anwenderdoku_Angebotserfassung).\"\n\n   4. If no relevant information is found in Supabase:\nRespond to the user with:\n\"The information you requested is not available in our internal documentation. Would you like me to do a Web search?\"\n\n   5. Do NOT use web search tools automatically to perform web search.\n\n      -> Wait for the user's explicit confirmation (e.g., \"Yes\", \"Okay\", \"Please do\", etc.).\n\n   6. Only after receiving user permission, you should web search. To search the web always use both (web search 1 and web search 2 tools node) and they accept single string of English querry.\n\n  Clearly state that this is an external source.\nExample:\n\"This information comes from an external source (e.g.,from relevant website)...\"\n\n*Important Rules & Logic*\n   1. After getting permission for web search use that only for the immediate response, return to Supabase for all future queries unless the user explicitly asks for external help again.\n   2. If no data is found in Supabase or web:\n\"At the moment, there is no information available to fully address this request based on current internal and external sources.\"\n\n*Format & Style Guidelines*\n   1. All Supabase queries must be in German and all responses to the user must be in English\n   2. Responses must be Professional, Clear and helpful, small as possible but presise and well structured.\n\n  Only for guide/ instruction based response, follow this format:\n   • Step-by-Step Guide\n   • Things To Consider\n   • Further Understanding\nUnder \"Further Understanding,\" ask for related questions to give better answer and list each of them in its own numbered line:\n\n**Things to Consider/Important Details/Common Pitfalls\n   •You should actively work to avoid common errors and pay close attention to important details, ensuring none are overlooked while performing the task.",
+          "returnIntermediateSteps": false
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        944,
+        760
+      ],
+      "id": "d57a3bc6-1777-4683-851d-490a78e2f05d",
+      "name": "SD agent"
+    },
+    {
+      "parameters": {
+        "mode": "retrieve-as-tool",
+        "toolName": "documents",
+        "toolDescription": "Use RAG to look up information in the knowledgebase.",
+        "tableName": {
+          "__rl": true,
+          "value": "n8n_test",
+          "mode": "list",
+          "cachedResultName": "n8n_test"
+        },
+        "topK": 20,
+        "options": {
+          "queryName": "match5_documents"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+      "typeVersion": 1,
+      "position": [
+        840,
+        982.5
+      ],
+      "id": "133ae204-cc0a-4df6-83ac-a95acd44d56d",
+      "name": "Supabase Vector Store",
+      "credentials": {
+        "supabaseApi": {
+          "id": "g2fuxg9JpTFapfzz",
+          "name": "Supabase Nostar"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "toolDescription": "Web Search tool only SAP websites",
+        "method": "POST",
+        "url": "https://api.tavily.com/search",
+        "sendHeaders": true,
+        "parametersHeaders": {
+          "values": [
+            {
+              "name": "Authorization",
+              "valueProvider": "fieldValue",
+              "value": "Bearer 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"
+            },
+            {
+              "name": "Content-Type",
+              "valueProvider": "fieldValue",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"query\": \"{query}\",\n  \"topic\": \"general\",\n  \"search_depth\": \"advanced\",\n  \"max_results\": 20,\n  \"include_answer\": true,\n  \"include_raw_content\": false,\n  \"include_images\": false,\n  \"include_image_descriptions\": false,\n  \"include_domains\": [\"https://help.sap.com/docs/\",\"https://community.sap.com/\"],\n  \"exclude_domains\": []\n}",
+        "placeholderDefinitions": {
+          "values": [
+            {
+              "name": "query",
+              "description": "Search Querry",
+              "type": "string"
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+      "typeVersion": 1.1,
+      "position": [
+        1136,
+        980
+      ],
+      "id": "c3d90a6b-f2ff-47eb-92fb-0a0a80896d9d",
+      "name": "Web Search 2"
+    },
+    {
+      "parameters": {
+        "toolDescription": "Web Search tool excluding SAP websites",
+        "method": "POST",
+        "url": "https://api.tavily.com/search",
+        "sendHeaders": true,
+        "parametersHeaders": {
+          "values": [
+            {
+              "name": "Authorization",
+              "valueProvider": "fieldValue",
+              "value": "Bearer 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"
+            },
+            {
+              "name": "Content-Type",
+              "valueProvider": "fieldValue",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"query\": \"{query}\",\n  \"topic\": \"general\",\n  \"search_depth\": \"advanced\",\n  \"max_results\": 20,\n  \"include_answer\": true,\n  \"include_raw_content\": false,\n  \"include_images\": false,\n  \"include_image_descriptions\": false,\n  \"include_domains\": [],\n  \"exclude_domains\": [\"https://help.sap.com/docs/\",\"https://community.sap.com/\"]\n}",
+        "placeholderDefinitions": {
+          "values": [
+            {
+              "name": "query",
+              "description": "Search Querry",
+              "type": "string"
+            }
+          ]
+        },
+        "optimizeResponse": true
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolHttpRequest",
+      "typeVersion": 1.1,
+      "position": [
+        1256,
+        980
+      ],
+      "id": "a450a0b7-5c4d-4fcd-8137-39c2f05f3dbc",
+      "name": "Web Search 1"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        928,
+        1180
+      ],
+      "id": "fe1d5072-3412-451d-ac3a-180ade488b1a",
+      "name": "Embeddings OpenAI",
+      "credentials": {
+        "openAiApi": {
+          "id": "jpK6UkKnpLM9LJPk",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4o-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        1220,
+        560
+      ],
+      "id": "12ae54a0-8385-4299-aa91-3958e7d60b3f",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "jpK6UkKnpLM9LJPk",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "9a9a245e-f1a1-4282-bb02-a81ffe629f0f",
+              "name": "chatInput",
+              "value": "={{ $json?.chatInput || $json.body.chatInput }}",
+              "type": "string"
+            },
+            {
+              "id": "b80831d8-c653-4203-8706-adedfdb98f77",
+              "name": "sessionId",
+              "value": "={{ $json?.sessionId || $json.body.sessionId}}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a4a37f76-af84-4e9f-8e04-46cbcc628583",
+      "name": "Edit Fields",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        280,
+        760
+      ]
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=We already send detailed answer to the user.\n\nAsk him if he need any help or if he is able to do that or if he need any further assistance.",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "={{ $json.chatInput }}"
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.6,
+      "position": [
+        900,
+        340
+      ],
+      "id": "8c754463-eceb-4cd2-b6fb-1cf5a688ddd0",
+      "name": "Basic LLM Chain"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        1640,
+        760
+      ],
+      "id": "0c5bb2e2-0b59-43f7-9072-b69ebc0c09ba",
+      "name": "Wait",
+      "webhookId": "6806628a-b295-4cba-8add-b227defc0c21"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "911cb262-be9a-450d-87d4-2671a36ef52d",
+              "leftValue": "={{ $json.sessionId }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "empty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        500,
+        760
+      ],
+      "id": "7dce0563-58ea-4962-b47d-ffbc1cffd9b2",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "respondWith": "allIncomingItems",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.2,
+      "position": [
+        1760,
+        360
+      ],
+      "id": "903edb10-fa36-4065-9fe3-7ef273869f7e",
+      "name": "Respond to Webhook"
+    }
+  ],
+  "origin": "n8n",
+  "pinData": {},
+  "repo": {
+    "owner": "AnushaPriya2",
+    "name": "n8n-workflow-backups"
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-05-23T15:14:33.000Z",
+  "versionId": "accf1eb3-ff1e-43cd-a265-544f83bfcf5a"
+}
