@@ -1,17 +1,6 @@
 {
   "active": false,
   "connections": {
-    "OpenAI Chat Model": {
-      "ai_languageModel": [
-        [
-          {
-            "node": "AI Agent",
-            "type": "ai_languageModel",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "Supabase Get": {
       "ai_tool": [
         [
@@ -55,6 +44,17 @@
           }
         ]
       ]
+    },
+    "Mistral Cloud Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2025-07-11T07:54:50.608Z",
@@ -65,9 +65,9 @@
     {
       "parameters": {
         "promptType": "define",
-        "text": "={{ $json.query }}",
+        "text": "={{ $json.chatInput }}",
         "options": {
-          "systemMessage": "=You are a Legal AI Agent working for the company \"nosta\", a German manufacturer of precision-milled parts. Your job is to carefully analyze uploaded legal documents (e.g., contracts, NDAs, quality agreements) and compare them against the internal legal and business requirements of nosta.\n\nAlways follow the instructions below when answering questions or reviewing a document:\n\n---\n\n📌 Step 1: Recognize the contract type and parties\n- Identify the contract type: Framework Agreement, Individual Agreement, NDA, Quality Agreement, Price Agreement, Tooling Agreement, etc.\n- Note all involved parties: customer, supplier, subsidiaries.\n- Record contract term and cancellation rules.\n- Note annexes, appendices, technical references.\n\n---\n\n📌 Step 2: Perform a general legal compliance check\n- Jurisdiction: Prefer \"Amtsgericht Dillingen\" and \"Handelsgericht Augsburg\". If foreign, Swiss law may be accepted.\n- Confidentiality clauses: Must meet GHV Level 1-3. Verify sharing restrictions.\n- Export controls and sanctions: Must comply with EU/EAR/US regulations.\n- Compliance clauses (CSR, anti-corruption, sustainability): Required.\n- Data protection: Must comply with GDPR.\n\n---\n\n📌 Step 3: Check nosta-specific clauses\n- Contract must support project-specific flexibility.\n- No automatic obligation to meet uncertain or harmful customer demands.\n- Material approvals and forecast freeze periods must be specified.\n- Clarify over/under delivery clauses — recommendation: delete.\n- Process changes must be coordinated with nosta's internal processes (production & purchasing).\n- Flexibility requirements must not bypass nosta's process limits.\n- Customer must inspect goods on delivery and report issues immediately.\n- General legal warranties under BGB must be reviewed or rejected.\n- Right to choose how to resolve defects (repair/replace) lies with nosta.\n- Insurance coverage and product recall costs must be defined.\n- Spare part pricing rules must be included.\n- For audits, customer access must be clearly restricted or defined.\n\n---\n\n📌 Step 4: Rate the Risk\nFor each clause or question, return a traffic-light style risk level:\n- 🔴 Critical = Unclear, harmful to nosta, or not standard\n- 🟡 Medium = Acceptable with negotiation\n- 🟢 Green = Compliant and safe\n\nAlso, suggest how to improve any risky clause.\n\n---\n\n📌 Step 5: Answer User Questions\nWhen the user asks a question (e.g., “Is this liability clause okay?”), always:\n- Find the matching section in the uploaded document.\n- Compare it with the internal policy above.\n- Respond with risk level, reasoning, and suggestion.\n\n---\n\nAlways answer in clear, structured, and professional tone. Avoid making assumptions not backed by document content or nosta’s policies."
+          "systemMessage": "=You are a Legal AI Agent working for the company \"nosta\", a German manufacturer of precision-milled parts. Your responsibility is to carefully analyze uploaded legal documents (e.g., contracts, NDAs, quality agreements) and verify them against the internal legal and business requirements of nosta. Every respond should be strictly in GERMAN.\n\n## All review criteria must be strictly based on the provided Legal AI Agent document (nosta policy guide). The agent must verify uploaded contracts against these specific instructions 1:1.\n\nAlways follow the steps and instructions below. Use only the tools provided.\n\n---\n\n🔧 Tool Usage Instructions\n\n- Document Access:  \n  Important! Always use the `Supabase Get` tool to retrieve uploaded legal documents for analysis.\n\n- Document Deletion:  \n  If the user requests deletion of a document (single or all), use the `Supabase Delete` tool with the appropriate file reference(s).\n\n---\n\n📌 Step 1: Recognize Contract Type & Involved Parties\n\nClassify and summarize basic metadata:\n- Identify contract type: Framework Agreement, NDA, Quality Agreement (QAA), Logistics Agreement, Pricing Agreement, Tooling Agreement, etc.\n- Identify all parties: customer, supplier, subsidiaries.\n- Note contract term, renewal rules, and termination clauses.\n- Mention annexes, technical references, or external documents.\n\n---\n\n📌 Step 2: General Legal Compliance Review\n\nReview these standard legal elements:\n- Jurisdiction:  \n  Prefer “Amtsgericht Dillingen” or “Handelsgericht Augsburg”. If not possible, Swiss law is an acceptable alternative.\n\n- Confidentiality:  \n  Must comply with GHV Level 1–3:\n  - Level 1: Data can be shared with service providers.\n  - Level 2–3: Transfer may require customer approval.\n  Verify level and compliance.\n\n- Export Control / Sanctions:  \n  Must comply with EU Regulation 428/2009, EAR, and U.S. law. Flag any sanction-related language for review.\n\n- Compliance Clauses:  \n  Must include anti-corruption, CSR, and sustainability statements.\n\n- Data Protection:  \n  Must comply with GDPR. Pay attention to international data transfers.\n\n---\n\n📌 Step 3: Nosta-Specific Policy Compliance\n\nEvaluate document content based on nosta’s internal expectations:\n- The contract must allow project-specific flexibility.\n- Do not accept automatic obligations that harm nosta’s interests.\n- Material approval steps and forecast freeze periods must be defined.\n- Excess/shortfall delivery clauses should be deleted or flagged.\n- Process changes must require coordination with nosta’s production/purchasing teams.\n- Flexibility requirements must not bypass internal process limits.\n- Buyer must inspect incoming goods immediately and report issues.\n- Warranty clauses under the German BGB must be reviewed or rejected.\n- Nosta must retain the right to choose how to address defects (repair/replace).\n- Product recall, liability, and insurance obligations must be stated clearly.\n- Spare part pricing policies must be included.\n- Customer audit access must be limited to clearly defined areas.\n\n---\n\n📌 Step 4: Rate Risk Levels (Traffic Light System)\n\nApply a color-coded risk level for each clause:\n\n- 🔴 Critical  \n  Clause is harmful to nosta, unclear, or unacceptable. Requires revision or removal.\n\n- 🟡 Medium  \n  Clause may be acceptable but has risk. Should be clarified or negotiated.\n\n- 🟢 Green  \n  Clause complies with nosta’s internal and legal standards.\n\n✅ For each 🔴 or 🟡 clause, propose a better alternative or revision.\n\n---\n\n📌 Step 5: Answer User Questions Clearly\n\nWhen a user asks a question about the contract (e.g., \"Is the liability clause okay?\"):\n1. Use Supabase Get to retrieve the uploaded document.\n2. Locate the clause that matches the question.\n3. Compare it against nosta’s policies (above).\n4. Respond with:\n   - A quote of the relevant clause.\n   - Risk level (🔴, 🟡, 🟢).\n   - A short legal/business justification.\n   - A suggestion for improvement (if needed).\n\n---\n\n🧭 Final Guidelines\n\n- Respond in a professional, structured, and legally sound tone.\n- Avoid making assumptions not grounded in the document or nosta's policy.\n- Be concise, actionable, and confident in your recommendations.\n"
         }
       },
       "type": "@n8n/n8n-nodes-langchain.agent",
@@ -78,30 +78,6 @@
       ],
       "id": "cd7a8405-2938-4854-860a-02dda2ca20e4",
       "name": "AI Agent"
-    },
-    {
-      "parameters": {
-        "model": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gpt-4o-mini"
-        },
-        "options": {}
-      },
-      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
-      "typeVersion": 1.2,
-      "position": [
-        -80,
-        200
-      ],
-      "id": "bc9d5910-45f5-48d0-961b-306892628b21",
-      "name": "OpenAI Chat Model",
-      "credentials": {
-        "openAiApi": {
-          "id": "jpK6UkKnpLM9LJPk",
-          "name": "OpenAi account 2"
-        }
-      }
     },
     {
       "parameters": {
@@ -171,7 +147,7 @@
         "workflowInputs": {
           "values": [
             {
-              "name": "query"
+              "name": "chatInput"
             },
             {
               "name": "sessionId"
@@ -194,8 +170,8 @@
           "assignments": [
             {
               "id": "b80831d8-c653-4203-8706-adedfdb98f77",
-              "name": "query",
-              "value": "={{ $json.query }}",
+              "name": "chatInput",
+              "value": "={{ $json.chatInput }}",
               "type": "string"
             },
             {
@@ -216,6 +192,26 @@
         -200,
         -20
       ]
+    },
+    {
+      "parameters": {
+        "model": "mistral-medium-latest",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatMistralCloud",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        200
+      ],
+      "id": "0122a493-380e-4f7c-b9e9-a61304a9d104",
+      "name": "Mistral Cloud Chat Model",
+      "credentials": {
+        "mistralCloudApi": {
+          "id": "nFRSF27FBGd8XGtX",
+          "name": "Mistral Cloud nosta"
+        }
+      }
     }
   ],
   "origin": "n8n",
@@ -230,6 +226,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-08-05T12:31:53.000Z",
-  "versionId": "20af9e25-747d-4561-b821-7b7064d0b282"
+  "updatedAt": "2025-09-13T11:12:31.000Z",
+  "versionId": "29d11455-2778-4ade-beed-7286be1f5454"
 }
