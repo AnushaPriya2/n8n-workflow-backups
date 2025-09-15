@@ -1,0 +1,2796 @@
+{
+  "active": false,
+  "connections": {
+    "Microsoft SharePoint HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Code8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items2": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Code12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft SharePoint HTTP Request1": {
+      "main": [
+        [
+          {
+            "node": "Code11",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set File ID1": {
+      "main": [
+        []
+      ]
+    },
+    "Code1": {
+      "main": [
+        []
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Microsoft SharePoint HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Compare Datasets": {
+      "main": [
+        [],
+        [],
+        [],
+        [
+          {
+            "node": "Loop Over Items2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        []
+      ]
+    },
+    "Supabase1": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields2": {
+      "main": [
+        [
+          {
+            "node": "Aggregate",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Convert to File": {
+      "main": [
+        [
+          {
+            "node": "S3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Convert to File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields3": {
+      "main": [
+        [
+          {
+            "node": "Split Out",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If1": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Edit Fields3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Loop Over Items2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Default Data Loader": {
+      "ai_document": [
+        [
+          {
+            "node": "Insert into Supabase Vectorstore",
+            "type": "ai_document",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings OpenAI1": {
+      "ai_embedding": [
+        []
+      ]
+    },
+    "Character Text Splitter": {
+      "ai_textSplitter": [
+        [
+          {
+            "node": "Default Data Loader",
+            "type": "ai_textSplitter",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Insert into Supabase Vectorstore": {
+      "main": [
+        [
+          {
+            "node": "Mistral file delete1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "Insert into Supabase Vectorstore",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "S31",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "S31": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [],
+        []
+      ]
+    },
+    "Insert Document Metadata": {
+      "main": [
+        [
+          {
+            "node": "Microsoft SharePoint HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields4": {
+      "main": [
+        []
+      ]
+    },
+    "Split Out2": {
+      "main": [
+        [
+          {
+            "node": "Compare Datasets1",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Set File ID",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft SharePoint HTTP Request5": {
+      "main": [
+        [
+          {
+            "node": "Code4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set File ID": {
+      "main": [
+        [
+          {
+            "node": "Insert Document Metadata1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code4": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Compare Datasets1": {
+      "main": [
+        [
+          {
+            "node": "Supabase3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [],
+        [],
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase2": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait1": {
+      "main": [
+        [
+          {
+            "node": "Microsoft SharePoint HTTP Request5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields5": {
+      "main": [
+        [
+          {
+            "node": "Code5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields5",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Default Data Loader1": {
+      "ai_document": [
+        [
+          {
+            "node": "Insert into Supabase Vectorstore1",
+            "type": "ai_document",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings OpenAI": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Insert into Supabase Vectorstore1",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Character Text Splitter1": {
+      "ai_textSplitter": [
+        [
+          {
+            "node": "Default Data Loader1",
+            "type": "ai_textSplitter",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Insert into Supabase Vectorstore1": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code5": {
+      "main": [
+        [
+          {
+            "node": "Insert into Supabase Vectorstore1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request1": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Wait1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Insert Document Metadata1": {
+      "main": [
+        [
+          {
+            "node": "Microsoft SharePoint HTTP Request5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields9": {
+      "main": [
+        [
+          {
+            "node": "Compare Datasets1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Microsoft SharePoint HTTP Request6": {
+      "main": [
+        [
+          {
+            "node": "Split Out2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code8": {
+      "main": [
+        [
+          {
+            "node": "Compare Datasets",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Mistral Upload": {
+      "main": [
+        [
+          {
+            "node": "Mistral Signed URL",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mistral Signed URL": {
+      "main": [
+        [
+          {
+            "node": "Mistral DOC OCR3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mistral DOC OCR": {
+      "main": [
+        []
+      ]
+    },
+    "Mistral DOC OCR3": {
+      "main": [
+        [
+          {
+            "node": "Code2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code2": {
+      "main": [
+        [
+          {
+            "node": "If1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aggregate": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings Mistral Cloud": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Insert into Supabase Vectorstore",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase4": {
+      "main": [
+        []
+      ]
+    },
+    "Wait3": {
+      "main": [
+        []
+      ]
+    },
+    "Code11": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mistral file delete": {
+      "main": [
+        []
+      ]
+    },
+    "Mistral file delete1": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "S3": {
+      "main": [
+        []
+      ]
+    },
+    "Code12": {
+      "main": [
+        [
+          {
+            "node": "Set File ID1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-08-19T11:45:17.855Z",
+  "id": "9KeIssggOTuo2QLC",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "mistral ocr",
+  "nodes": [
+    {
+      "parameters": {
+        "curlImport": "",
+        "httpVariantWarning": "",
+        "method": "GET",
+        "url": "https://nosta.sharepoint.com/sites/OPEX/_api/web/GetFolderByServerRelativeUrl('/sites/OPEX/Freigegebene Dokumente/OPEX/03_Externer_Zugriff/SAP Docs')?$expand=Files,Folders,Folders/Files,Folders/Folders,Folders/Folders/Files,Folders/Folders/Folders/Files,Folders/Folders/Folders/Folders/Files",
+        "": "",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "microsoftSharePointOAuth2Api",
+        "provideSslCertificates": false,
+        "sendQuery": false,
+        "sendHeaders": false,
+        "sendBody": false,
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": false,
+              "neverError": false,
+              "responseFormat": "autodetect"
+            }
+          }
+        },
+        "infoMessage": ""
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1500,
+        1280
+      ],
+      "id": "86fa8c56-21cd-44f9-8785-671f641c1afc",
+      "name": "Microsoft SharePoint HTTP Request",
+      "extendsCredential": "microsoftSharePointOAuth2Api",
+      "credentials": {
+        "microsoftSharePointOAuth2Api": {
+          "id": "9BGGzF75Nq8GkPkx",
+          "name": "Microsoft SharePoint account 4"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "Folders",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        1600,
+        3660
+      ],
+      "id": "448cf68e-2e70-42cd-b2de-b7862c9567c9",
+      "name": "Split Out1"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        2140,
+        1300
+      ],
+      "id": "3c38d1e0-b64f-4493-b0d3-99587855f9c6",
+      "name": "Loop Over Items2"
+    },
+    {
+      "parameters": {
+        "curlImport": "",
+        "httpVariantWarning": "",
+        "method": "GET",
+        "url": "=https://nosta.sharepoint.com/sites/OPEX/_api/web/GetFileByServerRelativeUrl('{{ $('Loop Over Items2').item.json.ServerRelativeUrl }}')/$value",
+        "": "",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "microsoftSharePointOAuth2Api",
+        "provideSslCertificates": false,
+        "sendQuery": false,
+        "sendHeaders": false,
+        "sendBody": false,
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": false,
+              "neverError": false,
+              "responseFormat": "file",
+              "outputPropertyName": "data"
+            }
+          }
+        },
+        "infoMessage": ""
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2860,
+        1280
+      ],
+      "id": "ebd0ba57-3131-49d8-a2c6-5582758c7913",
+      "name": "Microsoft SharePoint HTTP Request1",
+      "extendsCredential": "microsoftSharePointOAuth2Api",
+      "credentials": {
+        "microsoftSharePointOAuth2Api": {
+          "id": "9BGGzF75Nq8GkPkx",
+          "name": "Microsoft SharePoint account 4"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "10646eae-ae46-4327-a4dc-9987c2d76173",
+              "name": "file_id",
+              "value": "={{ $json.UniqueId }}",
+              "type": "string"
+            },
+            {
+              "id": "f4536df5-d0b1-4392-bf17-b8137fb31a44",
+              "name": "file_type",
+              "value": "={{ $json.Name.split('.').pop() }}",
+              "type": "string"
+            },
+            {
+              "id": "77d782de-169d-4a46-8a8e-a3831c04d90f",
+              "name": "file_title",
+              "value": "={{ $json.Name }}",
+              "type": "string"
+            },
+            {
+              "id": "9bde4d7f-e4f3-4ebd-9338-dce1350f9eab",
+              "name": "file_url",
+              "value": "={{ $json.fileUrl }}",
+              "type": "string"
+            },
+            {
+              "id": "fae402c8-c486-4b57-8d28-bf669db6b442",
+              "name": "last_modified_date",
+              "value": "={{ $json.TimeLastModified }}",
+              "type": "string"
+            },
+            {
+              "id": "866ce582-16e2-4869-ac77-13f248c187eb",
+              "name": "sharepoint_file_id",
+              "value": "={{ $json.UniqueId }}",
+              "type": "string"
+            },
+            {
+              "id": "e5c1596b-5884-4fb1-a62c-107cea9d590f",
+              "name": "foldername",
+              "value": "={{ JSON.stringify($json['odata.id'].split('(')[1].split('/').slice(5, -1)) }}\n",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "0c1017dc-6e0a-4044-aaf2-3affc666c085",
+      "name": "Set File ID1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        2520,
+        1280
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "$input.item.binary.data.fileName = 'myNewFilename.docx'\n\nreturn $input.item;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3040,
+        2700
+      ],
+      "id": "e06ab259-33bb-45bf-adcc-52cf5649f9ca",
+      "name": "Code1"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {}
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        1060,
+        1200
+      ],
+      "id": "e46d9417-1917-4010-a6f9-6aa2e7b96fcc",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "mergeByFields": {
+          "values": [
+            {
+              "field1": "sharepoint_file_id",
+              "field2": "UniqueId"
+            },
+            {
+              "field1": "Last_modified_date",
+              "field2": "TimeLastModified"
+            }
+          ]
+        },
+        "fuzzyCompare": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.compareDatasets",
+      "typeVersion": 2.3,
+      "position": [
+        1880,
+        1240
+      ],
+      "id": "99cb365b-24af-4246-9d54-b55b41bfb1b7",
+      "name": "Compare Datasets"
+    },
+    {
+      "parameters": {
+        "useCustomSchema": true,
+        "operation": "getAll",
+        "tableId": "n8n_metadata",
+        "returnAll": true
+      },
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        1660,
+        1020
+      ],
+      "id": "debbb68f-e598-45ff-9e47-4d25e712b355",
+      "name": "Supabase",
+      "credentials": {
+        "supabaseApi": {
+          "id": "8hlgdRRQJS9sMYJ1",
+          "name": "Supabase account 3 dbt rn"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        2460,
+        3680
+      ],
+      "id": "0eae5d56-0716-4105-8a14-5909bf945038",
+      "name": "Wait",
+      "webhookId": "29a6451b-8a53-4598-b4fe-e11241eb51ab"
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "tableId": "n8n_metadata",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "id_source",
+              "condition": "eq",
+              "keyValue": "={{ $json.id }}"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        2440,
+        980
+      ],
+      "id": "3082a4e9-8062-40f3-b6e7-cfc704c8da67",
+      "name": "Supabase1",
+      "credentials": {
+        "supabaseApi": {
+          "id": "8hlgdRRQJS9sMYJ1",
+          "name": "Supabase account 3 dbt rn"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "5132d92c-41da-4a55-ad79-0c329ca7e626",
+              "name": "Document name",
+              "value": "={{ $('Microsoft SharePoint HTTP Request1').item.json.title }}",
+              "type": "string"
+            },
+            {
+              "id": "c8160701-2be7-43c6-bcfa-295fbebe0e23",
+              "name": "Document data",
+              "value": "={{ $json.embedding_text }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        4180,
+        1260
+      ],
+      "id": "9ef204fc-a952-4a65-8a52-6707ae52a17a",
+      "name": "Edit Fields2"
+    },
+    {
+      "parameters": {
+        "operation": "toBinary",
+        "sourceProperty": "data",
+        "options": {
+          "fileName": "={{ $('Insert Document Metadata').item.json.id +\"_\"+ $json.fileName}}"
+        }
+      },
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        4800,
+        1020
+      ],
+      "id": "61782aff-6683-4bab-b699-c2cc58757b59",
+      "name": "Convert to File"
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "={\n  \"data\": \"{{$json['image_base64'].split(',').pop()}}\",\n  \"fileName\": \"{{$json.id}}\",\n  \"mimeType\": \"image/jpeg\"\n}\n\n\n\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        4620,
+        1020
+      ],
+      "id": "92f00bec-4031-4327-89e3-465165167a3e",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "7e6dcc66-0501-4739-a738-909878c4b23d",
+              "name": "images",
+              "value": "={{ $json.images }}",
+              "type": "array"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        4200,
+        1020
+      ],
+      "id": "eca4431d-05eb-455c-8002-81f946e11be5",
+      "name": "Edit Fields3"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "images",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        4400,
+        1020
+      ],
+      "id": "634f8e19-9c78-4ccf-8dde-86eabdb8a456",
+      "name": "Split Out"
+    },
+    {
+      "parameters": {
+        "operation": "upload",
+        "bucketName": "ragtest",
+        "fileName": "=",
+        "additionalFields": {
+          "parentFolderKey": "extracted_images"
+        }
+      },
+      "type": "n8n-nodes-base.s3",
+      "typeVersion": 1,
+      "position": [
+        5000,
+        1020
+      ],
+      "id": "46a181e5-50cc-4010-86e6-939fa19c7fdd",
+      "name": "S3",
+      "credentials": {
+        "s3": {
+          "id": "GDRbU9L8IZkO1nYn",
+          "name": "S3 account 3"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "d15e917b-43d2-40b8-8b49-af467ff63961",
+              "leftValue": "={{ $json.data[0].parseJson().skipped }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notExists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        4020,
+        1280
+      ],
+      "id": "9c7ee553-a3a6-4737-9f45-d40f3804f46c",
+      "name": "If1"
+    },
+    {
+      "parameters": {
+        "jsonMode": "expressionData",
+        "jsonData": "={{ $json.content.parseJson().pageContent.toJsonString() }}",
+        "options": {
+          "metadata": {
+            "metadataValues": [
+              {
+                "name": "source",
+                "value": "={{ $('Insert Document Metadata').item.json.url }}"
+              },
+              {
+                "name": "blobType",
+                "value": "application/jsonb"
+              },
+              {
+                "name": "loc",
+                "value": "={{ $json.content.parseJson().metadata.loc }}"
+              },
+              {
+                "name": "source_metadata_id",
+                "value": "={{ $('Insert Document Metadata').item.json.id_source }}"
+              }
+            ]
+          }
+        }
+      },
+      "id": "a66ed7d4-c40f-4d61-bcc1-fd56e3157326",
+      "name": "Default Data Loader",
+      "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+      "typeVersion": 1,
+      "position": [
+        4820,
+        1520
+      ]
+    },
+    {
+      "parameters": {
+        "model": "text-embedding-3-small",
+        "options": {}
+      },
+      "id": "e689ce45-d925-4f68-819f-de5ed767f255",
+      "name": "Embeddings OpenAI1",
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1,
+      "position": [
+        5120,
+        2440
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "jpK6UkKnpLM9LJPk",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "73f68089-1af6-481a-b786-48e9b58ccffa",
+      "name": "Character Text Splitter",
+      "type": "@n8n/n8n-nodes-langchain.textSplitterCharacterTextSplitter",
+      "typeVersion": 1,
+      "position": [
+        4720,
+        1740
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "insert",
+        "tableName": {
+          "__rl": true,
+          "value": "n8n_testmistral",
+          "mode": "list",
+          "cachedResultName": "n8n_testmistral"
+        },
+        "options": {
+          "queryName": "match_n8n_testmistral"
+        }
+      },
+      "id": "057cb2ca-771a-4640-9904-782d6a475c53",
+      "name": "Insert into Supabase Vectorstore",
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+      "typeVersion": 1,
+      "position": [
+        4900,
+        1280
+      ],
+      "credentials": {
+        "supabaseApi": {
+          "id": "8hlgdRRQJS9sMYJ1",
+          "name": "Supabase account 3 dbt rn"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// 0. Get document data\nlet raw = $input.first().json['Document data'];   // raw is an array of pages\nlet source = $input.first().json['Document name'];\nlet source_id = $('Insert Document Metadata').first().json.id;\n\n// Helper: return character length of an object's content\nfunction getObjLength(obj) {\n  return (obj.content || '').length;\n}\n\nfunction getObjLengthofTextOnly(obj) {\n  if (obj.type === 'image_ocr') return 0;\n  return (obj.content || '').length;\n}\n\n// Split oversized items by char length\nfunction splitOversizedItems(arr, chunkSize) {\n  const result = [];\n  for (const item of arr) {\n    const content = item.content || '';\n    if (content.length <= chunkSize) {\n      result.push(item);\n    } else {\n      for (let start = 0; start < content.length; start += chunkSize) {\n        const part = content.slice(start, start + chunkSize);\n        result.push({ ...item, content: part });\n      }\n    }\n  }\n  return result;\n}\n\n// Chunking function (per page)\nfunction chunkByCharLength(arr, source, pageNum, chunkSize = 1000) {\n  const flat = splitOversizedItems(arr, chunkSize);\n  const response = [];\n  let idx = 0;\n  let charPos = 0;\n\n  while (idx < flat.length) {\n    const a = [];\n    let sum = 0;\n    const from = charPos;\n\n    while (idx < flat.length && sum < chunkSize) {\n      const item = flat[idx];\n      const len = getObjLength(item);\n      const text_len = getObjLengthofTextOnly(item);\n      a.push(item);\n      sum += len;\n      charPos += text_len;\n      idx++;\n    }\n\n    const to = charPos;\n    const metadata = {\n      source: source,\n      source_metadata_id: source_id,\n      loc: { \n        page: pageNum,       // ✅ add page number here\n        Characters: { from, to } \n      }\n    };\n\n    response.push({\n      content: JSON.stringify({\n        pageContent: a,\n        metadata\n      })\n    });\n  }\n\n  return response;\n}\n\n// 1. Run chunking page by page\nlet chunks = [];\nraw.forEach((pageText, pageIndex) => {\n  let arr = [{ type: \"text\", content: pageText }];\n  let pageChunks = chunkByCharLength(arr, source, pageIndex + 1, 500); // pageIndex+1 for human-readable page no.\n  chunks.push(...pageChunks);\n});\n\n// 2. Return in n8n format\nreturn chunks.map(c => ({ json: c }));\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        4600,
+        1280
+      ],
+      "id": "39bdaf29-4598-46c5-93a5-c8b6787eedd9",
+      "name": "Code"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "68193487-bacc-4522-afdf-180c97c243e7",
+              "name": "storage url",
+              "value": "https://nsebtjqnfydjgjtigsiq.supabase.co/storage/v1/object/public/images/extracted_images/",
+              "type": "string"
+            },
+            {
+              "id": "91abb037-6fbd-48bf-a2f7-e87d1d7ecb3f",
+              "name": "file id",
+              "value": "={{ $('Compare Datasets').item.json.id }}",
+              "type": "string"
+            },
+            {
+              "id": "c0ca2edb-e256-4fdf-9b30-78e32751032f",
+              "name": "number",
+              "value": "={{ 1 + $runIndex }}",
+              "type": "number"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        2680,
+        980
+      ],
+      "id": "60f9e97f-d644-4599-8508-92ff7b1932c5",
+      "name": "Edit Fields1"
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "bucketName": "images",
+        "fileKey": "=extracted_images/{{ $json['file id'] }}_image{{ $json.number }}.png",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.s3",
+      "typeVersion": 1,
+      "position": [
+        2940,
+        980
+      ],
+      "id": "aef02b12-a851-4115-9cc3-1a5e7a89b230",
+      "name": "S31",
+      "credentials": {
+        "s3": {
+          "id": "R5bk1tDKWKBON865",
+          "name": "S3 account"
+        }
+      },
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://universal-file-to-text-extractor.vercel.app/extract",
+        "sendBody": true,
+        "contentType": "multipart-form-data",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "mode",
+              "value": "single"
+            },
+            {
+              "name": "output_type",
+              "value": "jsonl"
+            },
+            {
+              "parameterType": "formBinaryData",
+              "name": "files",
+              "inputDataFieldName": "data"
+            },
+            {
+              "name": "include_images",
+              "value": "true"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2740,
+        3660
+      ],
+      "id": "f6a3b1d4-5245-439b-a26a-8d9f14bcbede",
+      "name": "HTTP Request",
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "operation": "upsert",
+        "schema": {
+          "__rl": true,
+          "mode": "list",
+          "value": "public"
+        },
+        "table": {
+          "__rl": true,
+          "value": "=n8n_metadata",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "title": "={{ $('Set File ID1').item.json.file_title.replaceSpecialChars() }}",
+            "url": "={{ $('Set File ID1').item.json.file_url }}",
+            "sharepoint_file_id": "={{ $json.sharepoint_file_id }}",
+            "sharepoint_folder_name": "={{ $json.foldername }}",
+            "id_source": "={{ $('Set File ID1').item.json.file_id }}"
+          },
+          "matchingColumns": [
+            "id_source"
+          ],
+          "schema": [
+            {
+              "id": "id_source",
+              "displayName": "id_source",
+              "required": true,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "title",
+              "displayName": "title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false
+            },
+            {
+              "id": "url",
+              "displayName": "url",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false,
+              "removed": false
+            },
+            {
+              "id": "created_at",
+              "displayName": "created_at",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "dateTime",
+              "canBeUsedToMatch": false
+            },
+            {
+              "id": "last_modified_date",
+              "displayName": "last_modified_date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "dateTime",
+              "canBeUsedToMatch": false,
+              "removed": false
+            },
+            {
+              "id": "sharepoint_file_id",
+              "displayName": "sharepoint_file_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false,
+              "removed": false
+            },
+            {
+              "id": "sharepoint_folder_name",
+              "displayName": "sharepoint_folder_name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.5,
+      "position": [
+        2720,
+        1280
+      ],
+      "id": "4a112e51-f36a-4ab9-bb36-344135540883",
+      "name": "Insert Document Metadata",
+      "executeOnce": true,
+      "credentials": {
+        "postgres": {
+          "id": "Lbgzg53k1R1pwGeo",
+          "name": "Postgres account 4 dbt rn"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "4244c0ca-eef1-4674-ae75-8c7f9f06018b",
+              "name": "Last_modified_date",
+              "value": "={{ $json[\"Last_modified_date\"] + \"Z\" }}",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1860,
+        1020
+      ],
+      "id": "befced20-9e2e-4988-a0d5-954845be035f",
+      "name": "Edit Fields4"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "value",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        2000,
+        3200
+      ],
+      "id": "a97b9484-dde6-4862-99d7-da6302598403",
+      "name": "Split Out2"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        2600,
+        3220
+      ],
+      "id": "ac16821b-e0c0-4bc4-8a7e-0cacdc140061",
+      "name": "Loop Over Items"
+    },
+    {
+      "parameters": {
+        "curlImport": "",
+        "httpVariantWarning": "",
+        "method": "GET",
+        "url": "=https://nosta.sharepoint.com/sites/OPEX/_api/web/GetFileByServerRelativeUrl('{{ $('Microsoft SharePoint HTTP Request6').item.json.value[0].ServerRelativeUrl }}')/$value",
+        "": "",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "microsoftSharePointOAuth2Api",
+        "provideSslCertificates": false,
+        "sendQuery": false,
+        "sendHeaders": false,
+        "sendBody": false,
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": false,
+              "neverError": false,
+              "responseFormat": "file",
+              "outputPropertyName": "data"
+            }
+          }
+        },
+        "infoMessage": ""
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        3180,
+        3240
+      ],
+      "id": "f921d1f1-4499-40cd-9619-e47f4253812c",
+      "name": "Microsoft SharePoint HTTP Request5",
+      "extendsCredential": "microsoftSharePointOAuth2Api",
+      "credentials": {
+        "microsoftSharePointOAuth2Api": {
+          "id": "9BGGzF75Nq8GkPkx",
+          "name": "Microsoft SharePoint account 4"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "10646eae-ae46-4327-a4dc-9987c2d76173",
+              "name": "file_id",
+              "value": "={{ $json.UniqueId }}",
+              "type": "string"
+            },
+            {
+              "id": "f4536df5-d0b1-4392-bf17-b8137fb31a44",
+              "name": "file_type",
+              "value": "={{ $json.Name.split('.').pop() }}",
+              "type": "string"
+            },
+            {
+              "id": "77d782de-169d-4a46-8a8e-a3831c04d90f",
+              "name": "file_title",
+              "value": "={{ $json.Name }}",
+              "type": "string"
+            },
+            {
+              "id": "9bde4d7f-e4f3-4ebd-9338-dce1350f9eab",
+              "name": "file_url",
+              "value": "={{ $json.LinkingUri }}",
+              "type": "string"
+            },
+            {
+              "id": "fae402c8-c486-4b57-8d28-bf669db6b442",
+              "name": "last_modified_date",
+              "value": "={{ $json.TimeLastModified }}",
+              "type": "string"
+            },
+            {
+              "id": "866ce582-16e2-4869-ac77-13f248c187eb",
+              "name": "sharepoint_file_id",
+              "value": "={{ $json.UniqueId }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "8e04fae1-f20d-4b01-b2e1-26028faab219",
+      "name": "Set File ID",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        2800,
+        3240
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "$input.item.binary.data.fileName = 'myNewFilename.docx'\n\nreturn $input.item;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3380,
+        3240
+      ],
+      "id": "749b8ede-2071-4bc8-93c8-c6287e189037",
+      "name": "Code4"
+    },
+    {
+      "parameters": {
+        "mergeByFields": {
+          "values": [
+            {
+              "field1": "sharepoint_file_id",
+              "field2": "UniqueId"
+            },
+            {
+              "field1": "Last_modified_date",
+              "field2": "TimeLastModified"
+            }
+          ]
+        },
+        "fuzzyCompare": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.compareDatasets",
+      "typeVersion": 2.3,
+      "position": [
+        2280,
+        3160
+      ],
+      "id": "6cac0d4a-07d8-4567-ba73-31705b5fbd59",
+      "name": "Compare Datasets1"
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "tableId": "knowledge_metadata",
+        "returnAll": true
+      },
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        1660,
+        2940
+      ],
+      "id": "a38f105c-c676-4ed6-a72c-26ba55f459e7",
+      "name": "Supabase2",
+      "credentials": {
+        "supabaseApi": {
+          "id": "IOh0LUl8h2DbmqBS",
+          "name": "Supabase Ayan"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        3760,
+        3400
+      ],
+      "id": "691ca76d-bfe6-44e4-916b-898e5932a2d9",
+      "name": "Wait1",
+      "webhookId": "29a6451b-8a53-4598-b4fe-e11241eb51ab"
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "tableId": "knowledge_metadata",
+        "filters": {
+          "conditions": [
+            {
+              "keyName": "id",
+              "condition": "eq",
+              "keyValue": "={{ $json.id }}"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        2540,
+        2920
+      ],
+      "id": "5fbe6bea-6cd3-4b7a-ac75-efa4fd320f40",
+      "name": "Supabase3",
+      "credentials": {
+        "supabaseApi": {
+          "id": "IOh0LUl8h2DbmqBS",
+          "name": "Supabase Ayan"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "5132d92c-41da-4a55-ad79-0c329ca7e626",
+              "name": "Document name",
+              "value": "={{ $('HTTP Request1').item.json.data[0].parseJson().source }}",
+              "type": "string"
+            },
+            {
+              "id": "c8160701-2be7-43c6-bcfa-295fbebe0e23",
+              "name": "Document data",
+              "value": "={{ $('HTTP Request1').item.json.data[0].parseJson().blocks }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        4040,
+        3220
+      ],
+      "id": "8f50894d-95e8-4884-949b-e0c4e8008ba5",
+      "name": "Edit Fields5"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "d15e917b-43d2-40b8-8b49-af467ff63961",
+              "leftValue": "={{ $json.data[0].parseJson().skipped }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notExists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        3820,
+        3240
+      ],
+      "id": "a1f94d88-85e4-44c2-be6c-4282f27215a5",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "jsonMode": "expressionData",
+        "jsonData": "={{ $json.content.parseJson().pageContent.toJsonString() }}",
+        "options": {
+          "metadata": {
+            "metadataValues": [
+              {
+                "name": "source",
+                "value": "={{ $json.content.parseJson().metadata.source }}"
+              },
+              {
+                "name": "blobType",
+                "value": "application/jsonb"
+              },
+              {
+                "name": "loc",
+                "value": "={{ $json.content.parseJson().metadata.loc }}"
+              },
+              {
+                "name": "source_metadata_id",
+                "value": "={{ $json.content.parseJson().metadata.source_metadata_id }}"
+              }
+            ]
+          }
+        }
+      },
+      "id": "0e4298c1-517b-442a-846b-f7f7b72d6d83",
+      "name": "Default Data Loader1",
+      "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+      "typeVersion": 1,
+      "position": [
+        4580,
+        2600
+      ]
+    },
+    {
+      "parameters": {
+        "model": "text-embedding-3-small",
+        "options": {}
+      },
+      "id": "0fbaa1d6-e791-480b-a2df-03e91e21bb7a",
+      "name": "Embeddings OpenAI",
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1,
+      "position": [
+        4540,
+        3440
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "jpK6UkKnpLM9LJPk",
+          "name": "OpenAi account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chunkSize": 10000000
+      },
+      "id": "a20364c4-307b-4f78-8c23-c143e9f22563",
+      "name": "Character Text Splitter1",
+      "type": "@n8n/n8n-nodes-langchain.textSplitterCharacterTextSplitter",
+      "typeVersion": 1,
+      "position": [
+        4780,
+        3680
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "insert",
+        "tableName": {
+          "__rl": true,
+          "value": "knowledge_test",
+          "mode": "list",
+          "cachedResultName": "knowledge_test"
+        },
+        "options": {
+          "queryName": "match7_documents"
+        }
+      },
+      "id": "b250675e-2652-4f80-8431-ca27f9945d63",
+      "name": "Insert into Supabase Vectorstore1",
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+      "typeVersion": 1,
+      "position": [
+        4640,
+        3220
+      ],
+      "credentials": {
+        "supabaseApi": {
+          "id": "IOh0LUl8h2DbmqBS",
+          "name": "Supabase Ayan"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// 0. Parse the incoming Document data if it's still a string\nlet raw = $input.first().json['Document data'];\nlet arr = typeof raw === 'string' ? JSON.parse(raw) : raw;\nlet source = $input.first().json['Document name'];\nlet source_id = $('Insert Document Metadata1').first().json.id\n\n// Helper: return character length of an array object\nfunction getObjLength(obj) {\n  console.log(obj, typeof(obj));\n  return (obj.content || '').length;\n}\n\nfunction getObjLengthofTextOnly(obj) {\n  if (obj.type === 'image_ocr') {\n    return 0;\n  }\n  return (obj.content || '').length;\n}\n\n// Split any single item whose content is > chunkSize into multiple items\nfunction splitOversizedItems(arr, chunkSize) {\n  const result = [];\n  for (const item of arr) {\n    const content = item.content || '';\n    if (content.length <= chunkSize) {\n      result.push(item);\n    } else {\n      // slice into parts of size chunkSize\n      for (let start = 0; start < content.length; start += chunkSize) {\n        const part = content.slice(start, start + chunkSize);\n        // carry over other fields (type, filename, etc.)\n        result.push({ ...item, content: part });\n      }\n    }\n  }\n  return result;\n}\n\n// Chunking function\nfunction chunkByCharLength(arr, source, chunkSize = 1000) {\n  // first, split oversized items\n  const flat = splitOversizedItems(arr, chunkSize);\n\n  const response = [];\n  let idx = 0;\n  let charPos = 0;\n\n  while (idx < flat.length) {\n    const a = [];\n    let sum = 0;\n    const from = charPos;\n\n    // collect until we hit chunkSize\n    while (idx < flat.length && sum < chunkSize) {\n      const item = flat[idx];\n      const len = getObjLength(item);\n      const text_len = getObjLengthofTextOnly(item);\n      a.push(item);\n      sum += len;\n      charPos += text_len;\n      idx++;\n    }\n\n    const to = charPos;\n    const metadata = {\n      source: source,\n      source_metadata_id: source_id,\n      loc: { Characters: { from, to } }\n    };\n\n    response.push({\n      content: JSON.stringify({\n        pageContent: a,\n        metadata\n      })\n    });\n  }\n\n  return response;\n}\n\n// 1. Run chunking\nconst chunks = chunkByCharLength(arr, source, 1000);\n\n// 2. Return in n8n‑compatible format\nreturn chunks.map(c => ({ json: c }));\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        4320,
+        3220
+      ],
+      "id": "a1a45f7e-c87e-4ae4-bad4-97e71ba26c1f",
+      "name": "Code5"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://universal-file-to-text-extractor.vercel.app/extract",
+        "sendBody": true,
+        "contentType": "multipart-form-data",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "mode",
+              "value": "single"
+            },
+            {
+              "name": "output_type",
+              "value": "jsonl"
+            },
+            {
+              "parameterType": "formBinaryData",
+              "name": "files",
+              "inputDataFieldName": "data"
+            },
+            {
+              "name": "include_images",
+              "value": "true"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        3540,
+        3240
+      ],
+      "id": "ccce2a14-3e27-42f1-863c-abdbab8bf2ac",
+      "name": "HTTP Request1",
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "operation": "upsert",
+        "schema": {
+          "__rl": true,
+          "mode": "list",
+          "value": "public"
+        },
+        "table": {
+          "__rl": true,
+          "value": "=knowledge_metadata",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "id": "={{ $('Set File ID').item.json.file_id }}",
+            "title": "={{ $('Set File ID').item.json.file_title.replaceSpecialChars() }}",
+            "url": "={{ $('Set File ID').item.json.file_url }}",
+            "sharepoint_file_id": "={{ $json.sharepoint_file_id }}",
+            "Last_modified_date": "={{ $json.last_modified_date }}"
+          },
+          "matchingColumns": [
+            "id"
+          ],
+          "schema": [
+            {
+              "id": "id",
+              "displayName": "id",
+              "required": true,
+              "defaultMatch": true,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "title",
+              "displayName": "title",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false
+            },
+            {
+              "id": "url",
+              "displayName": "url",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false,
+              "removed": false
+            },
+            {
+              "id": "created_at",
+              "displayName": "created_at",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "dateTime",
+              "canBeUsedToMatch": false
+            },
+            {
+              "id": "schema",
+              "displayName": "schema",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false,
+              "removed": true
+            },
+            {
+              "id": "Last_modified_date",
+              "displayName": "Last_modified_date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "dateTime",
+              "canBeUsedToMatch": false,
+              "removed": false
+            },
+            {
+              "id": "sharepoint_file_id",
+              "displayName": "sharepoint_file_id",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": false,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.5,
+      "position": [
+        2980,
+        3240
+      ],
+      "id": "e5610b82-286f-4328-a7a1-bf55ccd9bde5",
+      "name": "Insert Document Metadata1",
+      "executeOnce": true,
+      "credentials": {
+        "postgres": {
+          "id": "Qer75M1RfykhlGmw",
+          "name": "Postgres Ayan"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "4244c0ca-eef1-4674-ae75-8c7f9f06018b",
+              "name": "Last_modified_date",
+              "value": "={{ $json[\"Last_modified_date\"] + \"Z\" }}",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1940,
+        2940
+      ],
+      "id": "47591068-3577-447a-a001-c6ee436aacd4",
+      "name": "Edit Fields9"
+    },
+    {
+      "parameters": {
+        "curlImport": "",
+        "httpVariantWarning": "",
+        "method": "GET",
+        "url": "https://nosta.sharepoint.com/sites/OPEX/_api/web/GetFolderByServerRelativeUrl('/sites/OPEX/Freigegebene%20Dokumente/OPEX/03_Externer_Zugriff/Knowledge%20OPEX')/Files",
+        "": "",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "microsoftSharePointOAuth2Api",
+        "provideSslCertificates": false,
+        "sendQuery": false,
+        "sendHeaders": false,
+        "sendBody": false,
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": false,
+              "neverError": false,
+              "responseFormat": "autodetect"
+            }
+          }
+        },
+        "infoMessage": ""
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1680,
+        3200
+      ],
+      "id": "23a8c509-bdda-42c1-a9d9-c4a4bc96c276",
+      "name": "Microsoft SharePoint HTTP Request6",
+      "extendsCredential": "microsoftSharePointOAuth2Api",
+      "credentials": {
+        "microsoftSharePointOAuth2Api": {
+          "id": "9BGGzF75Nq8GkPkx",
+          "name": "Microsoft SharePoint account 4"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// This code is working correctly for your n8n version and data structure.\nconst allFiles = [];\n\nfunction findFilesRecursively(folder) {\n  if (!folder || typeof folder !== 'object') { return; }\n  if (Array.isArray(folder.Files)) {\n    allFiles.push(...folder.Files);\n  }\n  if (Array.isArray(folder.Folders)) {\n    for (const subFolder of folder.Folders) {\n      findFilesRecursively(subFolder);\n    }\n  }\n}\n\n// This loop correctly processes all incoming items from SharePoint\nfor (const item of $items()) {\n  const data = item.json;\n  if (Array.isArray(data)) {\n    for (const folder of data) {\n      findFilesRecursively(folder);\n    }\n  } else {\n    findFilesRecursively(data);\n  }\n}\n\n// Return the final list of all 286 files.\nreturn allFiles.map(file => ({ json: file }));"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1840,
+        3660
+      ],
+      "id": "032c241a-7de1-4162-aaa3-5cc6d8f4fa96",
+      "name": "Code7"
+    },
+    {
+      "parameters": {
+        "curlImport": "",
+        "httpVariantWarning": "",
+        "method": "GET",
+        "url": "https://nosta.sharepoint.com/sites/OPEX/_api/web/GetFolderByServerRelativeUrl('/sites/OPEX/Freigegebene Dokumente/OPEX/03_Externer_Zugriff/SAP Docs')/Files?$filter=not substringof('.db',Name) and not substringof('.msg',Name)",
+        "": "",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "microsoftSharePointOAuth2Api",
+        "provideSslCertificates": false,
+        "sendQuery": false,
+        "sendHeaders": false,
+        "sendBody": false,
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": false,
+              "neverError": false,
+              "responseFormat": "autodetect"
+            }
+          }
+        },
+        "infoMessage": ""
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1380,
+        3660
+      ],
+      "id": "8d0c167d-35ed-4cf6-a3c1-9d18cfccf67d",
+      "name": "Microsoft SharePoint HTTP Request12",
+      "extendsCredential": "microsoftSharePointOAuth2Api",
+      "credentials": {
+        "microsoftSharePointOAuth2Api": {
+          "id": "9BGGzF75Nq8GkPkx",
+          "name": "Microsoft SharePoint account 4"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// This is the final, universal code that will get all your files.\n// It recursively finds all files and filters out temporary/system files.\nconst allFiles = [];\nconst excludedExtensions = ['.db', '.msg', '.xlsx', '.docx',  '.xlsm']; // <-- UPDATED THIS LINE\n\n/**\n * This function recursively digs through a folder structure to find all files.\n * @param {Object} folder - A folder object that may contain files and other folders.\n */\nfunction findFilesRecursively(folder) {\n  // Safety check to make sure we have a valid folder\n  if (!folder || typeof folder !== 'object') {\n    return;\n  }\n\n  // If there's a 'Files' array, add its contents to our main list\n  if (Array.isArray(folder.Files)) {\n    allFiles.push(...folder.Files);\n  }\n\n  // If there's a 'Folders' array, run this same function on each subfolder\n  if (Array.isArray(folder.Folders)) {\n    for (const subFolder of folder.Folders) {\n      findFilesRecursively(subFolder);\n    }\n  }\n}\n\n// Directly process the first item from the input.\nconst topLevelFolderObject = $input.item.json;\n\n// The data you provided is a single object with a \"Folders\" key at the top.\n// We start the search from this single object.\nfindFilesRecursively(topLevelFolderObject);\n\n// Filter out items based on multiple conditions\nconst filteredFiles = allFiles.filter(item => {\n  // Ensure item.Name exists and is a string before proceeding\n  if (typeof item.Name !== 'string') {\n    return false; // Exclude items that don't have a valid Name property\n  }\n  const fileName = item.Name;\n  const lowerCaseFileName = fileName.toLowerCase();\n\n  // Condition 1: Check if the filename starts with '~$' (Office temporary files)\n  const isTempFile = fileName.startsWith('~$');\n\n  // Condition 2: Check if the filename ends with an excluded extension\n  const hasExcludedExtension = excludedExtensions.some(ext => lowerCaseFileName.endsWith(ext));\n\n  // Keep the file only if it is NOT a temp file AND does NOT have an excluded extension\n  return !isTempFile && !hasExcludedExtension;\n});\n\n\n// Return the final, flattened list of all valid file items.\nreturn filteredFiles.map(file => ({ json: file }));"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1680,
+        1300
+      ],
+      "id": "759fd300-cf3f-4ee0-9b80-eb247b0af5a5",
+      "name": "Code8",
+      "executeOnce": false
+    },
+    {
+      "parameters": {
+        "curlImport": "",
+        "httpVariantWarning": "",
+        "method": "GET",
+        "url": "=https://nosta.sharepoint.com/sites/OPEX/_api/web/GetFileByServerRelativeUrl('{{ $('Microsoft SharePoint HTTP Request').item.json.value[0].ServerRelativeUrl }}')/$value",
+        "": "",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "microsoftSharePointOAuth2Api",
+        "provideSslCertificates": false,
+        "sendQuery": false,
+        "sendHeaders": false,
+        "sendBody": false,
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": false,
+              "neverError": false,
+              "responseFormat": "file",
+              "outputPropertyName": "data"
+            }
+          }
+        },
+        "infoMessage": ""
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2080,
+        3660
+      ],
+      "id": "ecd57ba7-20ab-405d-bc0c-dd0ca26330af",
+      "name": "Microsoft SharePoint HTTP Request13",
+      "extendsCredential": "microsoftSharePointOAuth2Api",
+      "credentials": {
+        "microsoftSharePointOAuth2Api": {
+          "id": "9BGGzF75Nq8GkPkx",
+          "name": "Microsoft SharePoint account 4"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.mistral.ai/v1/files",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "mistralCloudApi",
+        "sendBody": true,
+        "contentType": "multipart-form-data",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "purpose",
+              "value": "ocr"
+            },
+            {
+              "parameterType": "formBinaryData",
+              "name": "file",
+              "inputDataFieldName": "data"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a43464e5-fd83-4e21-af9d-359be4ce0018",
+      "name": "Mistral Upload",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        3220,
+        1280
+      ],
+      "typeVersion": 4.2,
+      "credentials": {
+        "mistralCloudApi": {
+          "id": "uXnHG2tXx33Gkexl",
+          "name": "Mistral Cloud account(dbt)"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "=https://api.mistral.ai/v1/files/{{ $json.id }}/url",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "mistralCloudApi",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "expiry",
+              "value": "24"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Accept",
+              "value": "application/json"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "4b5fb5f4-1af2-4476-97cf-a259d753ae22",
+      "name": "Mistral Signed URL",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        3320,
+        1300
+      ],
+      "typeVersion": 4.2,
+      "credentials": {
+        "mistralCloudApi": {
+          "id": "uXnHG2tXx33Gkexl",
+          "name": "Mistral Cloud account(dbt)"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.mistral.ai/v1/ocr",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "mistralCloudApi",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"mistral-ocr-latest\",\n  \"document\": {\n    \"type\": \"document_url\",\n    \"document_url\": \"{{ $json.url }}\"\n  },\n  \"include_image_base64\": true\n}",
+        "options": {}
+      },
+      "id": "0a274680-e774-4b20-89c2-ee3a8e6aed3a",
+      "name": "Mistral DOC OCR",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        4040,
+        2800
+      ],
+      "typeVersion": 4.2,
+      "credentials": {
+        "mistralCloudApi": {
+          "id": "nFRSF27FBGd8XGtX",
+          "name": "Mistral Cloud nosta"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        4440,
+        2860
+      ],
+      "id": "c80b781d-5880-478e-ab96-4059b7090289",
+      "name": "Wait2",
+      "webhookId": "e3501a12-a37d-48e5-a6a7-d22e16d6aa93"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.mistral.ai/v1/ocr",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "mistralCloudApi",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"mistral-ocr-latest\",\n  \"document\": {\n    \"document_url\": \"{{ $json.url }}\"\n  },\n  \"bbox_annotation_format\": {\n    \"type\": \"json_schema\",\n    \"json_schema\": {\n      \"schema\": {\n        \"properties\": {\n          \"image_type\": { \"title\": \"Image_Type\", \"type\": \"string\", \"description\": \"type of image\" },\n          \"short_description\": { \"title\": \"Short_Description\", \"type\": \"string\", \"description\": \"short description\" },\n          \"summary\": { \"title\": \"Summary\", \"type\": \"string\", \"description\": \"summary of the image\" }\n        },\n        \"required\": [\"image_type\",\"short_description\",\"summary\"],\n        \"title\": \"BBOXAnnotation\",\n        \"type\": \"object\",\n        \"additionalProperties\": false\n      },\n      \"name\": \"bbox_annotation\",\n      \"strict\": true\n    }\n  },\n  \"include_image_base64\": true\n}\n\n",
+        "options": {}
+      },
+      "id": "63c1f69f-0951-46d6-855d-a5aa442be003",
+      "name": "Mistral DOC OCR3",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        3460,
+        1280
+      ],
+      "typeVersion": 4.2,
+      "credentials": {
+        "mistralCloudApi": {
+          "id": "uXnHG2tXx33Gkexl",
+          "name": "Mistral Cloud account(dbt)"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "d15e917b-43d2-40b8-8b49-af467ff63961",
+              "leftValue": "={{ $json.embedding_text }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        3700,
+        2620
+      ],
+      "id": "a2fdec60-7124-4595-9651-6f7fe933e587",
+      "name": "If2"
+    },
+    {
+      "parameters": {
+        "jsCode": "// n8n Function node\n// Keeps image array from input, inserts embedding_text inline with images\n\nconst pages = items[0].json.pages;\nlet output = [];\n\nfor (const page of pages) {\n  let text = `Page ${page.index}\\n\\n`;\n  let markdown = page.markdown;\n\n  // Replace each image markdown with annotation text if available\n  markdown = markdown.replace(/!\\[(.*?)\\]\\((.*?)\\)/g, (match, alt, src) => {\n    const img = page.images.find(i => i.id === src || i.fileName === src);\n    if (img && img.image_annotation) {\n      const ann = JSON.parse(img.image_annotation);\n      return (\n        `Image [${img.id}]\\n` +\n        `Type: ${ann.image_type}\\n` +\n        `Short: ${ann.short_description}\\n` +\n        `Summary: ${ann.summary}\\n`\n      );\n    }\n    return \"\"; // if no annotation, strip it\n  });\n\n  text += markdown.trim();\n\n  output.push({\n    json: {\n      page_index: page.index,\n      embedding_text: text,\n      images: page.images   // ✅ keep original images array\n    }\n  });\n}\n\nreturn output;\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3840,
+        1280
+      ],
+      "id": "a437932e-0e40-415d-9bc2-7f856da8af56",
+      "name": "Code2"
+    },
+    {
+      "parameters": {
+        "fieldsToAggregate": {
+          "fieldToAggregate": [
+            {
+              "fieldToAggregate": "Document data"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        4420,
+        1260
+      ],
+      "id": "dadd6c36-88fb-4d92-8549-2c3380962d38",
+      "name": "Aggregate"
+    },
+    {
+      "parameters": {
+        "jsCode": "// n8n Function node\n// Keeps image array from input, adds embedding_text per page\n\nconst pages = items[0].json.pages;\nlet output = [];\n\nfor (const page of pages) {\n  let text = `Page ${page.index}\\n\\n`;\n\n  // OCR markdown text, but strip image tags\n  const cleanMarkdown = page.markdown.replace(/!\\[.*?\\]\\(.*?\\)/g, \"\").trim();\n  if (cleanMarkdown) {\n    text += cleanMarkdown + \"\\n\\n\";\n  }\n\n  // Add annotations for each image\n  for (const img of page.images) {\n    if (img.image_annotation) {\n      const ann = JSON.parse(img.image_annotation);\n      text += `Image [${img.id}]\\n`;\n      text += `Type: ${ann.image_type}\\n`;\n      text += `Short: ${ann.short_description}\\n`;\n      text += `Summary: ${ann.summary}\\n\\n`;\n    }\n  }\n\n  output.push({\n    json: {\n      page_index: page.index,\n      embedding_text: text.trim(),\n      images: page.images   // ✅ keep original images array here\n    }\n  });\n}\n\nreturn output;\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3200,
+        2740
+      ],
+      "id": "1420ddcd-a730-443a-a234-a4eedf1b2a32",
+      "name": "Code3"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.embeddingsMistralCloud",
+      "typeVersion": 1,
+      "position": [
+        4660,
+        1500
+      ],
+      "id": "5b206e1c-7ae6-44c2-bc1d-a56f298f5f03",
+      "name": "Embeddings Mistral Cloud",
+      "credentials": {
+        "mistralCloudApi": {
+          "id": "uXnHG2tXx33Gkexl",
+          "name": "Mistral Cloud account(dbt)"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// 0. Get document data\nlet raw = $input.first().json['Document data'];\nlet source = $input.first().json['Document name'];\nlet source_id = $('Insert Document Metadata').first().json.id;\n\n// CORRECTED PART: Combine the array of pages into a single string.\n// This is the fix.\nconst combinedText = raw.join('\\n\\n');\n\n// Wrap the combined text into the array structure the script expects.\nlet arr = [{ type: \"text\", content: combinedText }];\n\n// Helper: return character length of an object's content\nfunction getObjLength(obj) {\n  return (obj.content || '').length;\n}\n\nfunction getObjLengthofTextOnly(obj) {\n  if (obj.type === 'image_ocr') {\n    return 0;\n  }\n  return (obj.content || '').length;\n}\n\n// Split any single item whose content is > chunkSize into multiple items\nfunction splitOversizedItems(arr, chunkSize) {\n  const result = [];\n  for (const item of arr) {\n    const content = item.content || '';\n    if (content.length <= chunkSize) {\n      result.push(item);\n    } else {\n      // slice into parts of size chunkSize\n      for (let start = 0; start < content.length; start += chunkSize) {\n        const part = content.slice(start, start + chunkSize);\n        // carry over other fields\n        result.push({ ...item, content: part });\n      }\n    }\n  }\n  return result;\n}\n\n// Chunking function\nfunction chunkByCharLength(arr, source, chunkSize = 1000) {\n  const flat = splitOversizedItems(arr, chunkSize);\n  const response = [];\n  let idx = 0;\n  let charPos = 0;\n\n  while (idx < flat.length) {\n    const a = [];\n    let sum = 0;\n    const from = charPos;\n\n    while (idx < flat.length && sum < chunkSize) {\n      const item = flat[idx];\n      const len = getObjLength(item);\n      const text_len = getObjLengthofTextOnly(item);\n      a.push(item);\n      sum += len;\n      charPos += text_len;\n      idx++;\n    }\n\n    const to = charPos;\n    const metadata = {\n      source: source,\n      source_metadata_id: source_id,\n      loc: { Characters: { from, to } }\n    };\n\n    response.push({\n      content: JSON.stringify({\n        pageContent: a,\n        metadata\n      })\n    });\n  }\n\n  return response;\n}\n\n// 1. Run chunking\nconst chunks = chunkByCharLength(arr, source, 500);\n\n// 2. Return in n8n format\nreturn chunks.map(c => ({ json: c }));"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1360,
+        2940
+      ],
+      "id": "5e112f46-3739-44a0-b4e6-aa169c6310a9",
+      "name": "Code6"
+    },
+    {
+      "parameters": {
+        "jsCode": "// 0. Get document data\nlet raw = $input.first().json['Document data'];\nlet source = $input.first().json['Document name'];\nlet source_id = $('Insert Document Metadata').first().json.id;\n\n// CORRECTED PART: Combine the array of pages into a single string.\n// This is the fix.\nconst combinedText = raw.join('\\n\\n');\n\n// Wrap the combined text into the array structure the script expects.\nlet arr = [{ type: \"text\", content: combinedText }];\n\n// Helper: return character length of an object's content\nfunction getObjLength(obj) {\n  return (obj.content || '').length;\n}\n\nfunction getObjLengthofTextOnly(obj) {\n  if (obj.type === 'image_ocr') {\n    return 0;\n  }\n  return (obj.content || '').length;\n}\n\n// Split any single item whose content is > chunkSize into multiple items\nfunction splitOversizedItems(arr, chunkSize) {\n  const result = [];\n  for (const item of arr) {\n    const content = item.content || '';\n    if (content.length <= chunkSize) {\n      result.push(item);\n    } else {\n      // slice into parts of size chunkSize\n      for (let start = 0; start < content.length; start += chunkSize) {\n        const part = content.slice(start, start + chunkSize);\n        // carry over other fields\n        result.push({ ...item, content: part });\n      }\n    }\n  }\n  return result;\n}\n\n// Chunking function\nfunction chunkByCharLength(arr, source, chunkSize = 1000) {\n  const flat = splitOversizedItems(arr, chunkSize);\n  const response = [];\n  let idx = 0;\n  let charPos = 0;\n\n  while (idx < flat.length) {\n    const a = [];\n    let sum = 0;\n    const from = charPos;\n\n    while (idx < flat.length && sum < chunkSize) {\n      const item = flat[idx];\n      const len = getObjLength(item);\n      const text_len = getObjLengthofTextOnly(item);\n      a.push(item);\n      sum += len;\n      charPos += text_len;\n      idx++;\n    }\n\n    const to = charPos;\n    const metadata = {\n      source: source,\n      source_metadata_id: source_id,\n      loc: { Characters: { from, to } }\n    };\n\n    response.push({\n      content: JSON.stringify({\n        pageContent: a,\n        metadata\n      })\n    });\n  }\n\n  return response;\n}\n\n// 1. Run chunking\nconst chunks = chunkByCharLength(arr, source, 500);\n\n// 2. Return in n8n format\nreturn chunks.map(c => ({ json: c }));"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        960,
+        2860
+      ],
+      "id": "aa9f2ee9-902b-4c51-89eb-48f0c36c7c06",
+      "name": "Code9"
+    },
+    {
+      "parameters": {
+        "jsCode": "// 0. Get document data\nlet raw = $input.first().json['Document data'];\nlet source = $input.first().json['Document name'];\nlet source_id = $('Insert Document Metadata').first().json.id;\n\n// CORRECTED PART: Combine the array of pages into a single string.\n// This is the fix.\nconst combinedText = raw.join('\\n\\n');\n\n// Wrap the combined text into the array structure the script expects.\nlet arr = [{ type: \"text\", content: combinedText }];\n\n// Helper: return character length of an object's content\nfunction getObjLength(obj) {\n  return (obj.content || '').length;\n}\n\nfunction getObjLengthofTextOnly(obj) {\n  if (obj.type === 'image_ocr') {\n    return 0;\n  }\n  return (obj.content || '').length;\n}\n\n// Split any single item whose content is > chunkSize into multiple items\nfunction splitOversizedItems(arr, chunkSize) {\n  const result = [];\n  for (const item of arr) {\n    const content = item.content || '';\n    if (content.length <= chunkSize) {\n      result.push(item);\n    } else {\n      // slice into parts of size chunkSize\n      for (let start = 0; start < content.length; start += chunkSize) {\n        const part = content.slice(start, start + chunkSize);\n        // carry over other fields\n        result.push({ ...item, content: part });\n      }\n    }\n  }\n  return result;\n}\n\n// Chunking function\nfunction chunkByCharLength(arr, source, chunkSize = 1000) {\n  const flat = splitOversizedItems(arr, chunkSize);\n  const response = [];\n  let idx = 0;\n  let charPos = 0;\n\n  while (idx < flat.length) {\n    const a = [];\n    let sum = 0;\n    const from = charPos;\n\n    while (idx < flat.length && sum < chunkSize) {\n      const item = flat[idx];\n      const len = getObjLength(item);\n      const text_len = getObjLengthofTextOnly(item);\n      a.push(item);\n      sum += len;\n      charPos += text_len;\n      idx++;\n    }\n\n    const to = charPos;\n    const metadata = {\n      source: source,\n      source_metadata_id: source_id,\n      loc: { Characters: { from, to } }\n    };\n\n    response.push({\n      content: JSON.stringify({\n        pageContent: a,\n        metadata\n      })\n    });\n  }\n\n  return response;\n}\n\n// 1. Run chunking\nconst chunks = chunkByCharLength(arr, source, 500);\n\n// 2. Return in n8n format\nreturn chunks.map(c => ({ json: c }));"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        5440,
+        2520
+      ],
+      "id": "ca386f2b-9d3d-4845-a4ae-75cfc03923f3",
+      "name": "Code10"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.supabase",
+      "typeVersion": 1,
+      "position": [
+        2400,
+        2600
+      ],
+      "id": "f0ec74f9-5bf8-4e9b-9ace-f8b8cda5678e",
+      "name": "Supabase4",
+      "credentials": {
+        "supabaseApi": {
+          "id": "g2fuxg9JpTFapfzz",
+          "name": "Supabase Nostar"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.mistral.ai/v1/ocr",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "mistralCloudApi",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"mistral-ocr-latest\",\n  \"document\": {\n    \"type\": \"{{ $('File classifier').item.json.file_class }}\",\n    \"{{ $('File classifier').item.json.file_class }}\": \"{{ $('Settings').item.json.File_Downloader_Prod_URL.trim() }}?tg_file={{ $('Generating temporary file link').item.json.result.file_id }}\"\n  }\n}",
+        "options": {}
+      },
+      "id": "7a7c0e44-bd18-430f-8af9-b7228ce14a1d",
+      "name": "Mistral OCR",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        3720,
+        3000
+      ],
+      "typeVersion": 4.2,
+      "credentials": {
+        "mistralCloudApi": {
+          "id": "nFRSF27FBGd8XGtX",
+          "name": "Mistral Cloud nosta"
+        }
+      },
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        2820,
+        2620
+      ],
+      "id": "76c5fce1-a20f-41f7-95f0-897a4da711aa",
+      "name": "Wait3",
+      "webhookId": "03aa04f2-8d94-467d-8adc-aecac12a9185"
+    },
+    {
+      "parameters": {
+        "method": "DELETE",
+        "url": "=https://api.mistral.ai/v1/files/{{ $('Mistral Upload').item.json.id }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "mistralCloudApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {}
+          ]
+        },
+        "options": {}
+      },
+      "id": "e9a04310-4ba2-4e18-af86-437a63ee85e7",
+      "name": "Mistral file delete",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        4300,
+        2720
+      ],
+      "typeVersion": 4.2,
+      "credentials": {
+        "mistralCloudApi": {
+          "id": "uXnHG2tXx33Gkexl",
+          "name": "Mistral Cloud account(dbt)"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        3460,
+        2680
+      ],
+      "id": "4b57c5e6-73ec-44a3-a1b4-17a4371b6ca3",
+      "name": "Edit Fields6"
+    },
+    {
+      "parameters": {
+        "jsCode": "\n// Get the file name from SharePoint\n$input.item.binary.data.fileName = $input.first().json.title;\n\n\nreturn $input.item;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2980,
+        1280
+      ],
+      "id": "deb0e206-e0e8-4d0f-88e9-c3ecfad15b29",
+      "name": "Code11"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.mistral.ai/v1/files",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "mistralCloudApi",
+        "sendBody": true,
+        "contentType": "multipart-form-data",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "purpose",
+              "value": "ocr"
+            },
+            {
+              "parameterType": "formBinaryData",
+              "name": "={{$binary.data.fileName.replace(/\\.[^/.]+$/, \"\").replace(/[\\s+]/g, '_')}}\n",
+              "inputDataFieldName": "data"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "177d10d4-f988-40e7-8c8b-0118b4aad28b",
+      "name": "Mistral Upload1",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        2020,
+        2580
+      ],
+      "typeVersion": 4.2,
+      "credentials": {
+        "mistralCloudApi": {
+          "id": "uXnHG2tXx33Gkexl",
+          "name": "Mistral Cloud account(dbt)"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "DELETE",
+        "url": "=https://api.mistral.ai/v1/files/{{ $('Mistral Upload').item.json.id }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "mistralCloudApi",
+        "options": {}
+      },
+      "id": "ee72a91c-0edc-4f24-b562-b2f44bb34fe2",
+      "name": "Mistral file delete1",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        5420,
+        1260
+      ],
+      "typeVersion": 4.2,
+      "credentials": {
+        "mistralCloudApi": {
+          "id": "uXnHG2tXx33Gkexl",
+          "name": "Mistral Cloud account(dbt)"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "DELETE",
+        "url": "=https://mistralaifilesapiprodswe.blob.core.windows.net/fine-tune/1c76c963-f08f-4e59-b9c5-2f6a73e6bf32/de896c30-78ae-488e-815f-3310d955781a/9cbb14eb7c61416fb85e218129d7d958.docx?se=2025-08-25T15%3A21%3A19Z&sp=r&sv=2025-01-05&sr=b&sig=ja5UI1BBjYCavdMNqeN1E%2BjjLhA1j6fzUeWaOxJwkUc%3D",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "mistralCloudApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {}
+          ]
+        },
+        "options": {}
+      },
+      "id": "e790bec9-d18e-46ae-af22-ef42d1da0b4b",
+      "name": "Mistral file delete2",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        3540,
+        2760
+      ],
+      "typeVersion": 4.2,
+      "credentials": {
+        "mistralCloudApi": {
+          "id": "uXnHG2tXx33Gkexl",
+          "name": "Mistral Cloud account(dbt)"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "DELETE",
+        "url": "=https://api.mistral.ai/v1/files/{{ $('Mistral Upload').item.json.id }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "mistralCloudApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {}
+          ]
+        },
+        "options": {}
+      },
+      "id": "148824f6-1cdf-49aa-94fa-c0b98062beb2",
+      "name": "Mistral file delete3",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        3280,
+        2900
+      ],
+      "typeVersion": 4.2,
+      "credentials": {
+        "mistralCloudApi": {
+          "id": "uXnHG2tXx33Gkexl",
+          "name": "Mistral Cloud account(dbt)"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "DELETE",
+        "url": "=https://api.mistral.ai/v1/files/{{ $('Mistral Upload').item.json.id }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "mistralCloudApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {}
+          ]
+        },
+        "options": {}
+      },
+      "id": "d7bed5de-95d9-4111-8ed6-b5460b6e076d",
+      "name": "Mistral file delete4",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        3420,
+        780
+      ],
+      "typeVersion": 4.2,
+      "credentials": {
+        "mistralCloudApi": {
+          "id": "uXnHG2tXx33Gkexl",
+          "name": "Mistral Cloud account(dbt)"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "curlImport": "",
+        "httpVariantWarning": "",
+        "method": "GET",
+        "url": "=https://nosta.sharepoint.com/sites/OPEX/_api/web/GetFileByServerRelativeUrl('{{ $('Loop Over Items2').item.json.ServerRelativeUrl }}')/$value",
+        "": "",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "microsoftSharePointOAuth2Api",
+        "provideSslCertificates": false,
+        "sendQuery": false,
+        "sendHeaders": false,
+        "sendBody": false,
+        "options": {
+          "response": {
+            "response": {
+              "fullResponse": false,
+              "neverError": false,
+              "responseFormat": "file",
+              "outputPropertyName": "data"
+            }
+          }
+        },
+        "infoMessage": ""
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1580,
+        2700
+      ],
+      "id": "2fb105f0-faf8-4aa0-be1b-8501113c5f05",
+      "name": "Microsoft SharePoint HTTP Request2",
+      "extendsCredential": "microsoftSharePointOAuth2Api",
+      "credentials": {
+        "microsoftSharePointOAuth2Api": {
+          "id": "9BGGzF75Nq8GkPkx",
+          "name": "Microsoft SharePoint account 4"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "DELETE",
+        "url": "=https://api.mistral.ai/v1/files/{{ $('Mistral Upload').item.json.id }}",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "mistralCloudApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {}
+          ]
+        },
+        "options": {}
+      },
+      "id": "0d52f189-cedc-472d-b27a-cda7efe8dee1",
+      "name": "Mistral file delete5",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        3440,
+        1720
+      ],
+      "typeVersion": 4.2,
+      "credentials": {
+        "mistralCloudApi": {
+          "id": "uXnHG2tXx33Gkexl",
+          "name": "Mistral Cloud account(dbt)"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const items = $input.all();\n\nconst outputItems = items.map(item => {\n  const data = item.json;\n  \n  // Use existing LinkingUrl if available\n  if (data.LinkingUrl) {\n    return {\n      json: {\n        ...data,\n        fileUrl: data.LinkingUrl\n      }\n    };\n  }\n  \n  // Construct versioned URL\n  let fileUrl = '';\n  \n  if (data.ServerRelativeUrl && data.UniqueId) {\n    // Base URL with server relative path\n    fileUrl = 'https://nosta.sharepoint.com' + data.ServerRelativeUrl;\n    \n    // Use UniqueId for version parameter (remove hyphens)\n    const versionId = data.UniqueId.replace(/-/g, '');\n    fileUrl += `?d=w${versionId}`;\n  }\n  \n  return {\n    json: {\n      ...data,\n      fileUrl: fileUrl\n    }\n  };\n});\n\nreturn outputItems;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2320,
+        1280
+      ],
+      "id": "376cf47f-04d7-4bfb-84fa-0093afc226aa",
+      "name": "Code12"
+    }
+  ],
+  "origin": "n8n",
+  "pinData": {},
+  "repo": {
+    "owner": "AnushaPriya2",
+    "name": "n8n-workflow-backups"
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-08-28T11:12:03.000Z",
+  "versionId": "b51bec1b-25d1-489b-9731-375bc4ba2f4c"
+}
